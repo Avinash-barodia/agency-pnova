@@ -3,7 +3,6 @@ name: Deploy to Hostinger via FTP
 on:
   push:
     branches:
-      - master
       - main
 
 jobs:
@@ -17,7 +16,7 @@ jobs:
     - name: 🛠️ Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '18'
         cache: 'npm'
         
     - name: 📦 Install Dependencies
@@ -33,4 +32,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./out/
-        server-dir: ./
+        server-dir: /domains/purnova.in/public_html/
+        dangerous-clean-slate: true
