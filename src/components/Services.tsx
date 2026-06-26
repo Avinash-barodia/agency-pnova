@@ -52,10 +52,10 @@ export function Services() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
         {services.map((service, index) => (
-          <div key={index} className="luxury-card luxury-border p-8 md:p-12 bg-[var(--color-surface-container-low)] flex flex-col h-full min-h-[300px] md:min-h-[400px]">
-            <span className="material-symbols-outlined text-[var(--color-primary)] text-4xl mb-8 md:mb-10">{service.icon}</span>
-            <h3 className="font-serif text-[24px] md:text-[32px] font-semibold mb-4 md:mb-6 leading-tight md:leading-[40px]">{service.title}</h3>
-            <p className="text-[var(--color-on-surface-variant)] font-sans text-[14px] md:text-[16px] leading-[24px] md:leading-[26px] mb-auto">
+          <div key={index} className="luxury-card luxury-border p-6 md:p-8 bg-[var(--color-surface-container-low)] flex flex-col h-full min-h-[250px] md:min-h-[300px]">
+            <span className="material-symbols-outlined text-[var(--color-primary)] text-3xl md:text-4xl mb-4 md:mb-6">{service.icon}</span>
+            <h3 className="font-serif text-[22px] md:text-[26px] font-semibold mb-3 md:mb-4 leading-tight">{service.title}</h3>
+            <p className="text-[var(--color-on-surface-variant)] font-sans text-[14px] leading-[22px] md:leading-[24px] mb-auto">
                 {service.description}
             </p>
           </div>

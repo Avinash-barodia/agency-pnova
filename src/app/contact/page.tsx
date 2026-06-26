@@ -29,13 +29,39 @@ export default function ContactPage() {
           <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
             
             <div className="flex flex-col md:flex-row gap-6">
-              <input type="text" placeholder="Full Name" className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" />
-              <input type="email" placeholder="Email" className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" />
+              <input 
+                type="text" 
+                placeholder="Full Name" 
+                required
+                pattern="[A-Za-z\s\-]+"
+                title="Only letters, spaces, and hyphens allowed"
+                onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[0-9]/g, ''); }}
+                className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" 
+              />
+              <input 
+                type="email" 
+                placeholder="Email" 
+                required
+                className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" 
+              />
             </div>
 
             <div className="flex flex-col md:flex-row gap-6">
-              <input type="tel" placeholder="Phone Number" className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" />
-              <input type="text" placeholder="Company Name" className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" />
+              <input 
+                type="tel" 
+                placeholder="Phone Number" 
+                required
+                pattern="[0-9]+"
+                title="Only digits allowed"
+                onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, ''); }}
+                className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" 
+              />
+              <input 
+                type="text" 
+                placeholder="Company Name" 
+                required
+                className="w-full bg-[#111] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:bg-[#151515] transition-colors" 
+              />
             </div>
 
             <div className="relative">

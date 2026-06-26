@@ -32,9 +32,15 @@ export function Hero() {
         <motion.h1 variants={item} className="font-serif text-[38px] sm:text-[48px] md:text-[72px] mb-8 leading-tight font-bold tracking-[-0.02em]">We Don't Run Campaigns. <br />
           <span className="text-[var(--color-primary)] italic">We Build <span className="border-b-2 border-[var(--color-primary)]">Empires.</span></span>
         </motion.h1>
-        <motion.p variants={item} className="font-sans text-[16px] md:text-[20px] text-[var(--color-on-surface-variant)] mb-12 max-w-2xl mx-auto leading-[26px] md:leading-[32px]">
-          Premium digital marketing for brands that refuse to be ordinary. We specialize in aggressive growth strategies for luxury and enterprise markets.
-        </motion.p>
+        <motion.div variants={item} className="mb-12 max-w-2xl mx-auto flex flex-col gap-3">
+          <span className="font-sans font-bold text-[var(--color-primary)] tracking-[0.2em] text-[13px] md:text-[15px] uppercase">
+            NOT FOR EVERY BRAND.
+          </span>
+          <p className="font-sans text-[16px] md:text-[20px] text-[var(--color-on-surface-variant)] leading-[26px] md:leading-[32px]">
+            Built exclusively for those who refuse to be ordinary. <br className="hidden md:block" />
+            Premium digital marketing for brands destined to lead.
+          </p>
+        </motion.div>
         <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link href="/case-studies" className="inline-block w-full sm:w-auto bg-[var(--color-primary)] text-[var(--color-on-primary-fixed)] font-sans text-[12px] py-5 px-12 font-bold uppercase tracking-[0.15em] hover:bg-[var(--color-primary-fixed-dim)] transition-all duration-300 text-center">
             SEE OUR WORK

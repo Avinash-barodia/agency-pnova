@@ -11,13 +11,13 @@ const navLinks = [
   { name: "Clients", href: "/clients", sticker: "/navbar_sticker/clients.png" },
   { name: "About", href: "/about", sticker: "/navbar_sticker/about.png" },
   { name: "Our Team", href: "/team", sticker: "/navbar_sticker/team.png" },
-  // { name: "Contact", href: "#", sticker: "/navbar_sticker/contact.png" },
 ];
 
 export function NavBar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
   const pathname = usePathname();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -31,6 +31,31 @@ export function NavBar() {
 
   return (
     <>
+      {/* Full Screen Logo Hover Video */}
+      <AnimatePresence>
+        {isLogoHovered && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            className="fixed inset-0 z-[40] pointer-events-none"
+          >
+            {/* NOTE TO USER: Add a video file named "purnova-video.mp4" to your public folder */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              src="/logo video/Tech Impulse Logo Reveal_1080p (1).mp4"
+            />
+            {/* Dark overlay to ensure the navbar and page content remain somewhat legible */}
+            <div className="absolute inset-0 bg-[var(--color-background)]/60" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <motion.nav
         variants={{
           visible: { y: 0 },
@@ -38,10 +63,18 @@ export function NavBar() {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed top-0 w-full z-50 bg-[var(--color-background)]/95 backdrop-blur-md border-b border-[var(--color-surface-container-highest)] transition-transform duration-300"
+        className={`fixed top-0 w-full z-50 transition-colors duration-700 border-b ${isLogoHovered
+            ? "bg-transparent border-transparent backdrop-blur-none"
+            : "bg-[var(--color-background)]/95 backdrop-blur-md border-[var(--color-surface-container-highest)]"
+          }`}
       >
         <div className="flex justify-between items-center w-full px-6 md:px-[80px] max-w-[1440px] mx-auto pt-8 pb-4 md:pt-12 md:pb-5">
-          <Link href="/" className="text-[24px] md:text-[32px] font-serif font-bold text-[var(--color-primary)] tracking-tighter uppercase">
+          <Link
+            href="/"
+            className="text-[24px] md:text-[32px] font-serif font-bold text-[var(--color-primary)] tracking-tighter uppercase relative"
+            onMouseEnter={() => setIsLogoHovered(true)}
+            onMouseLeave={() => setIsLogoHovered(false)}
+          >
             Purnova
           </Link>
           <div className="hidden md:flex items-center gap-10">
