@@ -22,7 +22,7 @@ export default function ContactPage() {
     setStatus("loading");
     
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbyQ6rBgMztDLsM8t44iE6KzT4JHD9q0Gnlvq4iGD4X9_pmsiOPXsbz3JzFVjADoHdJS/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbwxXEwjDFf6K80N1Z-1QO_EDKnZANkim1yJJq6IU2BpYm2Ppmb8tJocd-ZubTQN-IHy/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
