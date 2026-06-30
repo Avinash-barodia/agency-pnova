@@ -41,16 +41,16 @@ export function SparkleCursor() {
           };
           
           setSparkles((prev) => {
-            // Keep maximum 30 sparkles at once to prevent performance issues
+            // Keep maximum 6 sparkles at once to make the tail shorter
             const next = [...prev, newSparkle];
-            if (next.length > 30) return next.slice(next.length - 30);
+            if (next.length > 6) return next.slice(next.length - 6);
             return next;
           });
           
           // Remove sparkle after animation duration
           setTimeout(() => {
             setSparkles((prev) => prev.filter((s) => s.id !== newSparkle.id));
-          }, 800);
+          }, 300);
         }
       }
     };
@@ -77,7 +77,7 @@ export function SparkleCursor() {
               rotate: sparkle.angle + 90 
             }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="absolute"
             style={{
               width: sparkle.size,

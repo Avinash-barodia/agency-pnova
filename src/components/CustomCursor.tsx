@@ -13,7 +13,7 @@ export function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   
   // Array to hold the trail points for a smooth, continuous "snake" effect
-  const trailLength = 25;
+  const trailLength = 10;
   const trailRef = useRef<Point[]>(Array(trailLength).fill({ x: -100, y: -100 }));
   
   const pathRef = useRef<SVGPathElement>(null);
@@ -165,7 +165,11 @@ export function CustomCursor() {
           y: position.y - 12,
           scale: isHovering ? 1.5 : 1,
         }}
-        transition={{ type: "spring", stiffness: 800, damping: 35, mass: 0.3 }}
+        transition={{ 
+          x: { duration: 0 },
+          y: { duration: 0 },
+          scale: { type: "spring", stiffness: 800, damping: 35, mass: 0.3 }
+        }}
         style={{
           width: 24,
           height: 24,
