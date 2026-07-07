@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Services", href: "/services", sticker: "/navbar_sticker/services.png" },
-  { name: "Case Studies", href: "/case-studies", sticker: "/navbar_sticker/case.png" },
+  // { name: "Case Studies", href: "/case-studies", sticker: "/navbar_sticker/case.png" },
   { name: "Clients", href: "/clients", sticker: "/navbar_sticker/clients.png" },
   { name: "About", href: "/about", sticker: "/navbar_sticker/about.png" },
   { name: "Our Team", href: "/team", sticker: "/navbar_sticker/team.png" },

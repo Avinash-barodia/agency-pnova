@@ -7,13 +7,13 @@ const services = [
   {
     title: "Performance Marketing",
     slug: "performance-marketing",
-    description: "Data-driven acquisition strategies designed to maximize ROI through precise targeting and algorithmic optimization.",
+    description: "You're spending ₹50k/month on ads and not sure it's working. We fix that with targeting so precise, every rupee has a job.",
     icon: "insights",
   },
   {
     title: "Brand Strategy",
     slug: "brand-strategy",
-    description: "Architecting distinctive brand identities that command attention and build long-term equity in crowded markets.",
+    description: "Your brand should command 30% more than your competitors. We architect the identity that makes that premium feel obvious  not unjustified.",
     icon: "diamond",
   },
   {
@@ -25,7 +25,7 @@ const services = [
   {
     title: "SEO & Content",
     slug: "seo-and-content",
-    description: "Dominating search landscapes with editorial-grade content and technical excellence that lasts.",
+    description: "Stop being invisible when buyers search. We put you on page one for the terms that actually close deals.",
     icon: "search",
   },
   {
@@ -46,7 +46,7 @@ export function Services() {
   return (
     <section id="services" className="py-24 md:py-40 px-6 md:px-[80px] max-w-[1440px] mx-auto relative z-10 bg-[var(--color-background)]">
       <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative">
-        
+
         {/* Left Side: Sticky Editorial Header */}
         <div className="w-full lg:w-1/3 lg:sticky lg:top-40 z-20">
           <motion.div
@@ -57,7 +57,7 @@ export function Services() {
           >
             <span className="font-sans text-[12px] font-bold text-[#D4AF37] uppercase tracking-[0.2em] mb-6 block">Our Expertise</span>
             <h2 className="font-serif text-[48px] md:text-[64px] lg:text-[72px] font-semibold mb-8 leading-[1.05] text-white tracking-tighter">
-              Mastering the Art of <br className="hidden lg:block"/> Digital Dominance.
+              Mastering the Art of <br className="hidden lg:block" /> Digital Dominance.
             </h2>
             <p className="text-white/60 font-sans text-[16px] md:text-[18px] leading-[28px] mb-10 max-w-md">
               We don't do templates. Every service is a bespoke weapon designed to carve out your market share and build a legacy that outlasts trends.
@@ -74,25 +74,25 @@ export function Services() {
           {services.map((service, index) => {
             // CSS Sticky creates the magical overlapping deck of cards effect natively
             const stickyTop = `calc(15vh + ${index * 40}px)`;
-            
+
             return (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
                 className="sticky w-full h-[450px] md:h-[500px] rounded-[40px] p-8 md:p-14 flex flex-col justify-between border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)] overflow-hidden group"
-                style={{ 
+                style={{
                   top: stickyTop,
-                  backgroundColor: '#0A0A0A', 
-                  zIndex: 10 + index 
+                  backgroundColor: '#0A0A0A',
+                  zIndex: 10 + index
                 }}
               >
                 {/* Background Glow Effect */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.15),_transparent_50%)] rounded-[40px] pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none rounded-[40px]" />
-                
+
                 {/* Card Header (Icon + Number) */}
                 <div className="flex justify-between items-start relative z-10 w-full">
                   <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full bg-[#111] border border-white/5 flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-500">
