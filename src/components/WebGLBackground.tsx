@@ -56,10 +56,10 @@ void main() {
     vec3 color = vec3(0.07, 0.08, 0.08); // #121414 equivalent base
     
     float particles = 0.0;
-    for(float i = 0.0; i < 60.0; i++) {
+    for(float i = 0.0; i < 20.0; i++) {
         float t = u_time * 0.1 + i * 532.123;
         vec2 pos = vec2(sin(t * 0.7), cos(t * 0.5)) * 0.8;
-        pos += mouse * 0.1 * (i / 60.0);
+        pos += mouse * 0.1 * (i / 20.0);
         
         float dist = length(uv - pos);
         float size = 0.002 + 0.001 * sin(t + i);

@@ -19,44 +19,58 @@ export function SparkleCursor() {
     let lastX = 0;
     let lastY = 0;
 
+    let animationFrameId: number | null = null;
+
     const handleMouseMove = (e: MouseEvent) => {
-      const dx = e.clientX - lastX;
-      const dy = e.clientY - lastY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+      if (animationFrameId !== null) return;
 
-      // Only spawn a sparkle if the mouse has moved a minimum distance
-      // to avoid spawning too many while moving slowly or stationary
-      if (distance > 10) {
-        lastX = e.clientX;
-        lastY = e.clientY;
+      const clientX = e.clientX;
+      const clientY = e.clientY;
 
-        // Add some randomness so it doesn't look too uniform
-        if (Math.random() > 0.3) {
-          const newSparkle: Sparkle = {
-            id: sparkId++,
-            x: e.clientX,
-            y: e.clientY,
-            size: Math.random() * 8 + 4, // 4px to 12px
-            angle: Math.random() * 360,
-          };
-          
-          setSparkles((prev) => {
-            // Keep maximum 6 sparkles at once to make the tail shorter
-            const next = [...prev, newSparkle];
-            if (next.length > 6) return next.slice(next.length - 6);
-            return next;
-          });
-          
-          // Remove sparkle after animation duration
-          setTimeout(() => {
-            setSparkles((prev) => prev.filter((s) => s.id !== newSparkle.id));
-          }, 300);
+      animationFrameId = requestAnimationFrame(() => {
+        animationFrameId = null;
+        
+        const dx = clientX - lastX;
+        const dy = clientY - lastY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // Only spawn a sparkle if the mouse has moved a minimum distance
+        // to avoid spawning too many while moving slowly or stationary
+        if (distance > 10) {
+          lastX = clientX;
+          lastY = clientY;
+
+          // Add some randomness so it doesn't look too uniform
+          if (Math.random() > 0.3) {
+            const newSparkle: Sparkle = {
+              id: sparkId++,
+              x: clientX,
+              y: clientY,
+              size: Math.random() * 8 + 4, // 4px to 12px
+              angle: Math.random() * 360,
+            };
+            
+            setSparkles((prev) => {
+              // Keep maximum 4 sparkles at once to make the tail shorter and more performant
+              const next = [...prev, newSparkle];
+              if (next.length > 4) return next.slice(next.length - 4);
+              return next;
+            });
+            
+            // Remove sparkle after animation duration
+            setTimeout(() => {
+              setSparkles((prev) => prev.filter((s) => s.id !== newSparkle.id));
+            }, 300);
+          }
         }
-      }
+      });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+       window.removeEventListener("mousemove", handleMouseMove);
+       if (animationFrameId !== null) cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   // Return early if no sparkles (optimization)

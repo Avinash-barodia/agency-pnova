@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 
 interface Point {
   x: number;
@@ -9,10 +9,10 @@ interface Point {
 }
 
 export function CustomCursor() {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
   
-  // Array to hold the trail points for a smooth, continuous "snake" effect
   const trailLength = 10;
   const trailRef = useRef<Point[]>(Array(trailLength).fill({ x: -100, y: -100 }));
   
@@ -26,9 +26,9 @@ export function CustomCursor() {
     const handleMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      setPosition({ x: mouseX, y: mouseY });
+      cursorX.set(mouseX - 12);
+      cursorY.set(mouseY - 12);
 
-      // On initial move, snap all points to the cursor to prevent streaking from corner
       if (trailRef.current[0].x === -100) {
         trailRef.current = Array(trailLength).fill({ x: mouseX, y: mouseY });
       }
@@ -59,70 +59,69 @@ export function CustomCursor() {
       if (mouseX !== -100) {
         const trail = trailRef.current;
         
-        // The head perfectly follows the mouse
-        trail[0] = { x: mouseX, y: mouseY };
+        // Calculate distance to see if trail is moving
+        const dist = Math.abs(trail[0].x - trail[trailLength-1].x) + Math.abs(trail[0].y - trail[trailLength-1].y);
+        
+        // Only run heavy math if the mouse is moving OR the trail hasn't caught up to the mouse yet
+        if (trail[0].x !== mouseX || trail[0].y !== mouseY || dist > 0.5) {
+          trail[0] = { x: mouseX, y: mouseY };
 
-        // Each subsequent point uses a spring-like easing to follow the point ahead of it
-        // This guarantees a perfectly smooth, continuous curve regardless of mouse speed
-        for (let i = 1; i < trail.length; i++) {
-          trail[i] = {
-            x: trail[i].x + (trail[i - 1].x - trail[i].x) * 0.35,
-            y: trail[i].y + (trail[i - 1].y - trail[i].y) * 0.35,
-          };
-        }
-
-        const n = trail.length;
-        const lefts = [];
-        const rights = [];
-
-        // Calculate normals to build a tapered polygon
-        for (let i = 0; i < n; i++) {
-          const p = trail[i];
-          let nx = 0, ny = 0;
-
-          if (i === 0) {
-            const p2 = trail[1];
-            const dx = p.x - p2.x, dy = p.y - p2.y;
-            const len = Math.sqrt(dx * dx + dy * dy) || 1;
-            nx = -dy / len; ny = dx / len;
-          } else if (i === n - 1) {
-            const p0 = trail[i - 1];
-            const dx = p0.x - p.x, dy = p0.y - p.y;
-            const len = Math.sqrt(dx * dx + dy * dy) || 1;
-            nx = -dy / len; ny = dx / len;
-          } else {
-            const p0 = trail[i - 1];
-            const p2 = trail[i + 1];
-            const dx = p0.x - p2.x, dy = p0.y - p2.y;
-            const len = Math.sqrt(dx * dx + dy * dy) || 1;
-            nx = -dy / len; ny = dx / len;
+          for (let i = 1; i < trail.length; i++) {
+            trail[i] = {
+              x: trail[i].x + (trail[i - 1].x - trail[i].x) * 0.35,
+              y: trail[i].y + (trail[i - 1].y - trail[i].y) * 0.35,
+            };
           }
-          
-          // Width of the tail smoothly tapers from head (4px) to tail (0px)
-          const radius = 4 * (1 - i / (n - 1)); 
-          
-          lefts.push({ x: p.x + nx * radius, y: p.y + ny * radius });
-          rights.push({ x: p.x - nx * radius, y: p.y - ny * radius });
-        }
 
-        // Connect the calculated points to draw the SVG shape
-        let d = `M ${lefts[0].x.toFixed(2)},${lefts[0].y.toFixed(2)} `;
-        for (let i = 1; i < n; i++) {
-          d += `L ${lefts[i].x.toFixed(2)},${lefts[i].y.toFixed(2)} `;
-        }
-        for (let i = n - 1; i >= 0; i--) {
-          d += `L ${rights[i].x.toFixed(2)},${rights[i].y.toFixed(2)} `;
-        }
-        d += "Z";
+          const n = trail.length;
+          const lefts = [];
+          const rights = [];
 
-        if (pathRef.current) pathRef.current.setAttribute("d", d);
+          for (let i = 0; i < n; i++) {
+            const p = trail[i];
+            let nx = 0, ny = 0;
 
-        // Adjust the gradient to strictly follow the head and tail
-        if (gradRef.current) {
-          gradRef.current.setAttribute("x1", String(trail[0].x));
-          gradRef.current.setAttribute("y1", String(trail[0].y));
-          gradRef.current.setAttribute("x2", String(trail[n - 1].x));
-          gradRef.current.setAttribute("y2", String(trail[n - 1].y));
+            if (i === 0) {
+              const p2 = trail[1];
+              const dx = p.x - p2.x, dy = p.y - p2.y;
+              const len = Math.sqrt(dx * dx + dy * dy) || 1;
+              nx = -dy / len; ny = dx / len;
+            } else if (i === n - 1) {
+              const p0 = trail[i - 1];
+              const dx = p0.x - p.x, dy = p0.y - p.y;
+              const len = Math.sqrt(dx * dx + dy * dy) || 1;
+              nx = -dy / len; ny = dx / len;
+            } else {
+              const p0 = trail[i - 1];
+              const p2 = trail[i + 1];
+              const dx = p0.x - p2.x, dy = p0.y - p2.y;
+              const len = Math.sqrt(dx * dx + dy * dy) || 1;
+              nx = -dy / len; ny = dx / len;
+            }
+            
+            const radius = 4 * (1 - i / (n - 1)); 
+            
+            lefts.push({ x: p.x + nx * radius, y: p.y + ny * radius });
+            rights.push({ x: p.x - nx * radius, y: p.y - ny * radius });
+          }
+
+          let d = `M ${lefts[0].x.toFixed(2)},${lefts[0].y.toFixed(2)} `;
+          for (let i = 1; i < n; i++) {
+            d += `L ${lefts[i].x.toFixed(2)},${lefts[i].y.toFixed(2)} `;
+          }
+          for (let i = n - 1; i >= 0; i--) {
+            d += `L ${rights[i].x.toFixed(2)},${rights[i].y.toFixed(2)} `;
+          }
+          d += "Z";
+
+          if (pathRef.current) pathRef.current.setAttribute("d", d);
+
+          if (gradRef.current) {
+            gradRef.current.setAttribute("x1", String(trail[0].x));
+            gradRef.current.setAttribute("y1", String(trail[0].y));
+            gradRef.current.setAttribute("x2", String(trail[n - 1].x));
+            gradRef.current.setAttribute("y2", String(trail[n - 1].y));
+          }
         }
       }
 
@@ -136,13 +135,12 @@ export function CustomCursor() {
       window.removeEventListener("mouseover", handleMouseOver);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [cursorX, cursorY]);
 
   if (typeof window !== "undefined" && window.innerWidth < 768) return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[99999] overflow-hidden hidden md:block">
-      {/* SVG Path for the seamless, continuous trail */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none">
         <defs>
           <linearGradient id="comet-grad" ref={gradRef} gradientUnits="userSpaceOnUse">
@@ -157,22 +155,19 @@ export function CustomCursor() {
         />
       </svg>
 
-      {/* Main Cursor (Solid Golden Star) */}
       <motion.div
         className="absolute flex items-center justify-center"
+        style={{
+          x: cursorX,
+          y: cursorY,
+          width: 24,
+          height: 24,
+        }}
         animate={{
-          x: position.x - 12, 
-          y: position.y - 12,
           scale: isHovering ? 1.5 : 1,
         }}
         transition={{ 
-          x: { duration: 0 },
-          y: { duration: 0 },
           scale: { type: "spring", stiffness: 800, damping: 35, mass: 0.3 }
-        }}
-        style={{
-          width: 24,
-          height: 24,
         }}
       >
         {isHovering && (

@@ -194,7 +194,6 @@ function DesktopClients() {
 // ---------------------------------------------------------
 
 function LivingConstellation() {
-  const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
   const [nodes, setNodes] = useState<{x: number, y: number}[]>([]);
   
   useEffect(() => {
@@ -207,11 +206,6 @@ function LivingConstellation() {
   return (
     <div 
       className="absolute inset-0 z-0 opacity-40" 
-      onMouseMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-      }}
-      onMouseLeave={() => setMousePos({ x: -1000, y: -1000 })}
     >
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
         {nodes.map((n1, i) => 

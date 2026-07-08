@@ -122,8 +122,10 @@ const FinalCTALayer = ({ p }: any) => {
    const [isActive, setIsActive] = useState(false);
    const [isRendered, setIsRendered] = useState(false);
    useMotionValueEvent(p, "change", (latest: number) => {
-      setIsActive(latest > 0.96);
-      setIsRendered(latest > 0.95);
+      const active = latest > 0.96;
+      const rendered = latest > 0.95;
+      if (isActive !== active) setIsActive(active);
+      if (isRendered !== rendered) setIsRendered(rendered);
    });
 
    if (!isRendered) return null;
@@ -169,8 +171,10 @@ const DesktopExhibit = ({ service, index, p, onSelect }: any) => {
    const [isActive, setIsActive] = useState(false);
    const [isRendered, setIsRendered] = useState(false);
    useMotionValueEvent(p, "change", (latest: number) => {
-      setIsActive(latest > start - 0.02 && latest < end);
-      setIsRendered(latest > start - 0.05 && latest < end + 0.05);
+      const active = latest > start - 0.02 && latest < end;
+      const rendered = latest > start - 0.05 && latest < end + 0.05;
+      if (isActive !== active) setIsActive(active);
+      if (isRendered !== rendered) setIsRendered(rendered);
    });
 
    if (!isRendered) return null;
@@ -277,8 +281,10 @@ const OrbitExperience = ({ p, services }: any) => {
    const [isActive, setIsActive] = useState(false);
    const [isRendered, setIsRendered] = useState(false);
    useMotionValueEvent(p, "change", (latest: number) => {
-      setIsActive(latest > 0.92);
-      setIsRendered(latest > 0.88);
+      const active = latest > 0.92;
+      const rendered = latest > 0.88;
+      if (isActive !== active) setIsActive(active);
+      if (isRendered !== rendered) setIsRendered(rendered);
    });
 
    if (!isRendered) return null;
