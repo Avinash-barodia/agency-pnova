@@ -273,7 +273,7 @@ function MasonryTile({ client }: { client: any }) {
         )}
 
         {client.logo && (
-           <div className="absolute inset-0 z-0 flex items-center justify-center p-12 pointer-events-none opacity-10 group-hover:opacity-60 transition-opacity duration-700">
+           <div className="absolute inset-0 z-0 flex items-center justify-center p-12 pointer-events-none opacity-60 lg:opacity-10 group-hover:opacity-60 transition-opacity duration-700">
               <img src={client.logo} alt={`${client.name} logo`} className="w-full h-full object-contain" />
            </div>
         )}
@@ -421,7 +421,7 @@ function MobileClients() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A1A] to-[#0A0A0A]"></div>
               
               {client.logo && (
-                 <div className="absolute inset-0 z-10 flex items-center justify-center p-12 pointer-events-none opacity-10 active:opacity-60 transition-opacity duration-500">
+                 <div className="absolute inset-0 z-10 flex items-center justify-center p-12 pointer-events-none opacity-60 transition-opacity duration-500">
                     <img src={client.logo} alt={`${client.name} logo`} className="w-full h-full object-contain" />
                  </div>
               )}

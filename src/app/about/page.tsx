@@ -36,12 +36,12 @@ export default function AboutPage() {
       <NavBar />
       
       {/* Hero Section */}
-      <header className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden pt-32 pb-16">
+      <header className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="absolute inset-0 w-full h-full pointer-events-none opacity-50 block">
           <WebGLBackground />
         </div>
         
-        <div className="relative z-10 text-center px-[var(--spacing-margin-desktop)] max-w-7xl w-full mt-24 md:mt-32">
+        <div className="relative z-10 text-center px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-7xl w-full mt-24 md:mt-32">
           <motion.span 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function AboutPage() {
           >
             ABOUT PURNOVA
           </motion.span>
-          <h1 className="font-display-lg text-[48px] md:text-[72px] leading-[1.1] md:leading-[80px] tracking-[-0.02em] font-bold text-white mb-8">
+          <h1 className="font-display-lg text-[36px] sm:text-[48px] md:text-[72px] leading-[1.1] md:leading-[80px] tracking-[-0.02em] font-bold text-white mb-6 md:mb-8">
             <span className="block overflow-hidden pb-2">
               <motion.span 
                 initial={{ y: "110%" }}
@@ -86,7 +86,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            className="font-body-lg text-body-lg text-[var(--color-on-surface-variant)] mb-12 max-w-2xl mx-auto"
+            className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] mb-8 md:mb-12 max-w-2xl mx-auto"
           >
             Built from change, forged through challenge, and driven by ambition, PURNOVA helps brands become impossible to ignore.
           </motion.p>
@@ -94,8 +94,9 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
+            className="px-4 sm:px-0"
           >
-            <button className="bg-[var(--color-primary)] px-12 py-5 font-label-caps text-label-caps font-bold uppercase tracking-[0.15em] text-[var(--color-on-primary)] hover:bg-[var(--color-primary-container)] transition-colors duration-300">
+            <button className="bg-[var(--color-primary)] w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 font-label-caps text-label-caps font-bold uppercase tracking-[0.15em] text-[var(--color-on-primary)] hover:bg-[var(--color-primary-container)] transition-colors duration-300">
               Explore Our Work
             </button>
           </motion.div>
@@ -104,13 +105,13 @@ export default function AboutPage() {
       </header>
 
       {/* Section 2: OUR STORY */}
-      <section className="py-32 px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-[var(--spacing-gutter)]">
+      <section className="py-20 md:py-32 px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto w-full">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-[var(--spacing-gutter)]">
           <div className="md:col-span-5 reveal">
-            <h2 className="font-headline-lg text-headline-lg font-semibold text-[var(--color-primary)] leading-tight">OUR <br/> STORY</h2>
+            <h2 className="font-headline-lg text-4xl md:text-headline-lg font-semibold text-[var(--color-primary)] leading-tight">OUR <br className="hidden md:block" /> STORY</h2>
           </div>
           <div className="md:col-span-7 reveal" style={{ transitionDelay: '200ms' }}>
-            <div className="font-body-lg text-body-lg text-[var(--color-on-surface-variant)] space-y-8 whitespace-pre-line">
+            <div className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] space-y-6 md:space-y-8 whitespace-pre-line">
               <p>{`Look closely at the night sky.
 
 The brightest stars are not born from stillness. They are born from collision, pressure, transformation, and the courage to shine despite the darkness around them.
@@ -138,15 +139,15 @@ The rare ones burn.`}</p>
       </section>
 
       {/* Section 3: WHO WE ARE */}
-      <section className="py-32 bg-[var(--color-surface-container-lowest)] w-full">
-        <div className="px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-[var(--spacing-gutter)] items-center">
-            <div className="md:col-span-12 reveal mb-16">
-              <h2 className="font-headline-lg text-headline-lg font-semibold text-white leading-tight">WHERE AMBITIOUS BRANDS BECOME UNFORGETTABLE</h2>
-              <div className="h-1 w-24 bg-[var(--color-primary)] mt-8"></div>
+      <section className="py-20 md:py-32 bg-[var(--color-surface-container-lowest)] w-full">
+        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-[var(--spacing-gutter)] items-center">
+            <div className="md:col-span-12 reveal mb-8 md:mb-16">
+              <h2 className="font-headline-lg text-3xl md:text-headline-lg font-semibold text-white leading-tight">WHERE AMBITIOUS BRANDS BECOME UNFORGETTABLE</h2>
+              <div className="h-1 w-16 md:w-24 bg-[var(--color-primary)] mt-6 md:mt-8"></div>
             </div>
             <div className="md:col-span-12 reveal">
-              <p className="font-body-lg text-body-lg text-[var(--color-on-surface-variant)] max-w-4xl">
+              <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-4xl">
                 At PURNOVA, we don't see your business as a list of deliverables, campaigns, or projects. We see it as an unfolding legacy. Our role is to uncover the strongest parts of what you've built and amplify them with clarity, creativity, and purpose. Every strategy we develop, every identity we design, every experience we create is built to move your brand from recognition to remembrance. We align vision with execution, creativity with performance, and ambition with measurable growth until your brand occupies a space that competitors cannot replicate.
               </p>
             </div>
@@ -155,23 +156,23 @@ The rare ones burn.`}</p>
       </section>
 
       {/* Section 4: OUR BELIEF */}
-      <section className="py-48 bg-[var(--color-surface)] w-full">
-        <div className="px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto text-center reveal">
-          <h2 className="font-display-lg text-headline-lg md:text-display-lg font-bold text-white mb-8">
-            CREATIVITY WITHOUT PURPOSE IS NOISE.<br/>
+      <section className="py-24 md:py-48 bg-[var(--color-surface)] w-full">
+        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto text-center reveal">
+          <h2 className="font-display-lg text-3xl sm:text-headline-lg md:text-display-lg font-bold text-white mb-6 md:mb-8 leading-tight md:leading-[80px]">
+            CREATIVITY WITHOUT PURPOSE IS NOISE.<br className="hidden sm:block"/>
             STRATEGY WITHOUT EXECUTION IS THEORY.
           </h2>
-          <p className="font-body-lg text-body-lg text-[var(--color-on-surface-variant)] max-w-2xl mx-auto">
+          <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-2xl mx-auto">
             Great brands are built where vision, creativity, and performance meet. That is where PURNOVA operates.
           </p>
         </div>
       </section>
 
       {/* Section 5: WHAT WE DO (5 Premium Cards) */}
-      <section className="py-32 w-full">
-        <div className="px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
-          <h2 className="font-label-caps text-label-caps font-bold text-[var(--color-primary)] text-center mb-20 tracking-widest uppercase">WHAT WE DO</h2>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+      <section className="py-20 md:py-32 w-full">
+        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
+          <h2 className="font-label-caps text-label-caps font-bold text-[var(--color-primary)] text-center mb-12 md:mb-20 tracking-widest uppercase">WHAT WE DO</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {/* Card 01 */}
             <div className="reveal h-full">
               <div className="p-8 bg-[var(--color-surface)] border border-[var(--color-outline-variant)] gold-glow transition-all duration-500 floating-vertical flex flex-col h-full" style={{ animationDelay: '0s' }}>
@@ -217,7 +218,7 @@ The rare ones burn.`}</p>
       </section>
 
       {/* Closing Manifesto */}
-      <section className="relative py-48 overflow-hidden bg-[var(--color-background)] w-full">
+      <section className="relative py-24 md:py-48 overflow-hidden bg-[var(--color-background)] w-full">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-background)] via-transparent to-[var(--color-background)] z-10"></div>
           <div 
@@ -225,13 +226,13 @@ The rare ones burn.`}</p>
             style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5vTJXSq0rNz9zopdtGv_1ZxdI9z82pghh1UIgWhzQIxyn8CgovDfRgmKyifqrwRdU-5T4sbGohcKt5lBeW-vunVPqTn9u2Xd7Zi_476mnuWxl4CQFjo7Hk8CEBihdSqDnP6hH5qjqkuijRohufpfzTunDQUbcCybpq6gfzaE2yjsQjzkGvfEVr6CUGwI-hXiqJEvM3I0P_AogqaHYxRmQAaSC3cfFV5QOHBBlL2T4-3l24BZ36nsP91FErE5D51uNwKY4wTym7VU')" }}
           ></div>
         </div>
-        <div className="relative z-20 px-[var(--spacing-margin-desktop)] max-w-5xl mx-auto text-center">
-          <h2 className="font-display-lg text-display-lg font-bold text-white mb-6 reveal italic">"STOP CHASING THE MARKET. BECOME THE STANDARD."</h2>
-          <p className="font-body-lg text-body-lg text-[var(--color-on-surface-variant)] mb-12 reveal" style={{ transitionDelay: '150ms' }}>
+        <div className="relative z-20 px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-5xl mx-auto text-center">
+          <h2 className="font-display-lg text-4xl md:text-display-lg font-bold text-white mb-6 reveal italic">"STOP CHASING THE MARKET. BECOME THE STANDARD."</h2>
+          <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] mb-8 md:mb-12 reveal" style={{ transitionDelay: '150ms' }}>
             The era of merely competing is over. The future belongs to brands brave enough to build something unforgettable.
           </p>
-          <div className="reveal" style={{ transitionDelay: '300ms' }}>
-            <button className="bg-[var(--color-primary)] px-16 py-6 font-label-caps text-label-caps font-bold uppercase tracking-[0.15em] text-[var(--color-on-primary)] hover:bg-[var(--color-primary-container)] transition-all duration-300 text-lg">
+          <div className="reveal px-4 sm:px-0" style={{ transitionDelay: '300ms' }}>
+            <button className="bg-[var(--color-primary)] w-full sm:w-auto px-8 sm:px-16 py-4 sm:py-6 font-label-caps text-label-caps font-bold uppercase tracking-[0.15em] text-[var(--color-on-primary)] hover:bg-[var(--color-primary-container)] transition-all duration-300 text-lg">
               Start Your Brand Journey
             </button>
           </div>

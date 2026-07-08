@@ -344,10 +344,10 @@ function MobileGalleryExperience() {
          <NavBar />
 
          {/* Mobile Hero */}
-         <div className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 relative sticky top-0 z-0 bg-[#0B0B0B] border-b border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+         <div className="min-h-[90dvh] flex flex-col items-center justify-center text-center px-6 relative sticky top-0 z-0 bg-[#0B0B0B] border-b border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.1),_transparent_70%)]"></div>
-            <h1 className="font-serif text-[48px] font-bold text-white mb-6 leading-tight relative z-10">Every Brand Has Untapped Potential.</h1>
-            <h2 className="font-serif text-[40px] font-bold text-[#D4AF37] italic relative z-10">We Reveal It.</h2>
+            <h1 className="font-serif text-[36px] sm:text-[48px] font-bold text-white mb-4 sm:mb-6 leading-tight relative z-10">Every Brand Has Untapped Potential.</h1>
+            <h2 className="font-serif text-[32px] sm:text-[40px] font-bold text-[#D4AF37] italic relative z-10">We Reveal It.</h2>
             <div className="absolute bottom-12 animate-bounce opacity-50">
                <span className="font-sans text-[10px] tracking-[0.3em] uppercase border border-white/20 px-6 py-2 rounded-full">Enter Gallery ↓</span>
             </div>
@@ -361,7 +361,7 @@ function MobileGalleryExperience() {
          </div>
 
          {/* Mobile Final Experience */}
-         <div className="min-h-[100vh] flex flex-col items-center justify-center text-center px-6 relative sticky bottom-0 z-20 bg-black pt-20 pb-32 shadow-[0_-30px_60px_rgba(0,0,0,1)] border-b border-white/5">
+         <div className="min-h-[100dvh] flex flex-col items-center justify-center text-center px-6 relative sticky top-0 z-20 bg-black pt-20 pb-32 shadow-[0_-30px_60px_rgba(0,0,0,1)] border-b border-white/5">
             <div className="w-[200px] h-[200px] bg-[#D4AF37] rounded-full blur-[80px] absolute opacity-20 animate-pulse"></div>
             <h2 className="font-serif text-[32px] sm:text-[40px] text-center leading-tight text-[#D4AF37] font-bold mb-4 relative z-10 px-4">
                Growth Happens When Everything Works Together.
@@ -369,19 +369,19 @@ function MobileGalleryExperience() {
          </div>
 
          {/* Mobile Very Final CTA */}
-         <div className="min-h-[100vh] flex flex-col items-center justify-center text-center px-6 relative sticky bottom-0 z-30 bg-[#050505] shadow-[0_-40px_60px_rgba(0,0,0,1)]">
+         <div className="min-h-[100dvh] flex flex-col items-center justify-center text-center px-6 w-full relative sticky top-0 z-30 bg-[#050505] shadow-[0_-40px_60px_rgba(0,0,0,1)]">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.2),_transparent_70%)] pointer-events-none"></div>
             <div className="w-[250px] h-[250px] bg-[#D4AF37] rounded-full blur-[100px] absolute opacity-30 animate-pulse pointer-events-none"></div>
 
-            <div className="relative z-20 flex flex-col items-center text-center px-4">
+            <div className="relative z-20 flex flex-col items-center text-center px-4 w-full">
                {/* Decorative Star */}
                <div className="absolute right-0 -top-6 text-[#D4AF37] text-[20px] opacity-80 animate-pulse">★</div>
                
-               <h2 className="font-serif text-[40px] text-white font-bold leading-[1.1] tracking-tighter mb-10">
+               <h2 className="font-serif text-[32px] sm:text-[40px] text-white font-bold leading-[1.1] tracking-tighter mb-8 sm:mb-10">
                   Ready To Build Your <br /> Growth System?
                </h2>
-               <Link href="/contact">
-                  <button className="bg-[#D4AF37] text-black font-sans text-[14px] font-bold uppercase tracking-[0.2em] px-10 py-5 rounded-[16px] active:scale-95 transition-transform shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+               <Link href="/contact" className="w-full sm:w-auto flex justify-center">
+                  <button className="bg-[#D4AF37] w-full sm:w-auto text-black font-sans text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.2em] px-8 sm:px-10 py-4 sm:py-5 rounded-[16px] active:scale-95 transition-transform shadow-[0_0_40px_rgba(212,175,55,0.3)]">
                      BOOK A CALL
                   </button>
                </Link>
@@ -396,18 +396,18 @@ const MobileExhibit = ({ service, index }: any) => {
    const [expanded, setExpanded] = useState(false);
 
    return (
-      <div className="min-h-screen sticky top-0 w-full overflow-hidden flex items-center justify-center bg-[#080808] border-b border-white/5" style={{ zIndex: index + 1 }}>
+      <div className="min-h-[100dvh] sticky top-0 w-full overflow-hidden flex items-center justify-center bg-[#080808] border-b border-white/5" style={{ zIndex: index + 1 }}>
          <div className="absolute inset-0 z-0 opacity-60">
             <ExhibitVisuals type={service.type} />
          </div>
          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20 z-10"></div>
 
-         <div className="relative z-20 px-8 py-20 flex flex-col justify-end w-full h-full min-h-screen">
-            <span className="font-sans text-[10px] text-[#D4AF37] tracking-[0.3em] uppercase mb-4 block border border-[#D4AF37]/30 px-4 py-2 rounded-full self-start bg-[#111]">
+         <div className="relative z-20 px-6 sm:px-8 py-16 sm:py-20 flex flex-col justify-center items-center text-center w-full h-full min-h-[100dvh]">
+            <span className="font-sans text-[10px] text-[#D4AF37] tracking-[0.3em] uppercase mb-4 block border border-[#D4AF37]/30 px-4 py-2 rounded-full bg-[#111]">
                0{index + 1} // {service.subtitle}
             </span>
-            <h2 className="font-serif text-[48px] text-white mb-6 leading-tight">{service.title}</h2>
-            <p className="font-sans text-[16px] text-white/70 leading-relaxed mb-8">{service.copy}</p>
+            <h2 className="font-serif text-[32px] sm:text-[40px] md:text-[48px] text-white mb-4 sm:mb-6 leading-tight">{service.title}</h2>
+            <p className="font-sans text-[15px] sm:text-[16px] text-white/70 leading-relaxed mb-6 sm:mb-8">{service.copy}</p>
 
             <AnimatePresence>
                {expanded && (
@@ -444,7 +444,7 @@ const MobileExhibit = ({ service, index }: any) => {
                )}
             </AnimatePresence>
 
-            <button onClick={() => setExpanded(!expanded)} className="self-start bg-transparent border border-white/30 text-white font-sans text-[10px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-colors hover:border-[#D4AF37] hover:text-[#D4AF37]">
+            <button onClick={() => setExpanded(!expanded)} className="bg-transparent border border-white/30 text-white font-sans text-[10px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-colors hover:border-[#D4AF37] hover:text-[#D4AF37] mt-4">
                {expanded ? "Close Details" : "Explore Masterpiece"}
             </button>
          </div>

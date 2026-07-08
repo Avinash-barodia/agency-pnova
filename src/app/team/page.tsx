@@ -30,7 +30,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Rushi%20Sir.jpg.jpeg"
                   alt="Rushikesh Hande"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -56,7 +56,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Saurabh%20Sir.jpg.jpeg"
                   alt="Saurabh Borawakey"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -82,7 +82,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Pallavi.jpg.jpeg"
                   alt="Pallavi Vishwas"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -108,7 +108,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Avinash.jpg.jpeg"
                   alt="Avinash Barodiya"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -134,7 +134,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Rutu.jpg.jpeg"
                   alt="Rutuja Pawar"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -160,7 +160,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Aniket.jpg.jpeg"
                   alt="Aniket Suryawanshi"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -186,7 +186,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Anushka.jpg.jpeg"
                   alt="Anushka Shirore"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -212,7 +212,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Tejas.jpg.jpeg"
                   alt="Tejas Kumbhar"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -238,7 +238,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Ritesh.jpg.jpeg"
                   alt="Ritesh Dharane"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -264,7 +264,7 @@ export default function TeamPage() {
                 <img
                   src="/team/Pratap.jpg.jpeg"
                   alt="Pratap Pawar"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div className="p-8 flex flex-col flex-grow">
