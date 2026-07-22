@@ -4,7 +4,15 @@ import CountUp from "react-countup";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-const stats = [
+type StatItem = {
+  value: number;
+  suffix: string;
+  label: string;
+  decimals?: number;
+  prefix?: string;
+};
+
+const stats: StatItem[] = [
   { value: 25, suffix: "+", label: "Industries Served" },
   { value: 150, suffix: "+", label: "Brands Scaled" },
   { value: 5, label: "Experience", suffix: "+ Years" },
