@@ -28,35 +28,32 @@ function useIntelligentDisplay() {
 
   useEffect(() => {
     if (!isClient) return;
-    // FIX #2: Don't trigger until isMobile is resolved (not null)
     if (isMobile === null) return;
     if (pathname.includes("/case-studies/")) return;
+    if (isOpen) return; // Prevent setting new timers if already open
 
     const navTimer = setTimeout(() => {
-      setIsOpen((currentIsOpen) => {
-        if (currentIsOpen) return true;
+      if (sessionStorage.getItem(`purnova_popup_v3_${pathname}`)) return;
 
-        if (sessionStorage.getItem(`purnova_popup_v2_${pathname}`)) return false;
+      const activeTag = document.activeElement?.tagName;
+      if (activeTag === "INPUT" || activeTag === "TEXTAREA" || activeTag === "SELECT") return;
 
-        const activeTag = document.activeElement?.tagName;
-        if (activeTag === "INPUT" || activeTag === "TEXTAREA" || activeTag === "SELECT") return false;
+      sessionStorage.setItem(`purnova_popup_v3_${pathname}`, "true");
 
-        sessionStorage.setItem(`purnova_popup_v2_${pathname}`, "true");
+      const countStr = sessionStorage.getItem("purnova_popup_count");
+      const currentCount = countStr ? parseInt(countStr) : 0;
+      const newCount = currentCount + 1;
+      sessionStorage.setItem("purnova_popup_count", newCount.toString());
 
-        const countStr = sessionStorage.getItem("purnova_popup_count");
-        const currentCount = countStr ? parseInt(countStr) : 0;
-        const newCount = currentCount + 1;
-        sessionStorage.setItem("purnova_popup_count", newCount.toString());
-
-        const type = ((newCount - 1) % 3 + 1) as AppearanceType;
-        setAppearanceType(type);
-
-        return true;
-      });
+      const type = ((newCount - 1) % 3 + 1) as AppearanceType;
+      
+      // Batch state updates properly outside of an updater function
+      setAppearanceType(type);
+      setIsOpen(true);
     }, 1500);
 
     return () => clearTimeout(navTimer);
-  }, [pathname, isClient, isMobile]);
+  }, [pathname, isClient, isMobile, isOpen]);
 
   const closePopup = () => {
     setIsOpen(false);
@@ -95,6 +92,43 @@ const AnimatedOrb = () => {
   );
 };
 
+// --- VARIANTS (Moved outside component for stable references) ---
+const desktopVariants: any = {
+  hidden: { scale: 0, opacity: 0, borderRadius: "50%", y: 0 },
+  app1: {
+    scale: [0, 1.1, 1],
+    opacity: [0, 1, 1],
+    borderRadius: ["50%", "50%", "32px"],
+    transition: { duration: 1.2, times: [0, 0.4, 1], ease: [0.16, 1, 0.3, 1] },
+  },
+  app2: {
+    scale: [0.9, 1],
+    opacity: [0, 1],
+    borderRadius: "32px",
+    transition: { duration: 1, ease: "easeOut" },
+  },
+  app3: {
+    scaleY: [0, 0.05, 1],
+    scaleX: [0, 1, 1],
+    opacity: [0, 1, 1],
+    borderRadius: "32px",
+    transition: { duration: 1.2, times: [0, 0.4, 1], ease: [0.16, 1, 0.3, 1] },
+  },
+  exit: {
+    scale: [1, 0.05, 0],
+    opacity: [1, 1, 0],
+    borderRadius: ["32px", "50%", "50%"],
+    y: [0, 0, -100],
+    transition: { duration: 0.8, times: [0, 0.6, 1], ease: "easeInOut" },
+  },
+};
+
+const mobileVariants: any = {
+  hidden: { y: "100%", opacity: 1 },
+  visible: { y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+  exit: { y: "100%", transition: { duration: 0.5, ease: "easeIn" } },
+};
+
 export function LeadCapturePopup() {
   const router = useRouter();
   const { isOpen, isMobile, appearanceType, closePopup, isClient } = useIntelligentDisplay();
@@ -112,44 +146,6 @@ export function LeadCapturePopup() {
   const handleStart = () => {
     closePopup();
     router.push("/contact");
-  };
-
-  // Desktop entrance variants
-  const desktopVariants: any = {
-    hidden: { scale: 0, opacity: 0, borderRadius: "50%", y: 0 },
-    app1: {
-      scale: [0, 1.1, 1],
-      opacity: [0, 1, 1],
-      borderRadius: ["50%", "50%", "32px"],
-      transition: { duration: 1.2, times: [0, 0.4, 1], ease: [0.16, 1, 0.3, 1] },
-    },
-    app2: {
-      scale: [0.9, 1],
-      opacity: [0, 1],
-      borderRadius: "32px",
-      transition: { duration: 1, ease: "easeOut" },
-    },
-    app3: {
-      scaleY: [0, 0.05, 1],
-      scaleX: [0, 1, 1],
-      opacity: [0, 1, 1],
-      borderRadius: "32px",
-      transition: { duration: 1.2, times: [0, 0.4, 1], ease: [0.16, 1, 0.3, 1] },
-    },
-    exit: {
-      scale: [1, 0.05, 0],
-      opacity: [1, 1, 0],
-      borderRadius: ["32px", "50%", "50%"],
-      y: [0, 0, -100],
-      transition: { duration: 0.8, times: [0, 0.6, 1], ease: "easeInOut" },
-    },
-  };
-
-  // Mobile bottom-sheet variants
-  const mobileVariants: any = {
-    hidden: { y: "100%", opacity: 1 },
-    visible: { y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
-    exit: { y: "100%", transition: { duration: 0.5, ease: "easeIn" } },
   };
 
   const getAnimateVariant = () => {

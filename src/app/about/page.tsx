@@ -58,7 +58,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                 className="block"
               >
-                SOME BRANDS EXIST.
+                SOME BRANDS ARE SEEN.
               </motion.span>
             </span>
             <span className="block overflow-hidden pb-2">
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="block"
               >
-                THE RARE ONES
+                GREAT BRANDS ARE
               </motion.span>
             </span>
             <span className="block overflow-hidden pb-2">
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                 className="block italic font-normal"
               >
-                BURN.
+                REMEMBERED.
               </motion.span>
             </span>
           </h1>
@@ -88,7 +88,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
             className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] mb-8 md:mb-12 max-w-2xl mx-auto"
           >
-            Built from change, forged through challenge, and driven by ambition, PURNOVA helps brands become impossible to ignore.
+            We help businesses build brands people trust, remember, and choose. Through strategy, creativity, and marketing, we turn ambitious ideas into lasting growth.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -112,27 +112,48 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-7 reveal" style={{ transitionDelay: '200ms' }}>
             <div className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] space-y-6 md:space-y-8 whitespace-pre-line">
-              <p>{`Look closely at the night sky.
+              <p>{`Look up.
+Every star you see tonight was born long before you ever noticed it.
+Not in silence.
+But in chaos.
+In unimaginable pressure.
+In violent collisions.
+In the darkness where nothing seemed possible.
 
-The brightest stars are not born from stillness. They are born from collision, pressure, transformation, and the courage to shine despite the darkness around them.
+Only then... did it become light.
 
-PURNOVA was born the same way.
+Brands are born the same way.
+Not from a logo.
+Not from a campaign.
+Not from a viral post.
 
-What appeared to be an ending became the beginning of something stronger—a clearer vision, a sharper purpose, and a relentless commitment to creating work that leaves a mark.
+They are forged in difficult decisions.
+Late nights.
+Risk.
+Reinvention.
+And the relentless belief that ordinary was never the destination.
 
-We believe that every remarkable brand begins with a moment of change. A moment when ordinary is no longer enough. A moment when growth demands reinvention. A moment when ambition refuses to stay hidden.
+The brands people remember aren't always the biggest.
+They're the clearest.
+The bravest.
+The ones that know exactly who they are, even when the world doesn't.
 
-That belief became PURNOVA.
+That's where Purnova begins.
 
-Today, we help businesses transform their potential into presence, their ideas into identity, and their vision into impact.
+We find the gravity hidden inside ambitious businesses.
+We shape their identity.
+Give their story a voice.
+Build experiences that people don't just notice...
+they remember.
 
-We combine strategy, design, storytelling, technology, and performance to create brands that don't simply exist—they endure.
+Because attention fades.
+Algorithms change.
+Trends disappear.
 
-Because in a world crowded with noise, visibility is no longer enough.
-
-Some brands exist.
-
-The rare ones burn.`}</p>
+But brands built on clarity, purpose, and trust become impossible to ignore.
+Like the brightest stars,
+they don't ask for attention.
+They become impossible not to see.`}</p>
             </div>
           </div>
         </div>
@@ -148,7 +169,7 @@ The rare ones burn.`}</p>
             </div>
             <div className="md:col-span-12 reveal">
               <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-4xl">
-                At PURNOVA, we don't see your business as a list of deliverables, campaigns, or projects. We see it as an unfolding legacy. Our role is to uncover the strongest parts of what you've built and amplify them with clarity, creativity, and purpose. Every strategy we develop, every identity we design, every experience we create is built to move your brand from recognition to remembrance. We align vision with execution, creativity with performance, and ambition with measurable growth until your brand occupies a space that competitors cannot replicate.
+                At PURNOVA, we believe every ambitious business already has something worth remembering. Our job is to uncover it, shape it, and help the world see it. Through strategy, branding, marketing, and digital experiences, we turn bold ideas into brands people trust, remember, and choose. Because growth isn't about being louder. It's about becoming unforgettable.
               </p>
             </div>
           </div>
@@ -222,8 +243,8 @@ The rare ones burn.`}</p>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-background)] via-transparent to-[var(--color-background)] z-10"></div>
           <div 
-            className="w-full h-full bg-cover bg-center opacity-30" 
-            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5vTJXSq0rNz9zopdtGv_1ZxdI9z82pghh1UIgWhzQIxyn8CgovDfRgmKyifqrwRdU-5T4sbGohcKt5lBeW-vunVPqTn9u2Xd7Zi_476mnuWxl4CQFjo7Hk8CEBihdSqDnP6hH5qjqkuijRohufpfzTunDQUbcCybpq6gfzaE2yjsQjzkGvfEVr6CUGwI-hXiqJEvM3I0P_AogqaHYxRmQAaSC3cfFV5QOHBBlL2T4-3l24BZ36nsP91FErE5D51uNwKY4wTym7VU')" }}
+            className="w-full h-full bg-cover bg-center opacity-40" 
+            style={{ backgroundImage: "url('/about_manifesto_bg.png')" }}
           ></div>
         </div>
         <div className="relative z-20 px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-5xl mx-auto text-center">

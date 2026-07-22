@@ -5,10 +5,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { value: 50, suffix: "Cr+", label: "Revenue Generated", prefix: "₹" },
-  { value: 120, suffix: "+", label: "Brands Scaled" },
-  { value: 8, label: "Experience", suffix: " Years" },
-  { value: 4.9, suffix: "★", label: "Client Rating", decimals: 1 },
+  { value: 25, suffix: "+", label: "Industries Served" },
+  { value: 150, suffix: "+", label: "Brands Scaled" },
+  { value: 5, label: "Experience", suffix: "+ Years" },
+  { value: 4.6, suffix: "★", label: "Client Rating", decimals: 1 },
 ];
 
 export function Stats() {

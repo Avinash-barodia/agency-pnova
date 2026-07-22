@@ -7,37 +7,31 @@ const services = [
   {
     title: "Performance Marketing",
     slug: "performance-marketing",
-    description: "You're spending ₹50k/month on ads and not sure it's working. We fix that with targeting so precise, every rupee has a job.",
+    description: "Performance isn't about spending more. It's about growing smarter. ",
     icon: "insights",
   },
   {
     title: "Brand Strategy",
     slug: "brand-strategy",
-    description: "Your brand should command 30% more than your competitors. We architect the identity that makes that premium feel obvious  not unjustified.",
+    description: "A great brand isn't just seen. It's remembered.",
     icon: "diamond",
   },
   {
     title: "Social Media",
     slug: "social-media",
-    description: "Curating high-end content and community engagement that transforms followers into loyal brand advocates.",
+    description: "Great content starts conversations. Great brands build communities.",
     icon: "public",
   },
   {
     title: "SEO & Content",
     slug: "seo-and-content",
-    description: "Stop being invisible when buyers search. We put you on page one for the terms that actually close deals.",
+    description: "Be found when your customers are looking for you.",
     icon: "search",
-  },
-  {
-    title: "Paid Ads",
-    slug: "paid-ads",
-    description: "High-stakes advertising management across Meta and Google with a focus on conversion and scale.",
-    icon: "ads_click",
   },
   {
     title: "Web Design",
     slug: "web-design",
-    description: "Crafting bespoke digital experiences that blend aesthetic sophistication with seamless functional precision.",
+    description: "More than a website. A digital experience.",
     icon: "web",
   },
 ];
@@ -48,19 +42,19 @@ export function Services() {
       <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative">
 
         {/* Left Side: Sticky Editorial Header */}
-        <div className="w-full lg:w-1/3 lg:sticky lg:top-40 z-20">
+        <div className="w-full lg:w-1/3 lg:sticky lg:top-24 z-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="font-sans text-[12px] font-bold text-[#D4AF37] uppercase tracking-[0.2em] mb-6 block">Our Expertise</span>
-            <h2 className="font-serif text-[48px] md:text-[64px] lg:text-[72px] font-semibold mb-8 leading-[1.05] text-white tracking-tighter">
-              Mastering the Art of <br className="hidden lg:block" /> Digital Dominance.
+            <span className="font-sans text-[12px] font-bold text-[#D4AF37] uppercase tracking-[0.2em] mb-6 block">OUR EXPERTISE</span>
+            <h2 className="font-serif text-[40px] md:text-[56px] font-semibold mb-6 leading-[1.1] text-white tracking-tighter">
+              Building Brands That Stand Out.
             </h2>
-            <p className="text-white/60 font-sans text-[16px] md:text-[18px] leading-[28px] mb-10 max-w-md">
-              We don't do templates. Every service is a bespoke weapon designed to carve out your market share and build a legacy that outlasts trends.
+            <p className="text-white/60 font-sans text-[16px] leading-[26px] mb-8 max-w-md">
+              We help businesses create stronger brands, better online experiences, and marketing strategies that connect with the right audience and drive meaningful growth.
             </p>
             <Link href="/services" className="group inline-flex items-center gap-4 font-sans text-[12px] font-bold uppercase tracking-[0.2em] text-white hover:text-[#D4AF37] transition-colors duration-300">
               Explore All Services

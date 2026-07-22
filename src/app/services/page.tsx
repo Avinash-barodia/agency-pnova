@@ -10,31 +10,77 @@ import { NavBar } from "@/components/NavBar";
 const servicesData = [
    {
       id: 1,
-      title: "Brand Strategy & Positioning",
-      subtitle: "Purnova — Services",
-      copy: "Where your brand stops competing on features and starts commanding a category.",
-      type: "branding",
+      title: "Performance Marketing",
+      subtitle: "Performance Marketing",
+      copy: "Strategic campaigns that help you reach the right audience, generate quality leads, and grow your business.",
+      type: "marketing",
       details: [
-         "Most brands occupy space. Rare brands occupy minds. We architect the strategic foundation that transforms how your market perceives, values, and chooses you not through surface aesthetics, but through the precise calibration of narrative, positioning logic, and competitive architecture.",
-         <span>We work with ambitious organizations at pivotal inflection points: <strong className="text-white font-medium">pre-launch clarity, market repositioning, acquisition alignment</strong>, or the moment leadership decides that incrementalism is no longer enough. The outcome is a brand that earns its authority before it asks for trust.</span>
-      ],
-      deliverables: [
-         "Competitive Landscape & Whitespace Audit",
-         "Brand Positioning Framework & Core Narrative",
-         "Audience Architecture & Psychographic Mapping",
-         "Messaging Hierarchy & Tone of Voice Guidelines",
-         "Category Design & Owned Vocabulary",
-         "Brand Differentiation Manifesto"
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Multi Platform Campaigns</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">Reach your audience wherever they are.</span>We create connected campaigns across Google, Meta, LinkedIn, YouTube, and more, so every platform works together to build awareness, generate leads, and drive consistent growth.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Landing Pages That Convert</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">Don't just attract visitors. Turn them into customers.</span>We design and optimize landing pages that make it easy for people to take action, improving conversions and getting more value from every marketing campaign.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Smarter Growth Strategies</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">Grow today without losing tomorrow.</span>We focus on attracting customers who bring long term value, helping your business grow sustainably instead of chasing short term wins.</div>
       ]
    },
-   { id: 2, title: "Digital Marketing", subtitle: "Data is the new oil.", copy: "Data-driven acquisition engines engineered for scale, precision, and undeniable ROI.", type: "marketing" },
-   { id: 3, title: "Social Media", subtitle: "Communities, not audiences.", copy: "Transforming passive followers into loyal advocates through hyper-engaged community building.", type: "social" },
-   { id: 4, title: "Video Production", subtitle: "Every frame tells a story.", copy: "Cinematic visual storytelling that commands attention and elevates brand perception.", type: "video" },
-   { id: 5, title: "SEO", subtitle: "Own the digital landscape.", copy: "Dominating search landscapes with technical excellence and editorial-grade authority.", type: "seo" },
-   { id: 6, title: "Content Creation", subtitle: "Convert attention into trust.", copy: "High-value creative assets that articulate your message and convert attention into trust.", type: "content" },
-   { id: 7, title: "Web Development", subtitle: "Architecture meets aesthetics.", copy: "High-performance digital experiences blending aesthetic sophistication with flawless function.", type: "web" },
-   { id: 8, title: "Technology", subtitle: "Infrastructure for scale.", copy: "Scalable infrastructure and automated systems that power modern enterprise growth.", type: "tech" },
-   { id: 9, title: "Consultation", subtitle: "Start with one conversation.", copy: "Executive advisory for founders ready to architect aggressive market expansion.", type: "consulting" },
+   {
+      id: 2,
+      title: "Brand Strategy",
+      subtitle: "Brand Strategy",
+      copy: "A great brand isn't just seen. It's remembered.",
+      type: "branding",
+      details: [
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Brand Positioning</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Find what makes your brand different."</span>Together, we'll define what sets your business apart, giving your customers a clear reason to choose you over everyone else.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Audience Research</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Know who you're talking to."</span>We uncover your audience's needs, challenges, and motivations so every decision speaks directly to the people you want to reach.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Competitor Analysis</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Learn from the market. Stand apart from it."</span>We study your competitors to identify opportunities, uncover gaps, and position your brand where it can truly stand out.</div>,
+         <div key="4"><strong className="text-white block text-[16px] mb-1">04 Brand Messaging</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Say the right thing to the right people."</span>From your brand story to your key messages, we create communication that is clear, consistent, and memorable across every platform.</div>,
+         <div key="5"><strong className="text-white block text-[16px] mb-1">05 Voice & Tone</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Give your brand a personality people recognize."</span>Whether your brand is bold, playful, premium, or approachable, we define a voice that stays consistent across every interaction.</div>,
+         <div key="6"><strong className="text-white block text-[16px] mb-1">06 Visual Identity</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Design with purpose."</span>We create a visual direction that reflects your values, builds trust, and makes your brand instantly recognizable.</div>,
+         <div key="7"><strong className="text-white block text-[16px] mb-1">07 Customer Experience</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Every interaction shapes your brand."</span>From the first click to the final conversation, we help create experiences that feel seamless, memorable, and worth coming back to.</div>,
+         <div key="8"><strong className="text-white block text-[16px] mb-1">08 Growth Strategy</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Build for today. Plan for tomorrow."</span>We develop practical strategies that help your brand grow with clarity, adapt to change, and achieve long term success.</div>
+      ]
+   },
+   {
+      id: 3,
+      title: "Social Media",
+      subtitle: "Social Media",
+      copy: "Social media strategies that build trust, spark engagement, and turn followers into loyal customers.",
+      type: "social",
+      details: [
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Content Strategy & Creation</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Content with purpose, not just presence."</span>We create content that reflects your brand, captures attention, and gives your audience a reason to engage. Every post is planned with strategy, creativity, and consistency.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Community Management</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Conversations build stronger brands."</span>We help you build genuine relationships with your audience through meaningful interactions, active engagement, and a community that keeps coming back.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Creator Collaborations</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Partner with voices your audience already trusts."</span>We connect your brand with creators who genuinely align with your values, helping you reach new audiences through authentic and impactful collaborations.</div>
+      ]
+   },
+   {
+      id: 4,
+      title: "SEO",
+      subtitle: "SEO",
+      copy: "SEO strategies that increase visibility, drive qualified traffic, and deliver long term growth.",
+      type: "seo",
+      details: [
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Technical SEO</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Build a website Google loves."</span>We optimize your website's speed, structure, and technical foundation so search engines can understand it better and customers can find it more easily.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 SEO Content Strategy</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Create content that keeps working for you."</span>We build SEO focused content that answers real customer questions, attracts qualified traffic, and helps your business grow organically over time.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Content That Builds Authority</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Become the trusted voice in your industry."</span>We create valuable articles, guides, and resources that answer customer questions, build trust, and improve your visibility on search engines.</div>
+      ]
+   },
+   {
+      id: 6,
+      title: "Content Creation",
+      subtitle: "Content Creation",
+      copy: "Content that tells your story, builds trust, and gives people a reason to choose your brand.",
+      type: "content",
+      details: []
+   },
+   {
+      id: 5,
+      title: "Web Development",
+      subtitle: "DESIGN MEETS PERFORMANCE.",
+      copy: "Fast, modern websites designed to look great, perform flawlessly, and grow with your business.",
+      type: "web",
+      details: [
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Conversion Focused Design</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Designed with your customers in mind."</span>Every page is crafted to guide visitors naturally, making it easier for them to explore, engage, and take action. Beautiful design means little if it doesn't deliver results.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Fast & Scalable Development</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Built for speed today and growth tomorrow."</span>We build fast, secure, and flexible websites that load quickly, perform reliably, and are ready to grow alongside your business.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Interactive Experiences</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Small details. Big impact."</span>Thoughtful animations and subtle interactions make your website feel more engaging, intuitive, and memorable while creating a smoother experience for every visitor.</div>
+      ]
+   }
 ];
 
 export default function ServicesPage() {
@@ -79,7 +125,7 @@ function DesktopGalleryExperience() {
    const rightDoorX = useTransform(p, [0.06, 0.10], ["0%", "100%"]);
 
    return (
-      <div ref={containerRef} className="h-[1500vh] relative w-full bg-[#050505] text-white">
+      <div ref={containerRef} className="h-[1000vh] relative w-full bg-[#050505] text-white">
          <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
             <NavBar />
 
@@ -92,15 +138,21 @@ function DesktopGalleryExperience() {
                <DesktopExhibit key={svc.id} service={svc} index={i} p={p} onSelect={() => setSelectedExhibit(svc)} />
             ))}
 
-            {/* Final Orbit Experience */}
-            <OrbitExperience p={p} services={servicesData} />
+            {/* Final Tree Experience */}
+            <TreeExperience p={p} />
 
             {/* Final Glowing CTA Layer */}
             <FinalCTALayer p={p} />
 
             {/* Gallery Doors (Cover everything until opened) */}
-            <motion.div style={{ x: leftDoorX }} className="absolute top-0 bottom-0 left-0 w-1/2 bg-[#0B0B0B] z-50 border-r border-[#D4AF37]/20 shadow-[20px_0_50px_rgba(0,0,0,0.8)]"></motion.div>
-            <motion.div style={{ x: rightDoorX }} className="absolute top-0 bottom-0 right-0 w-1/2 bg-[#0B0B0B] z-50 border-l border-[#D4AF37]/20 shadow-[-20px_0_50px_rgba(0,0,0,0.8)]"></motion.div>
+            <motion.div style={{ x: leftDoorX }} className="absolute top-0 bottom-0 left-0 w-1/2 bg-[#0B0B0B] z-50 shadow-[20px_0_50px_rgba(0,0,0,0.8)]">
+               {/* Glowing Line */}
+               <div className="absolute top-0 bottom-0 right-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></div>
+            </motion.div>
+            <motion.div style={{ x: rightDoorX }} className="absolute top-0 bottom-0 right-0 w-1/2 bg-[#0B0B0B] z-50 shadow-[-20px_0_50px_rgba(0,0,0,0.8)]">
+               {/* Glowing Line */}
+               <div className="absolute top-0 bottom-0 left-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></div>
+            </motion.div>
 
             {/* Hero Text (Sits ON TOP of the doors) */}
             <div className="absolute inset-0 z-[60] pointer-events-none flex flex-col items-center justify-center">
@@ -157,8 +209,8 @@ const FinalCTALayer = ({ p }: any) => {
 }
 
 const DesktopExhibit = ({ service, index, p, onSelect }: any) => {
-   const start = 0.10 + index * 0.088;
-   const end = 0.10 + (index + 1) * 0.088;
+   const start = 0.10 + index * 0.13;
+   const end = 0.10 + (index + 1) * 0.13;
 
    // Fade in, hold, fade out
    const opacity = useTransform(p, [start - 0.02, start, end - 0.02, end], [0, 1, 1, 0]);
@@ -239,9 +291,9 @@ const ExhibitModal = ({ service, onClose }: any) => {
                   <div className="flex flex-col gap-8">
                      <div className="flex flex-col gap-4">
                         {service.details.map((text: any, idx: number) => (
-                           <p key={idx} className="font-sans text-[14px] text-[#ADA8A0] leading-[1.85] font-light">
+                           <div key={idx} className="font-sans text-[14px] text-[#ADA8A0] leading-[1.85] font-light">
                               {text}
-                           </p>
+                           </div>
                         ))}
                      </div>
 
@@ -274,9 +326,68 @@ const ExhibitModal = ({ service, onClose }: any) => {
    )
 }
 
-const OrbitExperience = ({ p, services }: any) => {
-   const orbitOpacity = useTransform(p, [0.90, 0.93, 0.96, 0.99], [0, 1, 1, 0]);
-   const orbitScale = useTransform(p, [0.90, 1], [0.85, 1.1]);
+const treeNodes = [
+   // Parents
+   { id: 'strategy', label: 'STRATEGY', x: 50, y: 10, type: 'parent' },
+   { id: 'tech', label: 'TECH', x: 10, y: 30, type: 'parent' },
+   { id: 'marketing', label: 'MARKETING', x: 45, y: 30, type: 'parent' },
+   { id: 'brand', label: 'BRAND', x: 90, y: 30, type: 'parent' },
+   
+   // Leafs
+   { id: 'web', label: 'WEB DEVELOPMENT', x: 10, y: 50, type: 'leaf', icon: 'code' },
+   { id: 'brand-strat', label: <>BRAND STRATEGY<br />& POSITIONING</>, x: 90, y: 50, type: 'leaf', icon: 'my_location' },
+   
+   { id: 'seo', label: 'SEO', x: 25, y: 55, type: 'leaf', icon: 'search' },
+   { id: 'social', label: 'SOCIAL MEDIA', x: 65, y: 55, type: 'leaf', icon: 'chat' },
+   
+   { id: 'content', label: 'CONTENT CREATION', x: 50, y: 72, type: 'leaf', icon: 'edit' },
+   { id: 'video', label: 'VIDEO PRODUCTION', x: 80, y: 72, type: 'leaf', icon: 'play_arrow' },
+];
+
+const treeLines = [
+   // Strategy splits to Tech, Marketing, Brand
+   { x1: "50%", y1: "10%", x2: "50%", y2: "20%" },
+   { x1: "10%", y1: "20%", x2: "90%", y2: "20%" },
+   { x1: "10%", y1: "20%", x2: "10%", y2: "30%" },
+   { x1: "45%", y1: "20%", x2: "45%", y2: "30%" },
+   { x1: "90%", y1: "20%", x2: "90%", y2: "30%" },
+   
+   // Tech -> Web Dev
+   { x1: "10%", y1: "30%", x2: "10%", y2: "50%" },
+   
+   // Marketing splits to SEO, Social Media
+   { x1: "45%", y1: "30%", x2: "45%", y2: "45%" },
+   { x1: "25%", y1: "45%", x2: "65%", y2: "45%" },
+   { x1: "25%", y1: "45%", x2: "25%", y2: "55%" },
+   { x1: "65%", y1: "45%", x2: "65%", y2: "55%" },
+   
+   // Social splits to Content, Video
+   { x1: "65%", y1: "55%", x2: "65%", y2: "65%" },
+   { x1: "50%", y1: "65%", x2: "80%", y2: "65%" },
+   { x1: "50%", y1: "65%", x2: "50%", y2: "72%" },
+   { x1: "80%", y1: "65%", x2: "80%", y2: "72%" },
+
+   // Brand -> Brand Strat
+   { x1: "90%", y1: "30%", x2: "90%", y2: "50%" },
+];
+
+const treeDots = [
+   // Intersections
+   { x: "50%", y: "20%" },
+   { x: "10%", y: "20%" },
+   { x: "45%", y: "20%" },
+   { x: "90%", y: "20%" },
+   { x: "45%", y: "45%" },
+   { x: "25%", y: "45%" },
+   { x: "65%", y: "45%" },
+   { x: "65%", y: "65%" },
+   { x: "50%", y: "65%" },
+   { x: "80%", y: "65%" },
+];
+
+const TreeExperience = ({ p }: any) => {
+   const treeOpacity = useTransform(p, [0.90, 0.93, 0.96, 0.99], [0, 1, 1, 0]);
+   const treeScale = useTransform(p, [0.90, 1], [0.95, 1.05]);
 
    const [isActive, setIsActive] = useState(false);
    const [isRendered, setIsRendered] = useState(false);
@@ -291,52 +402,43 @@ const OrbitExperience = ({ p, services }: any) => {
 
    return (
       <motion.div
-         style={{ opacity: orbitOpacity, scale: orbitScale }}
+         style={{ opacity: treeOpacity, scale: treeScale }}
          className={`absolute inset-0 z-40 flex items-center justify-center ${isActive ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
          <div className="absolute inset-0 bg-[#050505] z-0"></div>
+         
+         {/* Central Ambient Glow */}
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#D4AF37] rounded-full blur-[150px] opacity-10 pointer-events-none z-10"></div>
 
-         {/* Radial Connecting Lines */}
-         <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
-            {services.map((_: any, i: number) => {
-               const angle = i * 40 * (Math.PI / 180);
-               const x2 = `calc(50vw + ${Math.cos(angle) * 35}vw)`;
-               const y2 = `calc(40vh + ${Math.sin(angle) * 35}vh)`;
-               return (
-                  <line key={i} x1="50vw" y1="40vh" x2={x2} y2={y2} stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.2" />
-               )
-            })}
-         </svg>
+         <div className="relative w-full max-w-[1400px] h-[80vh] z-20">
+            {/* SVG Connecting Lines */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none">
+               {treeLines.map((line, i) => (
+                  <line key={i} x1={line.x1} y1={line.y1} x2={line.x2} y2={line.y2} stroke="#D4AF37" strokeWidth="1.5" strokeOpacity="0.4" />
+               ))}
+               {treeDots.map((dot, i) => (
+                  <circle key={i} cx={dot.x} cy={dot.y} r="3.5" fill="#D4AF37" className="drop-shadow-[0_0_8px_rgba(212,175,55,1)]" />
+               ))}
+            </svg>
 
-         {/* Orbiting Mini Cards */}
-         {services.map((svc: any, i: number) => {
-            const angle = i * 40 * (Math.PI / 180);
-            const left = `calc(50vw + ${Math.cos(angle) * 35}vw)`;
-            const top = `calc(40vh + ${Math.sin(angle) * 35}vh)`;
-
-            return (
-               <div key={svc.id} className="absolute w-[140px] h-[200px] md:w-[180px] md:h-[240px] bg-[#111] border border-white/10 rounded-[16px] shadow-xl overflow-hidden z-20 group hover:border-[#D4AF37]/50 transition-colors" style={{ left, top, transform: "translate(-50%, -50%)" }}>
-                  <div className="absolute inset-0 opacity-40 group-hover:opacity-100 transition-opacity">
-                     <ExhibitVisuals type={svc.type} />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4 text-center">
-                     <h4 className="font-serif text-[14px] md:text-[16px] text-white">{svc.title}</h4>
-                  </div>
+            {/* Nodes */}
+            {treeNodes.map((node) => (
+               <div 
+                  key={node.id}
+                  className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center px-5 py-3 md:px-6 md:py-4 bg-[#0A0A0A] border border-[#D4AF37]/40 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.15)] whitespace-nowrap transition-transform duration-300 hover:scale-105 hover:border-[#D4AF37] cursor-pointer group"
+                  style={{ left: node.x + '%', top: node.y + '%' }}
+               >
+                  {node.type === 'parent' ? (
+                     <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#D4AF37] rounded-full mr-3 md:mr-4 shadow-[0_0_12px_rgba(212,175,55,1)] group-hover:shadow-[0_0_20px_rgba(212,175,55,1)] transition-shadow"></div>
+                  ) : (
+                     <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-[#D4AF37]/50 flex items-center justify-center mr-3 md:mr-4 group-hover:border-[#D4AF37] transition-colors">
+                        <span className="material-symbols-outlined text-[#D4AF37] text-[14px] md:text-[16px]">{node.icon}</span>
+                     </div>
+                  )}
+                  <span className="font-sans text-[10px] md:text-[12px] text-white tracking-[0.2em] font-medium uppercase text-left">{node.label}</span>
                </div>
-            )
-         })}
-
-         {/* Center Emblem */}
-         <div className="absolute top-[40vh] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-30">
-            <div className="w-[150px] h-[150px] md:w-[250px] md:h-[250px] bg-[#D4AF37] rounded-full blur-[80px] absolute opacity-30 animate-pulse"></div>
-            <h2 className="font-serif text-[32px] md:text-[48px] lg:text-[64px] max-w-[80vw] lg:max-w-4xl text-center leading-[1.1] text-[#D4AF37] font-bold drop-shadow-[0_0_40px_rgba(212,175,55,0.4)]">
-               Growth Happens When <br className="hidden md:block" /> Everything Works Together.
-            </h2>
+            ))}
          </div>
-
-
-
       </motion.div>
    )
 }
@@ -422,9 +524,9 @@ const MobileExhibit = ({ service, index }: any) => {
                         <div className="pt-6 border-t border-white/10 flex flex-col gap-6">
                            <div className="flex flex-col gap-4">
                               {service.details.map((text: any, idx: number) => (
-                                 <p key={idx} className="font-sans text-[13px] text-[#ADA8A0] leading-[1.7] font-light">
+                                 <div key={idx} className="font-sans text-[13px] text-[#ADA8A0] leading-[1.7] font-light">
                                     {text}
-                                 </p>
+                                 </div>
                               ))}
                            </div>
                            {service.deliverables && (

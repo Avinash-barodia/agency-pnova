@@ -1,199 +1,142 @@
 export const serviceDetails: Record<string, any> = {
   "performance-marketing": {
     title: "Performance Marketing",
-    manifesto: "We don't buy traffic. We buy market share.",
+    manifesto: "Performance isn't about spending more. It's about growing smarter.",
     icon: "insights",
-    philosophy: "In a world obsessed with vanity metrics, we focus exclusively on revenue architecture. Our performance marketing isn't just about managing ad spend; it's about building a predictable, scalable engine that out-competes your rivals in the auction and on the balance sheet.",
+    philosophy: "Performance isn't about spending more. It's about growing smarter.",
     features: [
       {
-        title: "Cross-Channel Architecture",
-        manifesto: "Dominate every touchpoint.",
-        description: "We don't isolate channels. We build interconnected ecosystems where Meta feeds Google, Google feeds Email, and every platform works in unison to drive down acquisition costs and scale revenue predictably."
+        title: "01 Multi Platform Campaigns",
+        manifesto: "Reach your audience wherever they are.",
+        description: "We create connected campaigns across Google, Meta, LinkedIn, YouTube, and more, so every platform works together to build awareness, generate leads, and drive consistent growth."
       },
       {
-        title: "Conversion Optimization",
-        manifesto: "Traffic is a commodity. Conversion is an asset.",
-        description: "We audit and rebuild your landing pages and funnels. By engineering high-converting UI/UX, we ensure that the traffic we acquire actually turns into measurable profit, maximizing the ROI of every campaign."
+        title: "02 Landing Pages That Convert",
+        manifesto: "Don't just attract visitors. Turn them into customers.",
+        description: "We design and optimize landing pages that make it easy for people to take action, improving conversions and getting more value from every marketing campaign."
       },
       {
-        title: "Predictive LTV Modeling",
-        manifesto: "Acquire for tomorrow, not just today.",
-        description: "We shift the focus from immediate ROAS to Lifetime Value. By identifying and targeting cohorts with the highest long-term profitability, we build sustainable growth engines that compound over time."
+        title: "03 Smarter Growth Strategies",
+        manifesto: "Grow today without losing tomorrow.",
+        description: "We focus on attracting customers who bring long term value, helping your business grow sustainably instead of chasing short term wins."
       }
     ]
   },
   "brand-strategy": {
     title: "Brand Strategy",
-    manifesto: "Distinctive brands don't compete. They dictate.",
+    manifesto: "A great brand isn't just seen. It's remembered.",
     icon: "diamond",
-    philosophy: "A brand is the emotional tax people are willing to pay for your product. We architect luxury-grade brand identities that command attention, build irrational loyalty, and create insurmountable moats against your competitors.",
+    philosophy: "A great brand isn't just seen. It's remembered.",
     features: [
       {
-        title: "Brand Positioning",
-        manifesto: "Define what makes you truly unforgettable.",
-        description: "We architect your unique market position, identifying uncontested spaces where your brand doesn't just compete, but dictates the rules of the category."
+        title: "01 Brand Positioning",
+        manifesto: "\"Find what makes your brand different.\"",
+        description: "Together, we'll define what sets your business apart, giving your customers a clear reason to choose you over everyone else."
       },
       {
-        title: "Audience Research",
-        manifesto: "Understand behavior before you influence it.",
-        description: "We dive deep into the psychology of your ideal customers. By mapping their desires, friction points, and market behavior, we ensure your brand speaks directly to their core needs."
+        title: "02 Audience Research",
+        manifesto: "\"Know who you're talking to.\"",
+        description: "We uncover your audience's needs, challenges, and motivations so every decision speaks directly to the people you want to reach."
       },
       {
-        title: "Competitor Analysis",
-        manifesto: "Identify the gaps. Exploit the weaknesses.",
-        description: "We dissect your competitive landscape to find strategic vulnerabilities. We don't just identify opportunities; we build the blueprint for you to systemically outperform them."
+        title: "03 Competitor Analysis",
+        manifesto: "\"Learn from the market. Stand apart from it.\"",
+        description: "We study your competitors to identify opportunities, uncover gaps, and position your brand where it can truly stand out."
       },
       {
-        title: "Brand Messaging",
-        manifesto: "Words that connect, resonate, and convert.",
-        description: "We craft powerful, precision-engineered messaging frameworks that articulate your value proposition instantly, transforming passive observers into irrational brand advocates."
+        title: "04 Brand Messaging",
+        manifesto: "\"Say the right thing to the right people.\"",
+        description: "From your brand story to your key messages, we create communication that is clear, consistent, and memorable across every platform."
       },
       {
-        title: "Voice & Tone",
-        manifesto: "A personality that commands authority.",
-        description: "We build a consistent, deeply recognizable brand personality. Whether playful or deeply sophisticated, we ensure your voice cuts through the noise and builds immediate trust."
+        title: "05 Voice & Tone",
+        manifesto: "\"Give your brand a personality people recognize.\"",
+        description: "Whether your brand is bold, playful, premium, or approachable, we define a voice that stays consistent across every interaction."
       },
       {
-        title: "Identity Direction",
-        manifesto: "Strategic guidance for visual dominance.",
-        description: "Aesthetics must serve strategy. We provide the comprehensive visual direction needed to ensure your design language perfectly mirrors your premium market positioning."
+        title: "06 Visual Identity",
+        manifesto: "\"Design with purpose.\"",
+        description: "We create a visual direction that reflects your values, builds trust, and makes your brand instantly recognizable."
       },
       {
-        title: "Customer Experience",
-        manifesto: "Crafting meaning at every single touchpoint.",
-        description: "A brand is built on interactions. We design frictionless, deeply meaningful customer journeys that elevate perceived value and foster long-term, compounding loyalty."
+        title: "07 Customer Experience",
+        manifesto: "\"Every interaction shapes your brand.\"",
+        description: "From the first click to the final conversation, we help create experiences that feel seamless, memorable, and worth coming back to."
       },
       {
-        title: "Growth Strategy",
-        manifesto: "The ultimate roadmap for long-term dominance.",
-        description: "We don't just plan for next quarter. We architect a comprehensive, multi-year strategic roadmap designed to aggressively scale your brand's market share and equity."
+        title: "08 Growth Strategy",
+        manifesto: "\"Build for today. Plan for tomorrow.\"",
+        description: "We develop practical strategies that help your brand grow with clarity, adapt to change, and achieve long term success."
       }
     ]
   },
   "social-media": {
     title: "Social Media",
-    manifesto: "We transform passive scrollers into irrational advocates.",
+    manifesto: "Great content starts conversations. Great brands build communities.",
     icon: "public",
-    philosophy: "Social media isn't a broadcasting platform; it's a culture engine. We curate high-end, culturally resonant content that inserts your brand into the daily lives of your target audience, fostering deep-rooted community loyalty.",
+    philosophy: "Great content starts conversations. Great brands build communities.",
     features: [
       {
-        title: "Editorial Curation",
-        manifesto: "Content that stops the scroll.",
-        description: "We treat your social feed like a high-end editorial magazine. Every post, reel, and story is meticulously crafted to engage, educate, and elevate your brand's perception in the eyes of your audience."
+        title: "01 Content Strategy & Creation",
+        manifesto: "\"Content with purpose, not just presence.\"",
+        description: "We create content that reflects your brand, captures attention, and gives your audience a reason to engage. Every post is planned with strategy, creativity, and consistency."
       },
       {
-        title: "Community Incubation",
-        manifesto: "From followers to fanatics.",
-        description: "We don't just accumulate followers; we build cult-like communities. Through proactive engagement and exclusive interactions, we turn passive audiences into vocal advocates for your brand."
+        title: "02 Community Management",
+        manifesto: "\"Conversations build stronger brands.\"",
+        description: "We help you build genuine relationships with your audience through meaningful interactions, active engagement, and a community that keeps coming back."
       },
       {
-        title: "Creator Alignment",
-        manifesto: "Leverage authentic influence.",
-        description: "We identify and partner with creators who perfectly embody your brand's ethos. By leveraging their established trust, we authentically introduce your brand to highly engaged, targeted demographics."
+        title: "03 Creator Collaborations",
+        manifesto: "\"Partner with voices your audience already trusts.\"",
+        description: "We connect your brand with creators who genuinely align with your values, helping you reach new audiences through authentic and impactful collaborations."
       }
     ]
   },
   "seo-and-content": {
     title: "SEO & Content",
-    manifesto: "Own the search bar, own the narrative.",
+    manifesto: "Be found when your customers are looking for you.",
     icon: "search",
-    philosophy: "Renting attention through ads is necessary, but owning attention through search is how empires are sustained. We deploy technical wizardry and editorial-grade content to monopolize the search landscapes that matter most to your bottom line.",
+    philosophy: "Be found when your customers are looking for you.",
     features: [
       {
-        title: "Technical Architecture",
-        manifesto: "Built for speed and crawlability.",
-        description: "We audit and overhaul your website's underlying code. By optimizing site speed, mobile responsiveness, and schema markup, we ensure search engines can effortlessly index and rank your pages."
+        title: "01 Technical SEO",
+        manifesto: "\"Build a website Google loves.\"",
+        description: "We optimize your website's speed, structure, and technical foundation so search engines can understand it better and customers can find it more easily."
       },
       {
-        title: "Programmatic Deployment",
-        manifesto: "Scale your organic footprint.",
-        description: "We utilize programmatic SEO to generate thousands of highly relevant, search-optimized landing pages. This strategy allows you to capture long-tail search intent at massive scale without sacrificing quality."
+        title: "02 SEO Content Strategy",
+        manifesto: "\"Create content that keeps working for you.\"",
+        description: "We build SEO focused content that answers real customer questions, attracts qualified traffic, and helps your business grow organically over time."
       },
       {
-        title: "Editorial Hubs",
-        manifesto: "Content that establishes authority.",
-        description: "We build comprehensive content hubs that comprehensively cover your industry's core topics. By producing long-form, high-value editorial content, we establish your brand as the undisputed thought leader."
+        title: "03 Content That Builds Authority",
+        manifesto: "\"Become the trusted voice in your industry.\"",
+        description: "We create valuable articles, guides, and resources that answer customer questions, build trust, and improve your visibility on search engines."
       }
     ]
   },
-  "paid-ads": {
-    title: "Paid Ads",
-    manifesto: "Precision targeting. Disproportionate returns.",
-    icon: "ads_click",
-    philosophy: "We treat every dollar of ad spend as an investment that demands an immediate, measurable return. By leveraging machine learning, elite creative, and ruthless optimization, we turn advertising platforms into your most reliable growth levers.",
-    features: [
-      {
-        title: "Search Ads",
-        manifesto: "Be the answer when the question is asked.",
-        description: "We build Search campaigns that intercept buyers at peak intent. The right keyword, the right message, the right bid structured so every click has a reason to convert and every rupee spent has a measurable destination."
-      },
-      {
-        title: "Performance Max",
-        manifesto: "One campaign. Every channel. Zero wasted reach.",
-        description: "We configure and manage Performance Max campaigns with the asset quality, audience signals, and conversion data that actually make the algorithm work in your favour. Most brands run PMax. Few run it right."
-      },
-      {
-        title: "YouTube Ads",
-        manifesto: "The brands people remember are the ones they've watched.",
-        description: "We create and place YouTube campaigns that build brand recall and drive measurable action. From skippable pre-rolls to non-skippable brand films structured around where your buyer is in the decision, not just where they're scrolling."
-      },
-      {
-        title: "Display Network",
-        manifesto: "Stay visible long after the first impression.",
-        description: "We run Display campaigns that keep your brand in the peripheral vision of the right audience. Precise placements, strong creative, and frequency logic that builds familiarity without burning budget on people who will never buy."
-      },
-      {
-        title: "Shopping Ads",
-        manifesto: "Put your product in front of someone already looking to buy it.",
-        description: "We structure Shopping campaigns that win on visibility, relevance, and margin. Feed optimisation, bidding architecture, and product segmentation that drives qualified traffic not just high click volume that looks good in a report."
-      },
-      {
-        title: "Retargeting",
-        manifesto: "Most buyers don't convert on the first visit. We bring them back.",
-        description: "We build retargeting systems that re-engage warm audiences with the right message at the right stage of their decision. Sequential logic, creative variation, and frequency caps that recover lost revenue without damaging brand perception."
-      },
-      {
-        title: "Conversion Optimisation",
-        manifesto: "Traffic without conversion is just an expensive audience.",
-        description: "We audit and rebuild the conversion layer landing pages, form logic, load speed, trust signals so the traffic you're already paying for starts performing. More conversions from the same budget is the fastest growth lever most businesses ignore."
-      },
-      {
-        title: "Audience Strategy",
-        manifesto: "Who you reach matters more than how many you reach.",
-        description: "We build audience architecture that layers intent, behaviour, and demographics into precise targeting segments. First-party data, Customer Match, and custom intent audiences designed so your ads reach people predisposed to buy, not just people who exist."
-      },
-      {
-        title: "Attribution Setup",
-        manifesto: "You can't optimise what you can't measure accurately.",
-        description: "We build attribution systems that tell you exactly which touchpoints drive revenue not just which ones drive clicks. GA4, Google Tag Manager, conversion tracking, and server-side setup that gives your data integrity and your decisions confidence."
-      },
-      {
-        title: "ROI Reporting",
-        manifesto: "Numbers without context are just noise.",
-        description: "We build reporting frameworks that translate campaign data into business decisions. Not vanity metrics. Not agency scorecards. Clear visibility into cost per acquisition, revenue attribution, and where the next rupee should go."
-      }
-    ]
-  },
+
   "web-design": {
     title: "Web Design",
-    manifesto: "Your digital flagship, engineered for conversion.",
+    manifesto: "More than a website. A digital experience.",
     icon: "web",
-    philosophy: "Your website is your ultimate salesperson, working 24/7. We craft bespoke, high-performance digital experiences that blend aesthetic sophistication with frictionless UI/UX, ensuring every visit is a step towards conversion.",
+    philosophy: "More than a website. A digital experience.",
     features: [
       {
-        title: "Conversion UI/UX",
-        manifesto: "Design that directs behavior.",
-        description: "We design interfaces based on psychological principles and user data. By removing friction and guiding the user journey, we create websites that don't just look beautiful, but actively drive conversions."
+        title: "01 Conversion Focused Design",
+        manifesto: "\"Designed with your customers in mind.\"",
+        description: "Every page is crafted to guide visitors naturally, making it easier for them to explore, engage, and take action. Beautiful design means little if it doesn't deliver results."
       },
       {
-        title: "Headless Architecture",
-        manifesto: "Uncompromising speed and flexibility.",
-        description: "We utilize modern headless CMS architectures to decouple the front-end from the back-end. This results in lightning-fast load times, enhanced security, and the flexibility to scale infinitely without technical debt."
+        title: "02 Fast & Scalable Development",
+        manifesto: "\"Built for speed today and growth tomorrow.\"",
+        description: "We build fast, secure, and flexible websites that load quickly, perform reliably, and are ready to grow alongside your business."
       },
       {
-        title: "Micro-Interactions",
-        manifesto: "The details that define luxury.",
-        description: "We integrate bespoke, subtle animations and micro-interactions throughout the user experience. These tiny details surprise and delight users, elevating the perceived value of your brand significantly."
+        title: "03 Interactive Experiences",
+        manifesto: "\"Small details. Big impact.\"",
+        description: "Thoughtful animations and subtle interactions make your website feel more engaging, intuitive, and memorable while creating a smoother experience for every visitor."
       }
     ]
   }

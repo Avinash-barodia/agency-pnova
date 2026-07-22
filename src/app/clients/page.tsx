@@ -94,21 +94,6 @@ function DesktopClients() {
         </motion.div>
       </section>
 
-      {/* 2. FLOATING CATEGORY SELECTOR */}
-      <div className="sticky top-24 z-40 w-full flex justify-center pointer-events-none mb-12">
-        <div className="pointer-events-auto bg-[#0B0B0B]/80 backdrop-blur-xl border border-white/10 rounded-full px-6 py-4 shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-wrap justify-center max-w-[90%] gap-2">
-          {categories.map(cat => (
-            <button 
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`font-sans text-[12px] uppercase tracking-[0.1em] px-4 py-2 rounded-full transition-all duration-300 ${activeCategory === cat ? 'bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/50 shadow-[0_0_15px_rgba(212,175,55,0.2)]' : 'text-white/40 hover:text-white border border-transparent hover:border-white/10'}`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* 3. MASONRY GALLERY */}
       <section className="relative w-full max-w-[1600px] mx-auto px-[40px] md:px-[80px] pb-32 min-h-[800px]">
         {/* Large screens: 3 columns */}
@@ -167,9 +152,9 @@ function DesktopClients() {
         <div className="relative z-20 text-center flex flex-col items-center max-w-4xl mx-auto px-6">
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
+            whileInView={{ scale: 1, opacity: 0.15 }}
             transition={{ duration: 1.5 }}
-            className="absolute w-[600px] h-[600px] bg-[#D4AF37] rounded-full blur-[150px] opacity-10 pointer-events-none -z-10"
+            className="absolute w-[600px] h-[600px] bg-[#D4AF37] rounded-full blur-[150px] pointer-events-none -z-10"
           />
           <h2 className="font-serif text-[64px] md:text-[100px] leading-[1.1] text-white mb-6">
             Your Brand Could <br/>Be Next.
@@ -383,19 +368,6 @@ function MobileClients() {
           Every logo represents a story.
         </p>
       </section>
-
-      {/* 2. HORIZONTAL CATEGORY CHIPS */}
-      <div className="flex overflow-x-auto gap-3 px-6 pb-6 mb-8 hide-scrollbar">
-        {categories.map(cat => (
-          <button 
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`whitespace-nowrap font-sans text-[10px] uppercase tracking-[0.15em] px-5 py-3 rounded-full border transition-colors ${activeCategory === cat ? 'bg-[#D4AF37]/20 border-[#D4AF37] text-[#D4AF37]' : 'bg-[#111] border-white/10 text-white/50'}`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
 
       {/* 3. SWIPEABLE STORY CARDS STACK */}
       <section className="relative w-full px-6 flex flex-col gap-6 mb-24 z-10">

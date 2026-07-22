@@ -28,17 +28,16 @@ export function Hero() {
         animate="show"
         className="max-w-4xl text-center z-10"
       >
-        <motion.span variants={item} className="font-sans text-[12px] font-bold text-[var(--color-primary)] tracking-[0.3em] block mb-6 uppercase">The Pinnacle of Digital Presence</motion.span>
-        <motion.h1 variants={item} className="font-serif text-[38px] sm:text-[48px] md:text-[72px] mb-8 leading-tight font-bold tracking-[-0.02em]">We Don't Run Campaigns. <br />
-          <span className="text-[var(--color-primary)] italic">We Build <span className="border-b-2 border-[var(--color-primary)]">Empires.</span></span>
+        <motion.span variants={item} className="font-sans text-[12px] font-bold text-[var(--color-primary)] tracking-[0.3em] block mb-6 uppercase">A DIFFERENT APPROACH TO DIGITAL MARKETING</motion.span>
+        <motion.h1 variants={item} className="font-serif text-[32px] sm:text-[40px] md:text-[56px] lg:text-[64px] mb-8 leading-[1.15] font-bold tracking-[-0.02em]">We Don't Just Run Campaigns. <br className="hidden md:block" />
+          <span className="text-[var(--color-primary)] italic">We Build <span className="border-b-2 border-[var(--color-primary)]">Brands.</span></span>
         </motion.h1>
         <motion.div variants={item} className="mb-12 max-w-2xl mx-auto flex flex-col gap-3">
           <span className="font-sans font-bold text-[var(--color-primary)] tracking-[0.2em] text-[13px] md:text-[15px] uppercase">
-            NOT FOR EVERY BRAND.
+            FOR THOSE WHO EXPECT MORE FROM MARKETING.
           </span>
           <p className="font-sans text-[16px] md:text-[20px] text-[var(--color-on-surface-variant)] leading-[26px] md:leading-[32px]">
-            Built exclusively for those who refuse to be ordinary <br className="hidden md:block" />
-            Premium digital marketing for brands destined to lead
+            Helping businesses grow through strategy, content, creativity, and performance marketing.
           </p>
         </motion.div>
         <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-6">

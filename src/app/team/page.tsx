@@ -17,7 +17,7 @@ export default function TeamPage() {
             Meet the Team
           </h1>
           <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] max-w-2xl">
-            Every campaign, every frame, every word — built by these people. We don't just execute; we architect excellence through a synthesis of logic and creativity.
+            Behind every remarkable brand is a room full of thinkers, builders, storytellers, designers, and strategists who obsess over the details no one else sees.
           </p>
         </header>
 
@@ -42,10 +42,10 @@ export default function TeamPage() {
                   Founder & Performance Strategist
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Rushikesh doesn't believe in gut feeling he believes in the decimal point after it. Every campaign is a hypothesis, every rupee a question waiting for proof. He built Purnova on the conviction that creativity without accountability is just decoration, and he's spent years making sure the two never get separated again. The room gets quieter when he starts doing math out loud.
+                  Rushikesh believes every successful brand is built twice, first as a strategy, then as a business. Long before campaigns launch or content goes live, he's already asking the difficult questions that shape lasting growth. He founded Purnova on the belief that creativity earns attention, but strategy earns trust. Everything else is just noise.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
-                  — "Show me the story. Then show me the spreadsheet."
+                  — "Attention gets you noticed. Strategy keeps you remembered."
                 </p>
               </div>
             </div>
@@ -62,13 +62,13 @@ export default function TeamPage() {
               <div className="p-8 flex flex-col flex-grow">
                 <div className="w-12 h-[1px] bg-[var(--color-primary)] mb-6 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:w-full"></div>
                 <h3 className="font-serif text-[32px] leading-[40px] font-semibold text-[var(--color-on-surface)] mb-1 uppercase tracking-tight">
-                  SAURABH BORAWAKEY
+                  SAURABH BORAWKEY
                 </h3>
                 <span className="font-sans text-[12px] leading-[16px] tracking-[0.15em] font-bold text-[var(--color-primary)] mb-6 block uppercase">
                   Digital Growth Manager
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Saurabh has said maybe eight sentences this week, and every one of them moved a number. He's not cold he's economical, the kind of person who has decided that most meetings could've been emails and most emails could've been silence. While others narrate their wins, he's already three steps into the next campaign, letting the dashboard do the bragging he never will.
+                  Saurabh has probably said eight sentences all week, and every one of them moved a number. He's not cold; he's intentional. The kind of person who believes most meetings could've been emails, and most emails could've been silence. While others are busy explaining their wins, he's already building the next campaign, quietly letting the dashboard say everything he doesn't.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
                   — "I don't talk strategy. I deliver it."
@@ -94,7 +94,7 @@ export default function TeamPage() {
                   Brand Architect
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Pallavi runs five conversations, three deadlines, and one brand crisis simultaneously and somehow remembers your dog's name. She calls her mind "wonderfully scattered," the kind of chaos that, in her hands, becomes structure other people can stand on. Clients don't just trust her with their brand; they trust her with the version of it they haven't figured out how to say yet.
+                  Pallavi somehow manages five conversations, three deadlines, and one brand crisis all at once and still remembers your dog's name. She calls her mind "wonderfully scattered," but in her hands, chaos becomes clarity and moving pieces become a plan. Clients don't just trust her with their brand; they trust her with the version they know exists but haven't yet found the words to express.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
                   — "My mind multitasks so your brand doesn't have to."
@@ -120,7 +120,7 @@ export default function TeamPage() {
                   Web Developer
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Avinash hears "that's not technically possible" the way most people hear a dare. He doesn't look for easy builds he looks for the ones with a catch, the ones that make other developers wince. Somewhere between the bug nobody could trace and the deadline nobody believed in, he finds the only kind of satisfaction that matters to him: proof that impossible was just an opinion.
+                  Avinash hears, "That's not technically possible," the way most people hear a dare. He doesn't look for easy builds; he looks for the ones with a catch, the kind that make other developers wince. Somewhere between the bug nobody could trace and the deadline nobody believed in, he finds the only satisfaction that matters to him: proving that impossible was just an opinion.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
                   — "Difficult is just a feature I haven't built yet."
@@ -146,10 +146,10 @@ export default function TeamPage() {
                   Graphic Designer
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  She designs like someone who's read more books than scrolled feeds unhurried, deliberate, allergic to anything that expires with the algorithm. Trends arrive and leave; her work stays exactly where she put it, quietly outlasting them. There's a gentleness to how she handles a brief, the kind that makes clients feel heard before they've finished explaining what they meant.
+                  Rutuja designs as though every brand lends her its voice before she opens the first artboard. She doesn't decorate identities, she uncovers them. Every layout, every colour, every line exists for a reason, until the work feels less like design and more like something that always belonged. Her art isn't made for today. It's made to outlive it.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
-                  — "I design for the years, not the algorithm."
+                  — "I design for the years, not the trends."
                 </p>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function TeamPage() {
                   Web Developer
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Aniket has perfected the art of doing exactly what's needed no more, no drama, no chaos, no missed deadline either. Ask him for ten things and you'll get ten things, on time, without the saga most people attach to getting work done. He jokes that he runs on instructions, but the truth is simpler: he's just allergic to excuses.
+                  Aniket believes reliability is a skill, not a personality trait. He delivers exactly what's needed no shortcuts, no overcomplication, no missed deadlines. Ask him for ten things, and you'll get ten things back, finished when promised. He jokes that he only follows instructions, but what he really follows is discipline. Excuses simply don't fit into his workflow.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
                   — "Tell me the task. I'll skip the drama."
@@ -198,10 +198,10 @@ export default function TeamPage() {
                   Content Architect
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Anushka finds plotlines in places nobody else is looking a half-finished sentence, a product nobody bothered to describe properly, a brand that didn't know it had a voice yet. She doesn't write copy so much as excavate it, turning ordinary briefs into narratives people actually want to finish reading. Her imagination doesn't wander; it works.
+                  Anushka sees stories long before she writes them. In half-finished ideas, overlooked details, and brands still searching for their identity, she finds the narrative waiting to be uncovered. She blends curiosity with strategy, turning ordinary briefs into stories people don't just read they remember. For her, content isn't decoration. It's the voice that gives a brand its place in the world.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
-                  — "Every brand has a story. I just go looking for it."
+                  — "Every brand has a story. I just know where to look."
                 </p>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function TeamPage() {
                   Visual Storyteller
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Tejas doesn't chase the shot—he just happens to be standing there when it arrives. He's the kind of observer who notices the half-second between moments, the one everyone else blinks through. Where other people see a meeting, a street, a product on a table, he sees the beginning of a story that hasn't been told yet, and reaches for the camera right on cue.
+                  Tejas doesn't chase the perfect shot he simply happens to be there when it arrives. He's the kind of observer who notices the half-second between moments, the one everyone else blinks through. Where others see a meeting, a street, or a product on a table, he sees the beginning of a story waiting to be told and instinctively knows when to press record.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
                   — "I don't find the moment. The moment finds me."
@@ -250,7 +250,7 @@ export default function TeamPage() {
                   Video Editor
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Ritesh treats every timeline like it owes someone an emotion. He'll spend an hour on a single cut most people wouldn't notice, because he would. For him, editing isn't assembly it's the difference between a video that plays and one that lingers. He doesn't finish projects so much as pour himself into them, frame by frame, until they feel like something instead of footage.
+                  Ritesh treats every timeline like it owes someone an emotion. He'll spend an hour refining a cut most people would never notice simply because he knows they'll feel it. For him, editing isn't assembly; it's the difference between a video that's watched and one that's remembered. He doesn't finish projects so much as pour himself into them, frame by frame, until every second earns its place.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
                   — "I don't edit videos. I edit feelings into them."
@@ -276,7 +276,7 @@ export default function TeamPage() {
                   Video Editor
                 </span>
                 <p className="font-sans text-[16px] leading-[26px] text-[var(--color-on-surface-variant)] mb-8 flex-grow">
-                  Pratap edits the way he talks straightforward, a little loud, completely unbothered by polish for polish's sake. He's not interested in making things look expensive; he's interested in making them feel true. There's a rawness to his cuts that big-budget gloss can't fake, the kind that comes from someone who grew up watching real stories, not stock footage.
+                  Pratap edits the way he speaks straightforward, a little loud, and completely uninterested in polish for the sake of polish. He's not trying to make things look expensive; he's trying to make them feel real. There's a rawness to his cuts that no amount of big-budget gloss can fake, the kind that comes from someone who grew up watching stories, not stock footage.
                 </p>
                 <p className="font-serif italic text-[18px] text-[var(--color-primary)]">
                   — "Keep it real, or don't keep it at all."
