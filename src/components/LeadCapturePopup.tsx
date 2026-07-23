@@ -94,32 +94,30 @@ const AnimatedOrb = () => {
 
 // --- VARIANTS (Moved outside component for stable references) ---
 const desktopVariants: any = {
-  hidden: { scale: 0, opacity: 0, borderRadius: "50%", y: 0 },
+  hidden: { scale: 0.95, opacity: 0, borderRadius: "32px", y: 20 },
   app1: {
-    scale: [0, 1.1, 1],
-    opacity: [0, 1, 1],
-    borderRadius: ["50%", "50%", "32px"],
-    transition: { duration: 1.2, times: [0, 0.4, 1], ease: [0.16, 1, 0.3, 1] },
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" },
   },
   app2: {
-    scale: [0.9, 1],
-    opacity: [0, 1],
-    borderRadius: "32px",
-    transition: { duration: 1, ease: "easeOut" },
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" },
   },
   app3: {
-    scaleY: [0, 0.05, 1],
-    scaleX: [0, 1, 1],
-    opacity: [0, 1, 1],
-    borderRadius: "32px",
-    transition: { duration: 1.2, times: [0, 0.4, 1], ease: [0.16, 1, 0.3, 1] },
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" },
   },
   exit: {
-    scale: [1, 0.05, 0],
-    opacity: [1, 1, 0],
-    borderRadius: ["32px", "50%", "50%"],
-    y: [0, 0, -100],
-    transition: { duration: 0.8, times: [0, 0.6, 1], ease: "easeInOut" },
+    scale: 0.95,
+    opacity: 0,
+    y: 20,
+    transition: { duration: 0.3, ease: "easeIn" },
   },
 };
 
