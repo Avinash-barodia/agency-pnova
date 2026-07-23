@@ -38,7 +38,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 md:py-40 px-6 md:px-[80px] max-w-[1440px] mx-auto relative z-10 bg-[var(--color-background)]">
+    <section id="services" className="pt-8 pb-24 md:pt-16 md:pb-40 px-6 md:px-12 lg:px-[80px] max-w-[1440px] mx-auto relative z-10 bg-[var(--color-background)]">
       <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative">
 
         {/* Left Side: Sticky Editorial Header */}
@@ -50,7 +50,7 @@ export function Services() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="font-sans text-[12px] font-bold text-[#D4AF37] uppercase tracking-[0.2em] mb-6 block">OUR EXPERTISE</span>
-            <h2 className="font-serif text-[40px] md:text-[56px] font-semibold mb-6 leading-[1.1] text-white tracking-tighter">
+            <h2 className="font-serif text-[40px] md:text-[48px] lg:text-[56px] font-semibold mb-6 leading-[1.1] text-white tracking-tighter">
               Building Brands That Stand Out.
             </h2>
             <p className="text-white/60 font-sans text-[16px] leading-[26px] mb-8 max-w-md">
@@ -67,7 +67,7 @@ export function Services() {
         <div className="w-full lg:w-2/3 flex flex-col gap-6 md:gap-12 relative pb-[10vh]">
           {services.map((service, index) => {
             // CSS Sticky creates the magical overlapping deck of cards effect natively
-            const stickyTop = `calc(15vh + ${index * 40}px)`;
+            const stickyTop = `calc(10vh + ${index * 40}px)`;
 
             return (
               <motion.div
@@ -76,7 +76,7 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-                className="sticky w-full h-[450px] md:h-[500px] rounded-[40px] p-8 md:p-14 flex flex-col justify-between border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)] overflow-hidden group"
+                className="sticky w-full h-auto min-h-[350px] md:min-h-[400px] rounded-[40px] p-8 md:p-14 flex flex-col justify-between border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)] overflow-hidden group"
                 style={{
                   top: stickyTop,
                   backgroundColor: '#0A0A0A',
@@ -101,10 +101,10 @@ export function Services() {
 
                 {/* Card Content (Title + Description) */}
                 <div className="relative z-10 max-w-xl mt-auto">
-                  <h3 className="font-serif text-[32px] md:text-[48px] font-semibold mb-4 leading-tight text-white group-hover:text-[#D4AF37] transition-colors duration-500">
+                  <h3 className="font-serif text-[32px] md:text-[36px] lg:text-[48px] font-semibold mb-4 leading-tight text-white group-hover:text-[#D4AF37] transition-colors duration-500">
                     {service.title}
                   </h3>
-                  <p className="text-white/60 font-sans text-[16px] md:text-[20px] leading-[30px] md:leading-[34px] mb-8">
+                  <p className="text-white/60 font-sans text-[16px] md:text-[20px] leading-[30px] md:leading-[34px] mb-6">
                     {service.description}
                   </p>
                   <Link href={`/services/${service.slug}`}>

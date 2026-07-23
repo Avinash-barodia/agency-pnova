@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -19,14 +19,20 @@ export function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLogoHovered, setIsLogoHovered] = useState(false);
   const pathname = usePathname();
+  const lastScrollYRef = useRef(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0;
-    if (latest > previous && latest > 100) {
-      setHidden(true);
-    } else {
-      setHidden(false);
+    const previous = lastScrollYRef.current;
+    
+    if (latest <= 0) {
+      setHidden(false); // Always show at the very top (handles macOS bounce)
+    } else if (latest > previous && latest > 100) {
+      setHidden(true); // Scrolling down
+    } else if (latest < previous) {
+      setHidden(false); // Scrolling up
     }
+    
+    lastScrollYRef.current = latest;
   });
 
   return (
@@ -64,11 +70,11 @@ export function NavBar() {
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className={`fixed top-0 w-full z-50 transition-colors duration-700 border-b ${isLogoHovered
-            ? "bg-transparent border-transparent backdrop-blur-none"
-            : "bg-[var(--color-background)]/95 backdrop-blur-md border-[var(--color-surface-container-highest)]"
+          ? "bg-transparent border-transparent backdrop-blur-none"
+          : "bg-[var(--color-background)]/95 backdrop-blur-md border-[var(--color-surface-container-highest)]"
           }`}
       >
-        <div className="flex justify-between items-center w-full px-6 md:px-[80px] max-w-[1440px] mx-auto pt-8 pb-4 md:pt-12 md:pb-5">
+        <div className="flex justify-between items-center w-full px-6 md:px-12 lg:px-[80px] max-w-[1440px] mx-auto pt-4 pb-4 md:pt-8 md:pb-3">
           <Link
             href="/"
             className="text-[24px] md:text-[32px] font-serif font-bold text-[var(--color-primary)] tracking-tighter uppercase relative"
@@ -77,7 +83,7 @@ export function NavBar() {
           >
             Purnova
           </Link>
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-6 lg:gap-10">
             {navLinks.map((link) => {
               const isActive = link.href !== "#" && pathname.startsWith(link.href);
               return (

@@ -29,14 +29,14 @@ export function LogoBanner() {
   ];
 
   return (
-    <section className="py-16 luxury-border border-x-0 bg-[var(--color-surface-container-lowest)] overflow-hidden">
+    <section className="py-8 luxury-border border-x-0 bg-[var(--color-surface-container-lowest)] overflow-hidden">
       <style>{`
         .marquee-track { animation: marquee 100s linear infinite; }
         .marquee-track:hover { animation-play-state: paused; }
         @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
       `}</style>
 
-      <div className="text-center mb-10">
+      <div className="text-center mb-6">
         <span className="font-sans text-[12px] font-bold text-[var(--color-on-surface-variant)] uppercase tracking-[0.15em]">Trusted by ambitious brands</span>
       </div>
 

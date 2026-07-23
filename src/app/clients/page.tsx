@@ -84,8 +84,32 @@ function DesktopClients() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-center z-10 pointer-events-none"
         >
-          <h1 className="font-serif text-[64px] md:text-[96px] lg:text-[120px] font-bold text-white mb-6 leading-[0.9] tracking-tighter">
-            The Brands Behind <br/>The Growth.
+          <h1 className="font-serif text-[64px] md:text-[96px] lg:text-[120px] font-bold text-white mb-6 leading-[0.9] tracking-tighter flex flex-wrap justify-center md:block">
+            {["The", "Brands", "Behind"].map((word, i) => (
+              <span key={i} className="inline-block overflow-hidden mr-3 md:mr-6 pb-2">
+                 <motion.span 
+                    initial={{ y: "-110%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 + (i * 0.1) }}
+                    className="inline-block"
+                 >
+                    {word}
+                 </motion.span>
+              </span>
+            ))}
+            <br className="hidden md:block"/>
+            {["The", "Growth."].map((word, i) => (
+              <span key={i + 3} className="inline-block overflow-hidden mr-3 md:mr-6 pb-2">
+                 <motion.span 
+                    initial={{ y: "-110%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 + ((i + 3) * 0.1) }}
+                    className="inline-block"
+                 >
+                    {word}
+                 </motion.span>
+              </span>
+            ))}
           </h1>
           <p className="font-sans text-[18px] md:text-[24px] text-[#D4AF37] italic max-w-2xl mx-auto">
             Every logo represents a story.<br/>
@@ -145,18 +169,10 @@ function DesktopClients() {
 
 
 
-      {/* 6. FINAL ECOSYSTEM & CTA */}
-      <section className="relative w-full h-[120vh] flex flex-col items-center justify-end overflow-hidden pt-40 pb-32">
-        <EcosystemAssembly />
-        
+      {/* 6. FINAL CTA */}
+      <section className="relative w-full flex flex-col items-center justify-center overflow-hidden py-32 md:py-48">
         <div className="relative z-20 text-center flex flex-col items-center max-w-4xl mx-auto px-6">
-          <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 0.15 }}
-            transition={{ duration: 1.5 }}
-            className="absolute w-[600px] h-[600px] bg-[#D4AF37] rounded-full blur-[150px] pointer-events-none -z-10"
-          />
-          <h2 className="font-serif text-[64px] md:text-[100px] leading-[1.1] text-white mb-6">
+          <h2 className="font-serif text-[36px] sm:text-[48px] md:text-[56px] lg:text-[72px] xl:text-[80px] leading-[1.1] text-white mb-6">
             Your Brand Could <br/>Be Next.
           </h2>
           <p className="font-sans text-[20px] md:text-[24px] text-white/40 italic mb-16">
@@ -338,7 +354,6 @@ function EcosystemAssembly() {
         {clients.slice(0, 15).map((c, i) => (
           <div key={i} className="absolute flex flex-col items-center" style={{ left: 400 + Math.cos(i*24) * 300, top: 400 + Math.sin(i*24) * 300 }}>
              <div className="w-3 h-3 bg-[#D4AF37] rounded-full mb-2 shadow-[0_0_15px_#D4AF37]"></div>
-             <span className="text-[10px] uppercase text-[#D4AF37]/50 tracking-widest">{c.name}</span>
           </div>
         ))}
       </motion.div>
@@ -361,8 +376,32 @@ function MobileClients() {
       
       {/* 1. MOBILE HERO */}
       <section className="px-6 mb-12 text-center relative z-10">
-        <h1 className="font-serif text-[48px] font-bold text-white mb-4 leading-[0.9] tracking-tighter">
-          The Brands Behind <br/>The Growth.
+        <h1 className="font-serif text-[48px] font-bold text-white mb-4 leading-[0.9] tracking-tighter flex flex-wrap justify-center">
+            {["The", "Brands", "Behind"].map((word, i) => (
+              <span key={i} className="inline-block overflow-hidden mr-2 pb-1">
+                 <motion.span 
+                    initial={{ y: "-110%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 + (i * 0.1) }}
+                    className="inline-block"
+                 >
+                    {word}
+                 </motion.span>
+              </span>
+            ))}
+            <div className="w-full h-0"></div>
+            {["The", "Growth."].map((word, i) => (
+              <span key={i + 3} className="inline-block overflow-hidden mr-2 pb-1">
+                 <motion.span 
+                    initial={{ y: "-110%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 + ((i + 3) * 0.1) }}
+                    className="inline-block"
+                 >
+                    {word}
+                 </motion.span>
+              </span>
+            ))}
         </h1>
         <p className="font-sans text-[14px] text-[#D4AF37] italic mb-6">
           Every logo represents a story.

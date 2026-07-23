@@ -123,6 +123,7 @@ function DesktopGalleryExperience() {
    // Gallery Doors
    const leftDoorX = useTransform(p, [0.06, 0.10], ["0%", "-100%"]);
    const rightDoorX = useTransform(p, [0.06, 0.10], ["0%", "100%"]);
+   const lineOpacity = useTransform(p, [0, 0.06], [0, 1]);
 
    return (
       <div ref={containerRef} className="h-[1000vh] relative w-full bg-[#050505] text-white">
@@ -147,11 +148,13 @@ function DesktopGalleryExperience() {
             {/* Gallery Doors (Cover everything until opened) */}
             <motion.div style={{ x: leftDoorX }} className="absolute top-0 bottom-0 left-0 w-1/2 bg-[#0B0B0B] z-50 shadow-[20px_0_50px_rgba(0,0,0,0.8)]">
                {/* Glowing Line */}
-               <div className="absolute top-0 bottom-0 right-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></div>
+               <div className="absolute top-0 bottom-0 right-0 w-[2px] bg-black"></div>
+               <motion.div style={{ opacity: lineOpacity }} className="absolute top-0 bottom-0 right-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></motion.div>
             </motion.div>
             <motion.div style={{ x: rightDoorX }} className="absolute top-0 bottom-0 right-0 w-1/2 bg-[#0B0B0B] z-50 shadow-[-20px_0_50px_rgba(0,0,0,0.8)]">
                {/* Glowing Line */}
-               <div className="absolute top-0 bottom-0 left-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></div>
+               <div className="absolute top-0 bottom-0 left-0 w-[2px] bg-black"></div>
+               <motion.div style={{ opacity: lineOpacity }} className="absolute top-0 bottom-0 left-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></motion.div>
             </motion.div>
 
             {/* Hero Text (Sits ON TOP of the doors) */}

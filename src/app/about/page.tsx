@@ -41,7 +41,7 @@ export default function AboutPage() {
           <WebGLBackground />
         </div>
         
-        <div className="relative z-10 text-center px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-7xl w-full mt-24 md:mt-32">
+        <div className="relative z-10 text-center px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-7xl w-full">
           <motion.span 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <h1 className="font-display-lg text-[36px] sm:text-[48px] md:text-[72px] leading-[1.1] md:leading-[80px] tracking-[-0.02em] font-bold text-white mb-6 md:mb-8">
             <span className="block overflow-hidden pb-2">
               <motion.span 
-                initial={{ y: "110%" }}
+                initial={{ y: "-110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                 className="block"
@@ -63,7 +63,7 @@ export default function AboutPage() {
             </span>
             <span className="block overflow-hidden pb-2">
               <motion.span 
-                initial={{ y: "110%" }}
+                initial={{ y: "-110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="block"
@@ -73,7 +73,7 @@ export default function AboutPage() {
             </span>
             <span className="block overflow-hidden pb-2">
               <motion.span 
-                initial={{ y: "110%" }}
+                initial={{ y: "-110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                 className="block italic font-normal"
