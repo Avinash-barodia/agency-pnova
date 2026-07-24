@@ -53,7 +53,7 @@ export default function ClientsPage() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  if (isMobile === null) return <div className="min-h-screen bg-[#0B0B0B]" />;
+  if (isMobile === null) return <div className="min-h-screen bg-[#0A0A0A]" />;
 
   return (
     <>
@@ -72,7 +72,7 @@ function DesktopClients() {
   const filteredClients = clients.filter(c => activeCategory === "All" || c.category === activeCategory);
 
   return (
-    <main className="bg-[#0B0B0B] text-white selection:bg-[#D4AF37] selection:text-black w-full overflow-hidden">
+    <main className="bg-[#0A0A0A] text-white selection:bg-[#C9A84C] selection:text-black w-full overflow-hidden">
       
       {/* 1. HERO & LIVING CONSTELLATION */}
       <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden pt-20">
@@ -111,7 +111,7 @@ function DesktopClients() {
               </span>
             ))}
           </h1>
-          <p className="font-sans text-[18px] md:text-[24px] text-[#D4AF37] italic max-w-2xl mx-auto">
+          <p className="font-sans text-[18px] md:text-[24px] text-[#C9A84C] italic max-w-2xl mx-auto">
             Every logo represents a story.<br/>
             Every story represents trust.
           </p>
@@ -148,7 +148,7 @@ function DesktopClients() {
       </section>
 
       {/* 4. SOCIAL PROOF STRIP */}
-      <section className="w-full py-10 bg-[#D4AF37] overflow-hidden rotate-[-1deg] scale-105 my-20 shadow-[0_0_50px_rgba(212,175,55,0.2)] flex">
+      <section className="w-full py-10 bg-[#C9A84C] overflow-hidden rotate-[-1deg] scale-105 my-20 shadow-[0_0_50px_rgba(212,175,55,0.2)] flex">
         <motion.div 
           className="flex whitespace-nowrap w-fit"
           animate={{ x: ["0%", "-50%"] }}
@@ -179,7 +179,7 @@ function DesktopClients() {
             The strongest brands grow together.
           </p>
           <Link href="/contact">
-            <button className="group relative bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] font-sans text-[16px] font-bold uppercase tracking-[0.2em] px-16 h-[72px] rounded-full overflow-hidden transition-colors hover:bg-[#D4AF37] hover:text-black">
+            <button className="group relative bg-transparent border-2 border-[#C9A84C] text-[#C9A84C] font-sans text-[16px] font-bold uppercase tracking-[0.2em] px-16 h-[72px] overflow-hidden transition-colors hover:bg-[#C9A84C] hover:text-black">
               <span className="relative z-10">Start The Conversation</span>
             </button>
           </Link>
@@ -211,18 +211,18 @@ function LivingConstellation() {
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
         {nodes.map((n1, i) => 
           nodes.slice(i + 1, i + 3).map((n2, j) => (
-            <line key={`${i}-${j}`} x1={`${n1.x}%`} y1={`${n1.y}%`} x2={`${n2.x}%`} y2={`${n2.y}%`} stroke="#D4AF37" strokeWidth="0.5" />
+            <line key={`${i}-${j}`} x1={`${n1.x}%`} y1={`${n1.y}%`} x2={`${n2.x}%`} y2={`${n2.y}%`} stroke="#C9A84C" strokeWidth="0.5" />
           ))
         )}
       </svg>
       {nodes.map((node, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-[#D4AF37] rounded-full"
+          className="absolute w-2 h-2 bg-[#C9A84C] rounded-full"
           style={{ left: `${node.x}%`, top: `${node.y}%` }}
           animate={{ y: [0, Math.random() * 20 - 10, 0], opacity: [0.2, 0.8, 0.2] }}
           transition={{ duration: 4 + Math.random() * 3, repeat: Infinity, ease: "easeInOut" }}
-          whileHover={{ scale: 3, boxShadow: "0 0 20px #D4AF37" }}
+          whileHover={{ scale: 3, boxShadow: "0 0 20px #C9A84C" }}
         />
       ))}
     </div>
@@ -247,7 +247,7 @@ function MasonryTile({ client }: { client: any }) {
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.5 }}
       onClick={() => setExpanded(!expanded)}
-      className="relative overflow-hidden bg-[#111] rounded-[24px] cursor-pointer group hover:-translate-y-2 transition-transform duration-500 border border-transparent hover:border-[#D4AF37]/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)]"
+      className="relative overflow-hidden bg-[#0A0A0A] rounded-[24px] cursor-pointer group hover:-translate-y-2 transition-transform duration-500 border border-transparent hover:border-[#C9A84C]/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)]"
     >
       {/* TILE FRONT */}
       <motion.div layout className={`relative w-full ${getHeight()} flex flex-col justify-between p-8`}>
@@ -256,7 +256,7 @@ function MasonryTile({ client }: { client: any }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
             {/* Visual Image Placeholder */}
             <div className="absolute inset-0 bg-[#1A1A1A]">
-               <div className="w-full h-full bg-[#D4AF37]/5 mix-blend-overlay"></div>
+               <div className="w-full h-full bg-[#C9A84C]/5 mix-blend-overlay"></div>
             </div>
           </>
         )}
@@ -275,20 +275,20 @@ function MasonryTile({ client }: { client: any }) {
 
         <div className="relative z-20 flex justify-between items-start">
           {client.type === 'C' ? (
-             <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#8A7320] flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+             <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#C9A84C] to-[#8A7320] flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)]">
                <span className="font-serif text-[24px] text-black">{client.name.charAt(0)}</span>
              </div>
           ) : (
              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-               <span className="material-symbols-outlined text-[18px] text-[#D4AF37]">camera_alt</span>
+               <span className="material-symbols-outlined text-[18px] text-[#C9A84C]">camera_alt</span>
              </div>
           )}
-          <span className="material-symbols-outlined text-[20px] text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-500">north_east</span>
+          <span className="material-symbols-outlined text-[20px] text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity duration-500">north_east</span>
         </div>
 
         <div className="relative z-20 mt-auto">
           <h3 className={`font-serif text-white mb-2 ${client.type === 'B' ? 'text-[40px] leading-none' : 'text-[28px]'}`}>{client.name}</h3>
-          <p className="font-sans text-[12px] uppercase tracking-widest text-[#D4AF37]">{client.handle}</p>
+          <p className="font-sans text-[12px] uppercase tracking-widest text-[#C9A84C]">{client.handle}</p>
         </div>
       </motion.div>
 
@@ -304,7 +304,7 @@ function MasonryTile({ client }: { client: any }) {
           >
             <div className="p-8">
               <div className="flex items-center gap-4 mb-8">
-                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-transparent flex items-center justify-center">
+                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C9A84C] to-transparent flex items-center justify-center">
                    <span className="font-serif text-[18px] text-white">{client.name.charAt(0)}</span>
                  </div>
                 <div>
@@ -317,13 +317,13 @@ function MasonryTile({ client }: { client: any }) {
               <div className="grid grid-cols-3 gap-2 mb-8">
                 {[1,2,3,4,5,6].map(i => (
                   <div key={i} className="aspect-square bg-[#222] rounded-md overflow-hidden relative">
-                    <div className="absolute inset-0 bg-[#D4AF37] opacity-0 hover:opacity-20 transition-opacity cursor-pointer"></div>
+                    <div className="absolute inset-0 bg-[#C9A84C] opacity-0 hover:opacity-20 transition-opacity cursor-pointer"></div>
                   </div>
                 ))}
               </div>
 
               <Link href={client.instagramUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
-                <button className="w-full bg-[#D4AF37]/10 text-[#D4AF37] font-sans text-[12px] font-bold uppercase tracking-[0.2em] py-4 rounded-[12px] hover:bg-[#D4AF37] hover:text-black transition-colors">
+                <button className="w-full bg-[#C9A84C]/10 text-[#C9A84C] font-sans text-[12px] font-bold uppercase tracking-[0.2em] py-4 hover:bg-[#C9A84C] hover:text-black transition-colors">
                   Visit Instagram
                 </button>
               </Link>
@@ -348,12 +348,12 @@ function EcosystemAssembly() {
       <motion.div style={{ scale, opacity }} className="relative w-[800px] h-[800px]">
         <svg className="absolute inset-0 w-full h-full">
            {clients.slice(0, 15).map((_, i) => (
-             <line key={i} x1="400" y1="400" x2={400 + Math.cos(i*24) * 300} y2={400 + Math.sin(i*24) * 300} stroke="#D4AF37" strokeWidth="0.5" strokeOpacity="0.2" />
+             <line key={i} x1="400" y1="400" x2={400 + Math.cos(i*24) * 300} y2={400 + Math.sin(i*24) * 300} stroke="#C9A84C" strokeWidth="0.5" strokeOpacity="0.2" />
            ))}
         </svg>
         {clients.slice(0, 15).map((c, i) => (
           <div key={i} className="absolute flex flex-col items-center" style={{ left: 400 + Math.cos(i*24) * 300, top: 400 + Math.sin(i*24) * 300 }}>
-             <div className="w-3 h-3 bg-[#D4AF37] rounded-full mb-2 shadow-[0_0_15px_#D4AF37]"></div>
+             <div className="w-3 h-3 bg-[#C9A84C] rounded-full mb-2 shadow-[0_0_15px_#C9A84C]"></div>
           </div>
         ))}
       </motion.div>
@@ -372,7 +372,7 @@ function MobileClients() {
   const [expandedClient, setExpandedClient] = useState<any>(null);
 
   return (
-    <main className="bg-[#0B0B0B] text-white w-full overflow-hidden pt-24 min-h-screen">
+    <main className="bg-[#0A0A0A] text-white w-full overflow-hidden pt-24 min-h-screen">
       
       {/* 1. MOBILE HERO */}
       <section className="px-6 mb-12 text-center relative z-10">
@@ -403,7 +403,7 @@ function MobileClients() {
               </span>
             ))}
         </h1>
-        <p className="font-sans text-[14px] text-[#D4AF37] italic mb-6">
+        <p className="font-sans text-[14px] text-[#C9A84C] italic mb-6">
           Every logo represents a story.
         </p>
       </section>
@@ -418,7 +418,7 @@ function MobileClients() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="relative w-full h-[400px] bg-[#111] rounded-[24px] overflow-hidden border border-white/5 shadow-2xl flex flex-col justify-end p-6"
+              className="relative w-full h-[400px] bg-[#0A0A0A] rounded-[24px] overflow-hidden border border-white/5 shadow-2xl flex flex-col justify-end p-6"
               onClick={() => setExpandedClient(client)}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
@@ -434,10 +434,10 @@ function MobileClients() {
               <div className="relative z-20 flex justify-between items-end">
                 <div>
                   <h3 className="font-serif text-[32px] text-white leading-none mb-2">{client.name}</h3>
-                  <p className="font-sans text-[12px] uppercase tracking-widest text-[#D4AF37]">{client.handle}</p>
+                  <p className="font-sans text-[12px] uppercase tracking-widest text-[#C9A84C]">{client.handle}</p>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md">
-                  <span className="material-symbols-outlined text-[18px] text-[#D4AF37]">keyboard_arrow_up</span>
+                  <span className="material-symbols-outlined text-[18px] text-[#C9A84C]">keyboard_arrow_up</span>
                 </div>
               </div>
             </motion.div>
@@ -468,12 +468,12 @@ function MobileClients() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D4AF37] to-transparent flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#C9A84C] to-transparent flex items-center justify-center">
                     <span className="font-serif text-[24px] text-white">{expandedClient.name.charAt(0)}</span>
                   </div>
                   <div>
                     <h3 className="font-serif text-[28px] text-white leading-none mb-1">{expandedClient.name}</h3>
-                    <p className="font-sans text-[12px] uppercase tracking-widest text-[#D4AF37]">{expandedClient.handle}</p>
+                    <p className="font-sans text-[12px] uppercase tracking-widest text-[#C9A84C]">{expandedClient.handle}</p>
                   </div>
                 </div>
 
@@ -488,7 +488,7 @@ function MobileClients() {
                 </div>
 
                 <Link href={expandedClient.instagramUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
-                  <button className="w-full bg-[#D4AF37] text-black font-sans text-[14px] font-bold uppercase tracking-[0.2em] py-5 rounded-[16px] shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                  <button className="w-full bg-[#C9A84C] text-black font-sans text-[14px] font-bold uppercase tracking-[0.2em] py-5 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
                     Visit Instagram
                   </button>
                 </Link>
@@ -504,7 +504,7 @@ function MobileClients() {
           Your Brand Could <br/>Be Next.
         </h2>
         <Link href="/contact">
-          <button className="w-full bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] font-sans text-[14px] font-bold uppercase tracking-[0.2em] py-5 rounded-full mt-6 active:bg-[#D4AF37] active:text-black transition-colors">
+          <button className="w-full bg-transparent border-2 border-[#C9A84C] text-[#C9A84C] font-sans text-[14px] font-bold uppercase tracking-[0.2em] py-5 mt-6 active:bg-[#C9A84C] active:text-black transition-colors">
             Start The Conversation
           </button>
         </Link>

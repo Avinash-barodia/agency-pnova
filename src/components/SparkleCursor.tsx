@@ -102,7 +102,7 @@ export function SparkleCursor() {
             }}
           >
             {/* 4-point sparkle star SVG */}
-            <svg viewBox="0 0 100 100" className="w-full h-full fill-[#D4AF37]">
+            <svg viewBox="0 0 100 100" className="w-full h-full fill-[#C9A84C]">
               <path d="M50 0 C50 30 70 50 100 50 C70 50 50 70 50 100 C50 70 30 50 0 50 C30 50 50 30 50 0 Z" />
             </svg>
           </motion.div>

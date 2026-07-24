@@ -69,7 +69,7 @@ void main() {
         particles += brightness * (0.2 + 0.2 * sin(t * 1.5));
     }
     
-    vec3 gold = vec3(0.83, 0.69, 0.22); // #D4AF37
+    vec3 gold = vec3(0.83, 0.69, 0.22); // #C9A84C
     color += particles * gold * 0.6;
     
     // Vignette

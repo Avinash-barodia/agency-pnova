@@ -48,7 +48,7 @@ export function LogoBanner() {
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[32px] font-serif font-bold text-white/50 hover:text-[#D4AF37] transition-colors duration-500 italic uppercase tracking-tighter shrink-0 cursor-pointer"
+              className="text-[32px] font-serif font-bold text-white/50 hover:text-[#C9A84C] transition-colors duration-500 italic uppercase tracking-tighter shrink-0 cursor-pointer"
             >
               {logo.name}
             </Link>

@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
   const containerOpacity = useTransform(scrollY, [200, 500], [1, 0]);
 
   return (
-    <main className="flex min-h-screen flex-col bg-[#0B0B0B] text-white">
+    <main className="flex min-h-screen flex-col bg-[#0A0A0A] text-white">
       <style dangerouslySetInnerHTML={{__html: `
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -58,7 +58,7 @@ export default function CaseStudiesPage() {
         <div 
           className="absolute inset-0 opacity-[0.015] md:opacity-[0.03] z-0"
           style={{
-            backgroundImage: `linear-gradient(to right, #D4AF37 1px, transparent 1px), linear-gradient(to bottom, #D4AF37 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, #C9A84C 1px, transparent 1px), linear-gradient(to bottom, #C9A84C 1px, transparent 1px)`,
             backgroundSize: '4rem 4rem',
             maskImage: 'radial-gradient(circle at center, black, transparent 80%)'
           }}
@@ -74,16 +74,16 @@ export default function CaseStudiesPage() {
 
           {/* Stats Blocks (Stacked/Inline on Mobile) */}
           <div className="grid grid-cols-3 gap-2 md:gap-12 w-full max-w-4xl border-t border-white/10 pt-8 md:pt-16">
-            <div className="flex flex-col items-center bg-[#111] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
-              <span className="font-serif text-[28px] md:text-[48px] text-[#D4AF37] mb-1 md:mb-2">40+</span>
+            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
+              <span className="font-serif text-[28px] md:text-[48px] text-[#C9A84C] mb-1 md:mb-2">40+</span>
               <span className="font-sans text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-white/50">Projects</span>
             </div>
-            <div className="flex flex-col items-center bg-[#111] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
-              <span className="font-serif text-[28px] md:text-[48px] text-[#D4AF37] mb-1 md:mb-2">12</span>
+            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
+              <span className="font-serif text-[28px] md:text-[48px] text-[#C9A84C] mb-1 md:mb-2">12</span>
               <span className="font-sans text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-white/50">Industries</span>
             </div>
-            <div className="flex flex-col items-center bg-[#111] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
-              <span className="font-serif text-[28px] md:text-[48px] text-[#D4AF37] mb-1 md:mb-2">5+</span>
+            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
+              <span className="font-serif text-[28px] md:text-[48px] text-[#C9A84C] mb-1 md:mb-2">5+</span>
               <span className="font-sans text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-white/50">Years</span>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function CaseStudiesPage() {
       <section className="sticky top-[72px] md:top-[88px] z-40 w-full pointer-events-none">
         
         {/* MOBILE (Standard Horizontal Scroll) */}
-        <div className="xl:hidden w-full bg-[#0B0B0B]/5 backdrop-blur-3xl supports-[backdrop-filter]:bg-[#0B0B0B]/5 border-b border-white/10 pointer-events-auto py-4">
+        <div className="xl:hidden w-full bg-[#0A0A0A]/5 backdrop-blur-3xl supports-[backdrop-filter]:bg-[#0A0A0A]/5 border-b border-white/10 pointer-events-auto py-4">
           <div className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory items-center gap-3 px-4 py-2">
             {filters.map(filter => (
               <button
@@ -102,7 +102,7 @@ export default function CaseStudiesPage() {
                 onClick={() => setActiveFilter(filter)}
                 className={`snap-center shrink-0 h-[48px] px-6 rounded-full font-sans text-[12px] tracking-[0.1em] uppercase transition-all duration-300 border ${
                   activeFilter === filter 
-                    ? 'border-[#D4AF37] text-[#D4AF37] bg-[#D4AF37]/5' 
+                    ? 'border-[#C9A84C] text-[#C9A84C] bg-[#C9A84C]/5' 
                     : 'border-white/10 text-white/60 hover:border-white/30 hover:text-white'
                 }`}
               >
@@ -116,7 +116,7 @@ export default function CaseStudiesPage() {
         <div className="hidden xl:block w-full relative h-[150px] max-w-[1440px] mx-auto pointer-events-none">
           {/* Glass Background that fades out */}
           <motion.div 
-            className="absolute inset-0 w-[100vw] left-1/2 -translate-x-1/2 bg-[#0B0B0B]/5 backdrop-blur-3xl supports-[backdrop-filter]:bg-[#0B0B0B]/5 border-b border-white/10 pointer-events-none"
+            className="absolute inset-0 w-[100vw] left-1/2 -translate-x-1/2 bg-[#0A0A0A]/5 backdrop-blur-3xl supports-[backdrop-filter]:bg-[#0A0A0A]/5 border-b border-white/10 pointer-events-none"
             style={{ opacity: containerOpacity }}
           />
 
@@ -137,7 +137,7 @@ export default function CaseStudiesPage() {
               const y = useTransform(scatterProgress, [0, 1], [initialY, finalY]);
 
               return (
-                <motion.line key={`line-${i}`} x1={initialX} y1={initialY} x2={x} y2={y} stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.3" />
+                <motion.line key={`line-${i}`} x1={initialX} y1={initialY} x2={x} y2={y} stroke="#C9A84C" strokeWidth="1" strokeOpacity="0.3" />
               )
             })}
           </motion.svg>
@@ -169,8 +169,8 @@ export default function CaseStudiesPage() {
                     style={{ x, y, opacity }}
                     className={`pointer-events-auto whitespace-nowrap px-6 h-[48px] rounded-full font-sans text-[12px] tracking-[0.1em] uppercase transition-all duration-300 border ${
                       isActive 
-                        ? 'border-[#D4AF37] text-[#D4AF37] bg-[#111] shadow-[0_0_20px_rgba(212,175,55,0.15)]' 
-                        : 'border-white/10 text-white hover:border-white/30 bg-[#111]'
+                        ? 'border-[#C9A84C] text-[#C9A84C] bg-[#0A0A0A] shadow-[0_0_20px_rgba(212,175,55,0.15)]' 
+                        : 'border-white/10 text-white hover:border-white/30 bg-[#0A0A0A]'
                     }`}
                   >
                     {filter}
@@ -207,17 +207,17 @@ export default function CaseStudiesPage() {
                   }}
                 >
                   {/* Floating Insight Panel */}
-                  <div className="hidden md:block absolute -top-4 -right-4 z-20 bg-[#111] border border-[#D4AF37]/30 px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 pointer-events-none shadow-2xl">
-                    <span className="font-sans text-[11px] tracking-[0.1em] text-[#D4AF37] uppercase whitespace-nowrap">
+                  <div className="hidden md:block absolute -top-4 -right-4 z-20 bg-[#0A0A0A] border border-[#C9A84C]/30 px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 pointer-events-none shadow-2xl">
+                    <span className="font-sans text-[11px] tracking-[0.1em] text-[#C9A84C] uppercase whitespace-nowrap">
                       {study.insight}
                     </span>
                   </div>
 
                   {/* Card Container */}
-                  <div className={`bg-[#111111] rounded-[16px] md:rounded-[20px] overflow-hidden border transition-all duration-700 h-full flex flex-col shadow-lg relative ${isTapped ? 'border-[#D4AF37]/50 scale-[1.02] shadow-[#D4AF37]/10' : 'border-white/5'} md:group-hover:border-[#D4AF37]/50 md:group-hover:-translate-y-2 md:group-hover:shadow-[#D4AF37]/10 before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-[#0B0B0B] before:z-10 before:opacity-0 md:group-hover:before:opacity-100 before:transition-opacity before:duration-700`}>
+                  <div className={`bg-[#0A0A0A] rounded-[16px] md:rounded-[20px] overflow-hidden border transition-all duration-700 h-full flex flex-col shadow-lg relative ${isTapped ? 'border-[#C9A84C]/50 scale-[1.02] shadow-[#C9A84C]/10' : 'border-white/5'} md:group-hover:border-[#C9A84C]/50 md:group-hover:-translate-y-2 md:group-hover:shadow-[#C9A84C]/10 before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-[#0A0A0A] before:z-10 before:opacity-0 md:group-hover:before:opacity-100 before:transition-opacity before:duration-700`}>
                     
                     <div className="aspect-[16/10] w-full overflow-hidden relative bg-[#1A1A1A]">
-                      <div className={`absolute inset-0 bg-[#0B0B0B]/20 z-10 transition-colors duration-700 ${isTapped ? 'bg-transparent' : ''} md:group-hover:bg-transparent`}></div>
+                      <div className={`absolute inset-0 bg-[#0A0A0A]/20 z-10 transition-colors duration-700 ${isTapped ? 'bg-transparent' : ''} md:group-hover:bg-transparent`}></div>
                       <img 
                         src={study.image} 
                         alt={study.title} 
@@ -225,17 +225,17 @@ export default function CaseStudiesPage() {
                       />
                     </div>
 
-                    <div className="p-6 md:p-8 flex flex-col flex-grow relative z-20 bg-[#111111]">
+                    <div className="p-6 md:p-8 flex flex-col flex-grow relative z-20 bg-[#0A0A0A]">
                       <div className="mb-auto">
-                        <span className="font-sans text-[10px] md:text-[11px] tracking-[0.2em] text-[#D4AF37] uppercase block mb-3 md:mb-4">
+                        <span className="font-sans text-[10px] md:text-[11px] tracking-[0.2em] text-[#C9A84C] uppercase block mb-3 md:mb-4">
                           {study.industry}
                         </span>
                         <h3 className="font-serif text-[24px] md:text-[28px] leading-tight text-white mb-3 md:mb-4">
                           {study.title}
                         </h3>
 
-                        <div className="md:hidden inline-flex items-center border border-[#D4AF37]/30 bg-[#D4AF37]/5 px-3 py-1.5 rounded-md mb-4 w-fit">
-                          <span className="font-sans text-[10px] tracking-[0.1em] text-[#D4AF37] uppercase">{study.insight}</span>
+                        <div className="md:hidden inline-flex items-center border border-[#C9A84C]/30 bg-[#C9A84C]/5 px-3 py-1.5 rounded-md mb-4 w-fit">
+                          <span className="font-sans text-[10px] tracking-[0.1em] text-[#C9A84C] uppercase">{study.insight}</span>
                         </div>
                         
                         <div className={`grid transition-[grid-template-rows] duration-500 ease-out ${isTapped ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] md:grid-rows-[0fr]'} md:group-hover:grid-rows-[1fr]`}>
@@ -248,10 +248,10 @@ export default function CaseStudiesPage() {
                       </div>
 
                       <div className="pt-6 md:pt-8 mt-2 md:mt-4 border-t border-white/5 flex items-center justify-between">
-                        <span className={`font-sans text-[11px] md:text-[12px] tracking-[0.15em] uppercase transition-colors duration-300 ${isTapped ? 'text-[#D4AF37]' : 'text-white/80'} md:group-hover:text-[#D4AF37]`}>
+                        <span className={`font-sans text-[11px] md:text-[12px] tracking-[0.15em] uppercase transition-colors duration-300 ${isTapped ? 'text-[#C9A84C]' : 'text-white/80'} md:group-hover:text-[#C9A84C]`}>
                           View Case Study
                         </span>
-                        <span className={`material-symbols-outlined transition-all duration-300 ${isTapped ? 'text-[#D4AF37] translate-x-2' : 'text-white/40'} md:group-hover:text-[#D4AF37] md:group-hover:translate-x-2`}>
+                        <span className={`material-symbols-outlined transition-all duration-300 ${isTapped ? 'text-[#C9A84C] translate-x-2' : 'text-white/40'} md:group-hover:text-[#C9A84C] md:group-hover:translate-x-2`}>
                           arrow_forward
                         </span>
                       </div>
@@ -277,9 +277,9 @@ export default function CaseStudiesPage() {
               </p>
             </div>
             <div className="relative aspect-square w-[280px] md:w-full lg:aspect-auto lg:h-[600px] flex items-center justify-center mx-auto order-2 lg:order-none">
-              <div className="absolute w-[80%] h-[80%] border border-[#D4AF37]/20 rounded-full animate-[spin_60s_linear_infinite]"></div>
-              <div className="absolute w-[60%] h-[60%] border border-[#D4AF37]/40 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
-              <div className="absolute w-[40%] h-[40%] border-t border-b border-[#D4AF37] rounded-full animate-[spin_20s_linear_infinite]"></div>
+              <div className="absolute w-[80%] h-[80%] border border-[#C9A84C]/20 rounded-full animate-[spin_60s_linear_infinite]"></div>
+              <div className="absolute w-[60%] h-[60%] border border-[#C9A84C]/40 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
+              <div className="absolute w-[40%] h-[40%] border-t border-b border-[#C9A84C] rounded-full animate-[spin_20s_linear_infinite]"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-[#080808] via-transparent to-[#080808] z-10"></div>
             </div>
           </div>
@@ -289,23 +289,23 @@ export default function CaseStudiesPage() {
       {/* Final CTA Section */}
       <section className="relative py-24 md:py-40 border-t border-white/5 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[#D4AF37]/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[#C9A84C]/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
         </div>
         <div className="max-w-[1440px] mx-auto px-4 md:px-20 relative z-10 text-center">
           <h2 className="font-serif text-[36px] md:text-[80px] leading-[1.1] text-white mb-4 md:mb-6">
             Ready To Become The<br className="hidden md:block"/> Next Case Study?
           </h2>
-          <p className="font-sans text-[16px] md:text-[22px] text-[#D4AF37] mb-12 md:mb-16 tracking-wide">
+          <p className="font-sans text-[16px] md:text-[22px] text-[#C9A84C] mb-12 md:mb-16 tracking-wide">
             Let's build a brand people remember.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-[400px] mx-auto sm:max-w-none">
               <Link href="/contact">
-                <button className="bg-[#D4AF37] text-black font-sans text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] px-8 md:px-12 py-4 md:py-5 rounded-[16px] shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 transition-transform active:scale-95">
+                <button className="bg-[#C9A84C] text-black font-sans text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] px-8 md:px-12 py-4 md:py-5 shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 transition-transform active:scale-95">
                   Book A Call
                 </button>
               </Link>
             <Link href="/services">
-              <button className="bg-transparent border border-white/20 text-white font-sans text-[12px] font-bold uppercase tracking-[0.2em] px-10 h-[52px] md:py-5 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors duration-300 w-full sm:w-auto rounded-[16px]">
+              <button className="bg-transparent border border-white/20 text-white font-sans text-[12px] font-bold uppercase tracking-[0.2em] px-10 h-[52px] md:py-5 hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors duration-300 w-full sm:w-auto">
                 View Services
               </button>
             </Link>

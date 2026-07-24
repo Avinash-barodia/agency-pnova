@@ -1,41 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #121414;
-  --color-foreground: #e2e2e2;
-  --color-primary: #f2ca50;
-  --color-on-primary: #3c2f00;
-  --color-primary-container: #d4af37;
-  --color-on-primary-container: #554300;
-  --color-on-primary-fixed: #241a00;
-  --color-primary-fixed-dim: #e9c349;
-  --color-surface: #121414;
-  --color-surface-container-lowest: #0c0f0f;
-  --color-surface-container-low: #1a1c1c;
-  --color-surface-variant: #333535;
-  --color-on-surface-variant: #d0c5af;
-  --color-on-surface: #e2e2e2;
-  --color-border: #262626;
-  --color-outline-variant: #4d4635;
+  --color-background: #0A0A0A;
+  --color-foreground: #F5F0E8;
+  --color-primary: #C9A84C;
+  --color-on-primary: #111111;
+  --color-primary-container: #C9A84C;
+  --color-on-primary-container: #111111;
+  --color-on-primary-fixed: #111111;
+  --color-primary-fixed-dim: #b8973b;
+  --color-surface: #0A0A0A;
+  --color-surface-container-lowest: #050505;
+  --color-surface-container-low: #0f0f0f;
+  --color-surface-variant: #1a1a1a;
+  --color-on-surface-variant: #b0a693;
+  --color-on-surface: #F5F0E8;
+  --color-border: #222222;
+  --color-outline-variant: #332d1f;
+  
+  /* Brand Specific Additions */
+  --color-accent: #00A878;
   
   /* Pune Voices variables */
-  --color-auric-gold: #D4AF37;
-  --color-obsidian-base: #0B0B0B;
-  --color-glass-border: rgba(212, 175, 55, 0.25);
+  --color-auric-gold: #C9A84C;
+  --color-obsidian-base: #0A0A0A;
+  --color-glass-border: rgba(201, 168, 76, 0.25);
   --color-muted-text: #888888;
   
-  --font-sans: var(--font-hanken);
-  --font-serif: var(--font-playfair);
-  --font-label-caps: var(--font-hanken);
-  --font-headline-md: var(--font-playfair);
-  --font-display-lg: var(--font-playfair);
-  --font-headline-lg: var(--font-playfair);
-  --font-body-lg: var(--font-hanken);
-  --font-body-md: var(--font-hanken);
-  --font-metric-value: var(--font-hanken);
-  --font-display-xl-mobile: var(--font-playfair);
-  --font-display-xl: var(--font-playfair);
-  --font-headline-lg-mobile: var(--font-playfair);
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-cormorant);
+  --font-label-caps: var(--font-cinzel);
+  --font-headline-md: var(--font-cormorant);
+  --font-display-lg: var(--font-cinzel);
+  --font-headline-lg: var(--font-cinzel);
+  --font-body-lg: var(--font-montserrat);
+  --font-body-md: var(--font-montserrat);
+  --font-metric-value: var(--font-montserrat);
+  --font-display-xl-mobile: var(--font-cinzel);
+  --font-display-xl: var(--font-cinzel);
+  --font-headline-lg-mobile: var(--font-cinzel);
 
   --text-label-caps: 12px;
   --text-label-caps--line-height: 16px;
@@ -114,7 +117,7 @@ body {
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #0A0A0A; }
-::-webkit-scrollbar-thumb { background: #D4AF37; }
+::-webkit-scrollbar-thumb { background: #C9A84C; }
 
 /* Navigation Sticker Styles */
 .nav-sticker {
@@ -217,7 +220,7 @@ body {
 .gold-line-draw {
     width: 0;
     height: 1px;
-    background: #D4AF37;
+    background: #C9A84C;
     transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-active .gold-line-draw {
@@ -230,8 +233,8 @@ body {
     background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
 }
 .btn-gold {
-    background: #D4AF37;
-    color: #0B0B0B;
+    background: #C9A84C;
+    color: #0A0A0A;
     font-family: var(--font-label-caps), sans-serif;
     font-weight: 600;
     letter-spacing: 0.15em;
@@ -244,14 +247,14 @@ body {
 }
 .btn-outline {
     border: 1px solid rgba(212, 175, 55, 0.4);
-    color: #D4AF37;
+    color: #C9A84C;
     font-family: var(--font-label-caps), sans-serif;
     font-weight: 600;
     letter-spacing: 0.15em;
     transition: all 0.3s ease;
 }
 .btn-outline:hover {
-    border-color: #D4AF37;
+    border-color: #C9A84C;
     background: rgba(212, 175, 55, 0.05);
     transform: translateY(-2px);
 }

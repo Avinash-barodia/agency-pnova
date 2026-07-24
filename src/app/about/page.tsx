@@ -105,71 +105,107 @@ export default function AboutPage() {
       </header>
 
       {/* Section 2: OUR STORY */}
-      <section className="py-20 md:py-32 px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-[var(--spacing-gutter)]">
-          <div className="md:col-span-5 reveal">
-            <h2 className="font-headline-lg text-4xl md:text-headline-lg font-semibold text-[var(--color-primary)] leading-tight">OUR <br className="hidden md:block" /> STORY</h2>
+      <section className="pt-20 md:pt-32 pb-10 md:pb-12 px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto w-full">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
+          <div className="md:col-span-4 relative">
+            <div className="md:sticky md:top-32">
+              <h2 className="font-headline-lg text-4xl md:text-[64px] font-bold text-[var(--color-primary)] leading-[1.1] uppercase tracking-tighter">OUR <br className="hidden md:block" /> STORY</h2>
+              <div className="w-12 h-1 bg-[var(--color-primary)] mt-6 md:mt-8 opacity-60"></div>
+            </div>
           </div>
-          <div className="md:col-span-7 reveal" style={{ transitionDelay: '200ms' }}>
-            <div className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] space-y-6 md:space-y-8 whitespace-pre-line">
-              <p>{`Look up.
-Every star you see tonight was born long before you ever noticed it.
-Not in silence.
-But in chaos.
-In unimaginable pressure.
-In violent collisions.
-In the darkness where nothing seemed possible.
+          <div className="md:col-span-8">
+            <div className="font-body-lg text-lg md:text-[22px] text-[var(--color-on-surface-variant)] space-y-8 md:space-y-12 leading-[1.6]">
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-white text-2xl md:text-3xl font-bold font-serif"
+              >
+                Look up.
+              </motion.p>
 
-Only then... did it become light.
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Every star you see today existed long before you noticed it. It wasn't born overnight. It was shaped by time, pressure, and purpose.
+              </motion.p>
 
-Brands are born the same way.
-Not from a logo.
-Not from a campaign.
-Not from a viral post.
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Brands aren't any different.
+              </motion.p>
 
-They are forged in difficult decisions.
-Late nights.
-Risk.
-Reinvention.
-And the relentless belief that ordinary was never the destination.
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                They're not built by a logo, a campaign, or a viral post. They're built through clarity, difficult decisions, and a clear understanding of who they are.
+              </motion.p>
 
-The brands people remember aren't always the biggest.
-They're the clearest.
-The bravest.
-The ones that know exactly who they are, even when the world doesn't.
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                The brands people remember aren't always the loudest. They're the ones with a distinct identity and a lasting presence.
+              </motion.p>
 
-That's where Purnova begins.
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                That's where Purnova comes in.
+              </motion.p>
 
-We find the gravity hidden inside ambitious businesses.
-We shape their identity.
-Give their story a voice.
-Build experiences that people don't just notice...
-they remember.
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                We help ambitious businesses discover what makes them different, shape their brand identity, and build a presence that people recognize, remember, and trust.
+              </motion.p>
 
-Because attention fades.
-Algorithms change.
-Trends disappear.
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-white border-l-2 border-[var(--color-primary)] pl-6 md:pl-8 py-2 font-serif italic"
+              >
+                <p>Because marketing may create attention, but a strong brand creates lasting impact.</p>
+              </motion.div>
 
-But brands built on clarity, purpose, and trust become impossible to ignore.
-Like the brightest stars,
-they don't ask for attention.
-They become impossible not to see.`}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 3: WHO WE ARE */}
-      <section className="py-20 md:py-32 bg-[var(--color-surface-container-lowest)] w-full">
+      <section className="pt-16 md:pt-24 pb-10 md:pb-16 bg-[var(--color-surface-container-lowest)] w-full">
         <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-[var(--spacing-gutter)] items-center">
-            <div className="md:col-span-12 reveal mb-8 md:mb-16">
+            <div className="md:col-span-12 reveal mb-8 md:mb-12">
               <h2 className="font-headline-lg text-3xl md:text-headline-lg font-semibold text-white leading-tight">WHERE AMBITIOUS BRANDS BECOME UNFORGETTABLE</h2>
               <div className="h-1 w-16 md:w-24 bg-[var(--color-primary)] mt-6 md:mt-8"></div>
             </div>
             <div className="md:col-span-12 reveal">
               <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-4xl">
-                At PURNOVA, we believe every ambitious business already has something worth remembering. Our job is to uncover it, shape it, and help the world see it. Through strategy, branding, marketing, and digital experiences, we turn bold ideas into brands people trust, remember, and choose. Because growth isn't about being louder. It's about becoming unforgettable.
+                At <span className="text-[var(--color-primary)] font-semibold">PURNOVA</span>, we believe every ambitious business already has something worth remembering. Our job is to uncover it, shape it, and help the world see it. Through strategy, branding, marketing, and digital experiences, we turn bold ideas into brands people trust, remember, and choose. Because growth isn't about being louder. It's about becoming unforgettable.
               </p>
             </div>
           </div>
@@ -177,22 +213,73 @@ They become impossible not to see.`}</p>
       </section>
 
       {/* Section 4: OUR BELIEF */}
-      <section className="py-24 md:py-48 bg-[var(--color-surface)] w-full">
-        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto text-center reveal">
-          <h2 className="font-display-lg text-3xl sm:text-headline-lg md:text-display-lg font-bold text-white mb-6 md:mb-8 leading-tight md:leading-[80px]">
-            CREATIVITY WITHOUT PURPOSE IS NOISE.<br className="hidden sm:block"/>
-            STRATEGY WITHOUT EXECUTION IS THEORY.
+      <section className="pt-16 md:pt-24 pb-12 md:pb-16 bg-[var(--color-surface)] w-full">
+        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto text-center">
+          <h2 className="font-display-lg text-3xl sm:text-[40px] md:text-display-lg font-bold text-white mb-10 md:mb-12 leading-tight md:leading-[1.1] flex flex-col items-center justify-center">
+            
+            <div className="overflow-hidden pb-1 md:pb-2">
+              <motion.div
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0 }}
+              >
+                <span className="text-[var(--color-primary)]">CREATIVITY</span> WITHOUT
+              </motion.div>
+            </div>
+
+            <div className="overflow-hidden pb-4 md:pb-8">
+              <motion.div
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
+              >
+                <span className="text-[var(--color-primary)]">PURPOSE</span> IS NOISE.
+              </motion.div>
+            </div>
+
+            <div className="overflow-hidden pb-1 md:pb-2">
+              <motion.div
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.65 }}
+              >
+                <span className="text-[var(--color-primary)]">STRATEGY</span> WITHOUT
+              </motion.div>
+            </div>
+
+            <div className="overflow-hidden pb-1 md:pb-2">
+              <motion.div
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
+              >
+                <span className="text-[var(--color-primary)]">EXECUTION</span> IS THEORY.
+              </motion.div>
+            </div>
+
           </h2>
-          <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-2xl mx-auto">
-            Great brands are built where vision, creativity, and performance meet. That is where PURNOVA operates.
-          </p>
+          <div className="overflow-hidden">
+             <motion.p 
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 1.3 }}
+               className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-2xl mx-auto"
+             >
+               Great brands are built where vision, creativity, and performance meet. That is where PURNOVA operates.
+             </motion.p>
+          </div>
         </div>
       </section>
 
       {/* Section 5: WHAT WE DO (5 Premium Cards) */}
-      <section className="py-20 md:py-32 w-full">
+      <section className="pt-16 md:pt-24 pb-20 md:pb-32 w-full">
         <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
-          <h2 className="font-label-caps text-label-caps font-bold text-[var(--color-primary)] text-center mb-12 md:mb-20 tracking-widest uppercase">WHAT WE DO</h2>
+          <h2 className="font-label-caps text-label-caps font-bold text-[var(--color-primary)] text-center mb-12 md:mb-16 tracking-widest uppercase">WHAT WE DO</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {/* Card 01 */}
             <div className="reveal h-full">

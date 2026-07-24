@@ -75,17 +75,17 @@ const AnimatedOrb = () => {
         <motion.div
           animate={{ scale: [1, 1.05, 1], opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute inset-0 rounded-full border border-[#D4AF37]/30 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)]"
+          className="absolute inset-0 rounded-full border border-[#C9A84C]/30 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)]"
         />
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-[-20%] rounded-full border border-[#D4AF37]/10 border-dashed"
+          className="absolute inset-[-20%] rounded-full border border-[#C9A84C]/10 border-dashed"
         />
         <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-[-40%] rounded-full border border-[#D4AF37]/5"
+          className="absolute inset-[-40%] rounded-full border border-[#C9A84C]/5"
         />
       </motion.div>
     </div>
@@ -195,7 +195,7 @@ export function LeadCapturePopup() {
             onDragEnd={(e, info) => {
               if (isMobile && info.offset.y > 100) closePopup();
             }}
-            className={`relative flex flex-col overflow-hidden bg-[#090909] border border-[#D4AF37]/25 shadow-[0_20px_80px_rgba(0,0,0,0.8),_0_0_40px_rgba(212,175,55,0.05)] ${
+            className={`relative flex flex-col overflow-hidden bg-[#090909] border border-[#C9A84C]/25 shadow-[0_20px_80px_rgba(0,0,0,0.8),_0_0_40px_rgba(212,175,55,0.05)] ${
               isMobile
                 ? "w-full h-[85vh] rounded-t-[28px]"
                 : "w-[800px] max-w-[90vw] min-h-[500px] rounded-[32px]"
@@ -209,7 +209,7 @@ export function LeadCapturePopup() {
               whileHover={{ rotate: 90, boxShadow: "0 0 15px rgba(212,175,55,0.5)" }}
               transition={{ duration: 0.3 }}
               onClick={closePopup}
-              className="absolute top-6 right-6 z-50 w-10 h-10 rounded-full border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] transition-colors hover:bg-[#D4AF37]/10 bg-black/20 backdrop-blur-md"
+              className="absolute top-6 right-6 z-50 w-10 h-10 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] transition-colors hover:bg-[#C9A84C]/10 bg-black/20 backdrop-blur-md"
             >
               <span className="material-symbols-outlined text-[18px]">close</span>
             </motion.button>
@@ -226,7 +226,7 @@ export function LeadCapturePopup() {
                     transition={{ duration: 0.4 }}
                     className="text-center"
                   >
-                    <span className="inline-block font-sans text-[10px] tracking-[0.2em] text-[#D4AF37] uppercase border border-[#D4AF37]/30 px-4 py-2 rounded-full bg-[#D4AF37]/5 mb-6">
+                    <span className="inline-block font-sans text-[10px] tracking-[0.2em] text-[#C9A84C] uppercase border border-[#C9A84C]/30 px-4 py-2 rounded-full bg-[#C9A84C]/5 mb-6">
                       Private Growth Diagnosis
                     </span>
                     <h2 className="font-serif text-[40px] md:text-[56px] text-white leading-[1.1] mb-4">
@@ -237,7 +237,7 @@ export function LeadCapturePopup() {
                     </p>
                     <button
                       onClick={handleStart}
-                      className="group relative inline-block bg-[#D4AF37] text-black font-sans text-[14px] font-bold uppercase tracking-[0.2em] py-4 px-10 rounded-full overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all hover:-translate-y-1"
+                      className="group relative inline-block bg-[#C9A84C] text-black font-sans text-[14px] font-bold uppercase tracking-[0.2em] py-4 px-10 overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all hover:-translate-y-1"
                     >
                       <span className="relative z-10 flex items-center gap-2">
                         Start Diagnosis <span>→</span>

@@ -51,9 +51,9 @@ export function ServiceDetailClient({ service }: { service: any }) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#111] border border-white/10 flex items-center justify-center mb-10 shadow-[0_0_40px_rgba(212,175,55,0.2)]"
+          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#0A0A0A] border border-white/10 flex items-center justify-center mb-10 shadow-[0_0_40px_rgba(212,175,55,0.2)]"
         >
-          <span className="material-symbols-outlined text-[#D4AF37] text-4xl md:text-5xl">
+          <span className="material-symbols-outlined text-[#C9A84C] text-4xl md:text-5xl">
             {service.icon}
           </span>
         </motion.div>
@@ -71,7 +71,7 @@ export function ServiceDetailClient({ service }: { service: any }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="font-sans text-[18px] md:text-[24px] text-[#D4AF37] italic tracking-wide max-w-2xl"
+          className="font-sans text-[18px] md:text-[24px] text-[#C9A84C] italic tracking-wide max-w-2xl"
         >
           "{service.manifesto}"
         </motion.p>
@@ -85,7 +85,7 @@ export function ServiceDetailClient({ service }: { service: any }) {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <span className="font-sans text-[12px] md:text-[14px] font-bold text-[#D4AF37] uppercase tracking-[0.2em] mb-12 text-center animate-pulse flex items-center gap-2">
+          <span className="font-sans text-[12px] md:text-[14px] font-bold text-[#C9A84C] uppercase tracking-[0.2em] mb-12 text-center animate-pulse flex items-center gap-2">
             <span className="material-symbols-outlined text-sm">flashlight_on</span>
             Explore the dark to reveal our architecture
           </span>
@@ -134,12 +134,12 @@ export function ServiceDetailClient({ service }: { service: any }) {
           transition={{ duration: 1 }}
           className="flex flex-col items-center"
         >
-          <div className="text-[#D4AF37] text-[24px] opacity-80 animate-pulse mb-8">★</div>
+          <div className="text-[#C9A84C] text-[24px] opacity-80 animate-pulse mb-8">★</div>
           <h2 className="font-serif text-[40px] md:text-[64px] lg:text-[80px] text-white font-bold leading-[1.1] tracking-tighter mb-12">
             Ready To Build Your <br className="hidden md:block" /> Growth System?
           </h2>
           <Link href="/contact">
-            <button className="bg-[#D4AF37] text-black font-sans text-[14px] md:text-[16px] font-bold uppercase tracking-[0.2em] px-12 py-5 rounded-[16px] hover:bg-white transition-colors duration-300 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+            <button className="bg-[#C9A84C] text-black font-sans text-[14px] md:text-[16px] font-bold uppercase tracking-[0.2em] px-12 py-5 hover:bg-white transition-colors duration-300 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
               BOOK A CALL
             </button>
           </Link>
@@ -161,7 +161,7 @@ function FeatureCard({ feature, index, isBright = false }: { feature: any, index
           {index < 9 ? `0${index + 1}` : index + 1}
         </span>
         <div className="flex flex-col gap-2 pt-2">
-          <h3 className={`font-serif text-[28px] md:text-[32px] font-semibold leading-tight ${isBright ? 'text-[#D4AF37]' : 'text-white'}`}>
+          <h3 className={`font-serif text-[28px] md:text-[32px] font-semibold leading-tight ${isBright ? 'text-[#C9A84C]' : 'text-white'}`}>
             {feature.title}
           </h3>
           <p className={`font-sans text-[16px] md:text-[18px] italic ${isBright ? 'text-white/90' : 'text-white'}`}>

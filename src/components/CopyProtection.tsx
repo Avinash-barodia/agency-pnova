@@ -57,9 +57,9 @@ export function CopyProtection() {
           className="fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-full drop-shadow-2xl"
           style={{ left: toastPos.x, top: toastPos.y }}
         >
-          <div className="bg-[#0B0B0B] border border-[#D4AF37]/50 shadow-[0_10px_40px_rgba(212,175,55,0.2)] px-8 py-4 rounded-full flex items-center gap-4 backdrop-blur-md">
-            <span className="material-symbols-outlined text-[#D4AF37]">content_copy</span>
-            <span className="font-serif text-[#D4AF37] text-[18px] tracking-widest uppercase font-bold">
+          <div className="bg-[#0A0A0A] border border-[#C9A84C]/50 shadow-[0_10px_40px_rgba(212,175,55,0.2)] px-8 py-4 rounded-full flex items-center gap-4 backdrop-blur-md">
+            <span className="material-symbols-outlined text-[#C9A84C]">content_copy</span>
+            <span className="font-serif text-[#C9A84C] text-[18px] tracking-widest uppercase font-bold">
               Legends Don't copy
             </span>
           </div>

@@ -49,14 +49,14 @@ export function Services() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="font-sans text-[12px] font-bold text-[#D4AF37] uppercase tracking-[0.2em] mb-6 block">OUR EXPERTISE</span>
+            <span className="font-sans text-[12px] font-bold text-[#C9A84C] uppercase tracking-[0.2em] mb-6 block">OUR EXPERTISE</span>
             <h2 className="font-serif text-[40px] md:text-[48px] lg:text-[56px] font-semibold mb-6 leading-[1.1] text-white tracking-tighter">
-              Building Brands That Stand Out.
+              Turning Businesses Into Brands.
             </h2>
             <p className="text-white/60 font-sans text-[16px] leading-[26px] mb-8 max-w-md">
-              We help businesses create stronger brands, better online experiences, and marketing strategies that connect with the right audience and drive meaningful growth.
+              From defining your brand to strengthening your digital presence, we help businesses build meaningful connections that inspire lasting growth.
             </p>
-            <Link href="/services" className="group inline-flex items-center gap-4 font-sans text-[12px] font-bold uppercase tracking-[0.2em] text-white hover:text-[#D4AF37] transition-colors duration-300">
+            <Link href="/services" className="group inline-flex items-center gap-4 font-sans text-[12px] font-bold uppercase tracking-[0.2em] text-white hover:text-[#C9A84C] transition-colors duration-300">
               Explore All Services
               <span className="material-symbols-outlined text-sm group-hover:translate-x-3 transition-transform duration-300">arrow_forward</span>
             </Link>
@@ -89,8 +89,8 @@ export function Services() {
 
                 {/* Card Header (Icon + Number) */}
                 <div className="flex justify-between items-start relative z-10 w-full">
-                  <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full bg-[#111] border border-white/5 flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-500">
-                    <span className="material-symbols-outlined text-[#D4AF37] text-4xl md:text-5xl">
+                  <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full bg-[#0A0A0A] border border-white/5 flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-500">
+                    <span className="material-symbols-outlined text-[#C9A84C] text-4xl md:text-5xl">
                       {service.icon}
                     </span>
                   </div>
@@ -101,14 +101,14 @@ export function Services() {
 
                 {/* Card Content (Title + Description) */}
                 <div className="relative z-10 max-w-xl mt-auto">
-                  <h3 className="font-serif text-[32px] md:text-[36px] lg:text-[48px] font-semibold mb-4 leading-tight text-white group-hover:text-[#D4AF37] transition-colors duration-500">
+                  <h3 className="font-serif text-[32px] md:text-[36px] lg:text-[48px] font-semibold mb-4 leading-tight text-white group-hover:text-[#C9A84C] transition-colors duration-500">
                     {service.title}
                   </h3>
                   <p className="text-white/60 font-sans text-[16px] md:text-[20px] leading-[30px] md:leading-[34px] mb-6">
                     {service.description}
                   </p>
                   <Link href={`/services/${service.slug}`}>
-                    <button className="bg-transparent border border-[#D4AF37] text-[#D4AF37] font-sans text-[12px] font-bold uppercase tracking-[0.15em] px-8 py-3 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+                    <button className="bg-transparent border border-[#C9A84C] text-[#C9A84C] font-sans text-[12px] font-bold uppercase tracking-[0.15em] px-8 py-3 hover:bg-[#C9A84C] hover:text-black transition-all duration-300">
                       Explore Service
                     </button>
                   </Link>

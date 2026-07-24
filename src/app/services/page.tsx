@@ -15,9 +15,9 @@ const servicesData = [
       copy: "Strategic campaigns that help you reach the right audience, generate quality leads, and grow your business.",
       type: "marketing",
       details: [
-         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Multi Platform Campaigns</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">Reach your audience wherever they are.</span>We create connected campaigns across Google, Meta, LinkedIn, YouTube, and more, so every platform works together to build awareness, generate leads, and drive consistent growth.</div>,
-         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Landing Pages That Convert</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">Don't just attract visitors. Turn them into customers.</span>We design and optimize landing pages that make it easy for people to take action, improving conversions and getting more value from every marketing campaign.</div>,
-         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Smarter Growth Strategies</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">Grow today without losing tomorrow.</span>We focus on attracting customers who bring long term value, helping your business grow sustainably instead of chasing short term wins.</div>
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Multi Platform Campaigns</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">Reach your audience wherever they are.</span>We create connected campaigns across Google, Meta, LinkedIn, YouTube, and more, so every platform works together to build awareness, generate leads, and drive consistent growth.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Landing Pages That Convert</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">Don't just attract visitors. Turn them into customers.</span>We design and optimize landing pages that make it easy for people to take action, improving conversions and getting more value from every marketing campaign.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Smarter Growth Strategies</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">Grow today without losing tomorrow.</span>We focus on attracting customers who bring long term value, helping your business grow sustainably instead of chasing short term wins.</div>
       ]
    },
    {
@@ -27,14 +27,14 @@ const servicesData = [
       copy: "A great brand isn't just seen. It's remembered.",
       type: "branding",
       details: [
-         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Brand Positioning</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Find what makes your brand different."</span>Together, we'll define what sets your business apart, giving your customers a clear reason to choose you over everyone else.</div>,
-         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Audience Research</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Know who you're talking to."</span>We uncover your audience's needs, challenges, and motivations so every decision speaks directly to the people you want to reach.</div>,
-         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Competitor Analysis</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Learn from the market. Stand apart from it."</span>We study your competitors to identify opportunities, uncover gaps, and position your brand where it can truly stand out.</div>,
-         <div key="4"><strong className="text-white block text-[16px] mb-1">04 Brand Messaging</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Say the right thing to the right people."</span>From your brand story to your key messages, we create communication that is clear, consistent, and memorable across every platform.</div>,
-         <div key="5"><strong className="text-white block text-[16px] mb-1">05 Voice & Tone</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Give your brand a personality people recognize."</span>Whether your brand is bold, playful, premium, or approachable, we define a voice that stays consistent across every interaction.</div>,
-         <div key="6"><strong className="text-white block text-[16px] mb-1">06 Visual Identity</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Design with purpose."</span>We create a visual direction that reflects your values, builds trust, and makes your brand instantly recognizable.</div>,
-         <div key="7"><strong className="text-white block text-[16px] mb-1">07 Customer Experience</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Every interaction shapes your brand."</span>From the first click to the final conversation, we help create experiences that feel seamless, memorable, and worth coming back to.</div>,
-         <div key="8"><strong className="text-white block text-[16px] mb-1">08 Growth Strategy</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Build for today. Plan for tomorrow."</span>We develop practical strategies that help your brand grow with clarity, adapt to change, and achieve long term success.</div>
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Brand Positioning</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Find what makes your brand different."</span>Together, we'll define what sets your business apart, giving your customers a clear reason to choose you over everyone else.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Audience Research</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Know who you're talking to."</span>We uncover your audience's needs, challenges, and motivations so every decision speaks directly to the people you want to reach.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Competitor Analysis</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Learn from the market. Stand apart from it."</span>We study your competitors to identify opportunities, uncover gaps, and position your brand where it can truly stand out.</div>,
+         <div key="4"><strong className="text-white block text-[16px] mb-1">04 Brand Messaging</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Say the right thing to the right people."</span>From your brand story to your key messages, we create communication that is clear, consistent, and memorable across every platform.</div>,
+         <div key="5"><strong className="text-white block text-[16px] mb-1">05 Voice & Tone</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Give your brand a personality people recognize."</span>Whether your brand is bold, playful, premium, or approachable, we define a voice that stays consistent across every interaction.</div>,
+         <div key="6"><strong className="text-white block text-[16px] mb-1">06 Visual Identity</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Design with purpose."</span>We create a visual direction that reflects your values, builds trust, and makes your brand instantly recognizable.</div>,
+         <div key="7"><strong className="text-white block text-[16px] mb-1">07 Customer Experience</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Every interaction shapes your brand."</span>From the first click to the final conversation, we help create experiences that feel seamless, memorable, and worth coming back to.</div>,
+         <div key="8"><strong className="text-white block text-[16px] mb-1">08 Growth Strategy</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Build for today. Plan for tomorrow."</span>We develop practical strategies that help your brand grow with clarity, adapt to change, and achieve long term success.</div>
       ]
    },
    {
@@ -44,9 +44,9 @@ const servicesData = [
       copy: "Social media strategies that build trust, spark engagement, and turn followers into loyal customers.",
       type: "social",
       details: [
-         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Content Strategy & Creation</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Content with purpose, not just presence."</span>We create content that reflects your brand, captures attention, and gives your audience a reason to engage. Every post is planned with strategy, creativity, and consistency.</div>,
-         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Community Management</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Conversations build stronger brands."</span>We help you build genuine relationships with your audience through meaningful interactions, active engagement, and a community that keeps coming back.</div>,
-         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Creator Collaborations</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Partner with voices your audience already trusts."</span>We connect your brand with creators who genuinely align with your values, helping you reach new audiences through authentic and impactful collaborations.</div>
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Content Strategy & Creation</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Content with purpose, not just presence."</span>We create content that reflects your brand, captures attention, and gives your audience a reason to engage. Every post is planned with strategy, creativity, and consistency.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Community Management</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Conversations build stronger brands."</span>We help you build genuine relationships with your audience through meaningful interactions, active engagement, and a community that keeps coming back.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Creator Collaborations</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Partner with voices your audience already trusts."</span>We connect your brand with creators who genuinely align with your values, helping you reach new audiences through authentic and impactful collaborations.</div>
       ]
    },
    {
@@ -56,9 +56,9 @@ const servicesData = [
       copy: "SEO strategies that increase visibility, drive qualified traffic, and deliver long term growth.",
       type: "seo",
       details: [
-         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Technical SEO</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Build a website Google loves."</span>We optimize your website's speed, structure, and technical foundation so search engines can understand it better and customers can find it more easily.</div>,
-         <div key="2"><strong className="text-white block text-[16px] mb-1">02 SEO Content Strategy</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Create content that keeps working for you."</span>We build SEO focused content that answers real customer questions, attracts qualified traffic, and helps your business grow organically over time.</div>,
-         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Content That Builds Authority</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Become the trusted voice in your industry."</span>We create valuable articles, guides, and resources that answer customer questions, build trust, and improve your visibility on search engines.</div>
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Technical SEO</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Build a website Google loves."</span>We optimize your website's speed, structure, and technical foundation so search engines can understand it better and customers can find it more easily.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 SEO Content Strategy</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Create content that keeps working for you."</span>We build SEO focused content that answers real customer questions, attracts qualified traffic, and helps your business grow organically over time.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Content That Builds Authority</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Become the trusted voice in your industry."</span>We create valuable articles, guides, and resources that answer customer questions, build trust, and improve your visibility on search engines.</div>
       ]
    },
    {
@@ -76,9 +76,9 @@ const servicesData = [
       copy: "Fast, modern websites designed to look great, perform flawlessly, and grow with your business.",
       type: "web",
       details: [
-         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Conversion Focused Design</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Designed with your customers in mind."</span>Every page is crafted to guide visitors naturally, making it easier for them to explore, engage, and take action. Beautiful design means little if it doesn't deliver results.</div>,
-         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Fast & Scalable Development</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Built for speed today and growth tomorrow."</span>We build fast, secure, and flexible websites that load quickly, perform reliably, and are ready to grow alongside your business.</div>,
-         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Interactive Experiences</strong><span className="text-[#D4AF37] block mb-2 text-[12px] uppercase tracking-widest">"Small details. Big impact."</span>Thoughtful animations and subtle interactions make your website feel more engaging, intuitive, and memorable while creating a smoother experience for every visitor.</div>
+         <div key="1"><strong className="text-white block text-[16px] mb-1">01 Conversion Focused Design</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Designed with your customers in mind."</span>Every page is crafted to guide visitors naturally, making it easier for them to explore, engage, and take action. Beautiful design means little if it doesn't deliver results.</div>,
+         <div key="2"><strong className="text-white block text-[16px] mb-1">02 Fast & Scalable Development</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Built for speed today and growth tomorrow."</span>We build fast, secure, and flexible websites that load quickly, perform reliably, and are ready to grow alongside your business.</div>,
+         <div key="3"><strong className="text-white block text-[16px] mb-1">03 Interactive Experiences</strong><span className="text-[#C9A84C] block mb-2 text-[12px] uppercase tracking-widest">"Small details. Big impact."</span>Thoughtful animations and subtle interactions make your website feel more engaging, intuitive, and memorable while creating a smoother experience for every visitor.</div>
       ]
    }
 ];
@@ -93,7 +93,7 @@ export default function ServicesPage() {
       return () => window.removeEventListener("resize", checkMobile);
    }, []);
 
-   if (isMobile === null) return <div className="min-h-screen bg-[#0B0B0B]" />;
+   if (isMobile === null) return <div className="min-h-screen bg-[#0A0A0A]" />;
 
    return isMobile ? <MobileGalleryExperience /> : <DesktopGalleryExperience />;
 }
@@ -146,21 +146,21 @@ function DesktopGalleryExperience() {
             <FinalCTALayer p={p} />
 
             {/* Gallery Doors (Cover everything until opened) */}
-            <motion.div style={{ x: leftDoorX }} className="absolute top-0 bottom-0 left-0 w-1/2 bg-[#0B0B0B] z-50 shadow-[20px_0_50px_rgba(0,0,0,0.8)]">
+            <motion.div style={{ x: leftDoorX }} className="absolute top-0 bottom-0 left-0 w-1/2 bg-[#0A0A0A] z-50 shadow-[20px_0_50px_rgba(0,0,0,0.8)]">
                {/* Glowing Line */}
                <div className="absolute top-0 bottom-0 right-0 w-[2px] bg-black"></div>
-               <motion.div style={{ opacity: lineOpacity }} className="absolute top-0 bottom-0 right-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></motion.div>
+               <motion.div style={{ opacity: lineOpacity }} className="absolute top-0 bottom-0 right-0 w-[2px] bg-[#C9A84C] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></motion.div>
             </motion.div>
-            <motion.div style={{ x: rightDoorX }} className="absolute top-0 bottom-0 right-0 w-1/2 bg-[#0B0B0B] z-50 shadow-[-20px_0_50px_rgba(0,0,0,0.8)]">
+            <motion.div style={{ x: rightDoorX }} className="absolute top-0 bottom-0 right-0 w-1/2 bg-[#0A0A0A] z-50 shadow-[-20px_0_50px_rgba(0,0,0,0.8)]">
                {/* Glowing Line */}
                <div className="absolute top-0 bottom-0 left-0 w-[2px] bg-black"></div>
-               <motion.div style={{ opacity: lineOpacity }} className="absolute top-0 bottom-0 left-0 w-[2px] bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></motion.div>
+               <motion.div style={{ opacity: lineOpacity }} className="absolute top-0 bottom-0 left-0 w-[2px] bg-[#C9A84C] shadow-[0_0_20px_rgba(212,175,55,1),0_0_40px_rgba(212,175,55,0.6)]"></motion.div>
             </motion.div>
 
             {/* Hero Text (Sits ON TOP of the doors) */}
             <div className="absolute inset-0 z-[60] pointer-events-none flex flex-col items-center justify-center">
                <motion.h1 style={{ opacity: heroText1Opacity }} className="font-serif text-[40px] md:text-[64px] font-bold text-white mb-2 absolute text-center w-full px-6 leading-tight">Every Brand Has Untapped Potential.</motion.h1>
-               <motion.h2 style={{ opacity: heroText2Opacity }} className="font-serif text-[40px] md:text-[64px] font-bold text-[#D4AF37] italic absolute mt-24 md:mt-32 text-center w-full px-6">We Reveal It.</motion.h2>
+               <motion.h2 style={{ opacity: heroText2Opacity }} className="font-serif text-[40px] md:text-[64px] font-bold text-[#C9A84C] italic absolute mt-24 md:mt-32 text-center w-full px-6">We Reveal It.</motion.h2>
             </div>
 
             <AnimatePresence>
@@ -192,17 +192,17 @@ const FinalCTALayer = ({ p }: any) => {
       >
          <div className="absolute inset-0 bg-[#050505] z-0"></div>
          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.15),_transparent_60%)] z-10 pointer-events-none"></div>
-         <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#D4AF37] rounded-full blur-[150px] absolute opacity-30 animate-pulse z-10 pointer-events-none"></div>
+         <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#C9A84C] rounded-full blur-[150px] absolute opacity-30 animate-pulse z-10 pointer-events-none"></div>
 
          <div className="relative z-20 flex flex-col items-center text-center">
             {/* Decorative Star */}
-            <div className="absolute -right-8 md:-right-20 top-[-20px] md:top-0 text-[#D4AF37] text-[20px] md:text-[24px] opacity-80 animate-pulse">★</div>
+            <div className="absolute -right-8 md:-right-20 top-[-20px] md:top-0 text-[#C9A84C] text-[20px] md:text-[24px] opacity-80 animate-pulse">★</div>
             
             <h2 className="font-serif text-[48px] md:text-[80px] lg:text-[100px] text-white font-bold leading-[1.1] tracking-tighter mb-10 md:mb-12">
                Ready To Build Your <br /> Growth System?
             </h2>
             <Link href="/contact">
-               <button className="bg-[#D4AF37] text-black font-sans text-[14px] md:text-[16px] font-bold uppercase tracking-[0.2em] px-12 py-5 rounded-[16px] hover:bg-white transition-colors duration-300 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+               <button className="bg-[#C9A84C] text-black font-sans text-[14px] md:text-[16px] font-bold uppercase tracking-[0.2em] px-12 py-5 hover:bg-white transition-colors duration-300 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
                   BOOK A CALL
                </button>
             </Link>
@@ -246,13 +246,13 @@ const DesktopExhibit = ({ service, index, p, onSelect }: any) => {
          <div className="absolute inset-0 bg-black/30 z-10"></div>
 
          <div className="relative z-30 text-center max-w-4xl px-6 flex flex-col items-center">
-            <span className="font-sans text-[12px] text-[#D4AF37] tracking-[0.3em] uppercase mb-6 border border-[#D4AF37]/30 px-6 py-2 rounded-full bg-[#111]">
+            <span className="font-sans text-[12px] text-[#C9A84C] tracking-[0.3em] uppercase mb-6 border border-[#C9A84C]/30 px-6 py-2 rounded-full bg-[#0A0A0A]">
                {service.subtitle}
             </span>
             <h2 className="font-serif text-[64px] md:text-[96px] text-white leading-[1.1] mb-8">{service.title}</h2>
             <p className="font-sans text-[16px] md:text-[20px] text-white/60 leading-relaxed max-w-2xl">{service.copy}</p>
 
-            <button onClick={onSelect} className="mt-12 bg-transparent border border-white/20 hover:border-[#D4AF37] hover:bg-[#D4AF37]/5 text-white hover:text-[#D4AF37] font-sans text-[12px] font-bold uppercase tracking-[0.2em] px-12 py-5 rounded-full transition-all duration-300 shadow-xl group">
+            <button onClick={onSelect} className="mt-12 bg-transparent border border-white/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/5 text-white hover:text-[#C9A84C] font-sans text-[12px] font-bold uppercase tracking-[0.2em] px-12 py-5 transition-all duration-300 shadow-xl group">
                Explore Masterpiece
                <span className="inline-block ml-3 group-hover:translate-x-2 transition-transform">→</span>
             </button>
@@ -270,16 +270,16 @@ const ExhibitModal = ({ service, onClose }: any) => {
          <div className="absolute inset-0 cursor-pointer" onClick={onClose}></div>
          <motion.div
             initial={{ scale: 0.95, y: 30 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.95, y: 30 }} transition={{ duration: 0.5, ease: "easeOut" }}
-            className="relative bg-[#0B0B0B] border border-[#D4AF37]/20 w-full max-w-6xl rounded-[32px] p-12 md:p-16 shadow-[0_0_100px_rgba(212,175,55,0.15)] flex flex-col md:flex-row gap-12 md:gap-16 items-center"
+            className="relative bg-[#0A0A0A] border border-[#C9A84C]/20 w-full max-w-6xl rounded-[32px] p-12 md:p-16 shadow-[0_0_100px_rgba(212,175,55,0.15)] flex flex-col md:flex-row gap-12 md:gap-16 items-center"
          >
-            <button onClick={onClose} className="absolute top-8 right-8 w-12 h-12 bg-white/5 hover:bg-[#D4AF37] text-white hover:text-black rounded-full transition-colors flex items-center justify-center z-50">
+            <button onClick={onClose} className="absolute top-8 right-8 w-12 h-12 bg-white/5 hover:bg-[#C9A84C] text-white hover:text-black transition-colors flex items-center justify-center z-50">
                <span className="material-symbols-outlined">close</span>
             </button>
 
             <div className="flex-1 relative z-10 max-h-[70vh] overflow-y-auto pr-4">
                <div className="flex items-center gap-3 mb-8">
-                  <span className="w-8 h-[1px] bg-[#D4AF37]"></span>
-                  <span className="font-sans text-[10px] text-[#D4AF37] tracking-[0.2em] uppercase">{service.subtitle}</span>
+                  <span className="w-8 h-[1px] bg-[#C9A84C]"></span>
+                  <span className="font-sans text-[10px] text-[#C9A84C] tracking-[0.2em] uppercase">{service.subtitle}</span>
                </div>
 
                <h2 className="font-serif text-[40px] md:text-[48px] text-white leading-tight mb-4">
@@ -302,11 +302,11 @@ const ExhibitModal = ({ service, onClose }: any) => {
 
                      {service.deliverables && (
                         <div>
-                           <p className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-[#D4AF37] mb-6">Key Deliverables</p>
+                           <p className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-[#C9A84C] mb-6">Key Deliverables</p>
                            <div className="flex flex-col">
                               {service.deliverables.map((item: string, idx: number) => (
                                  <div key={idx} className="flex items-start gap-4 py-4 border-b border-white/5 last:border-0 first:border-t">
-                                    <span className="w-1.5 h-1.5 border border-[#D4AF37] rotate-45 shrink-0 mt-1.5"></span>
+                                    <span className="w-1.5 h-1.5 border border-[#C9A84C] rotate-45 shrink-0 mt-1.5"></span>
                                     <span className="font-sans text-[13px] font-light text-[#C8C3BB] leading-relaxed">{item}</span>
                                  </div>
                               ))}
@@ -315,7 +315,7 @@ const ExhibitModal = ({ service, onClose }: any) => {
                      )}
                   </div>
                ) : (
-                  <p className="font-sans text-[14px] md:text-[16px] text-white/40 leading-relaxed border-l-2 border-[#D4AF37]/30 pl-6 italic">
+                  <p className="font-sans text-[14px] md:text-[16px] text-white/40 leading-relaxed border-l-2 border-[#C9A84C]/30 pl-6 italic">
                      "We approach every discipline as an art form. Every detail is meticulously crafted to ensure your brand stands out in the most competitive markets. We architect scalable systems designed for elite performance."
                   </p>
                )}
@@ -411,16 +411,16 @@ const TreeExperience = ({ p }: any) => {
          <div className="absolute inset-0 bg-[#050505] z-0"></div>
          
          {/* Central Ambient Glow */}
-         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#D4AF37] rounded-full blur-[150px] opacity-10 pointer-events-none z-10"></div>
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#C9A84C] rounded-full blur-[150px] opacity-10 pointer-events-none z-10"></div>
 
          <div className="relative w-full max-w-[1400px] h-[80vh] z-20">
             {/* SVG Connecting Lines */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
                {treeLines.map((line, i) => (
-                  <line key={i} x1={line.x1} y1={line.y1} x2={line.x2} y2={line.y2} stroke="#D4AF37" strokeWidth="1.5" strokeOpacity="0.4" />
+                  <line key={i} x1={line.x1} y1={line.y1} x2={line.x2} y2={line.y2} stroke="#C9A84C" strokeWidth="1.5" strokeOpacity="0.4" />
                ))}
                {treeDots.map((dot, i) => (
-                  <circle key={i} cx={dot.x} cy={dot.y} r="3.5" fill="#D4AF37" className="drop-shadow-[0_0_8px_rgba(212,175,55,1)]" />
+                  <circle key={i} cx={dot.x} cy={dot.y} r="3.5" fill="#C9A84C" className="drop-shadow-[0_0_8px_rgba(212,175,55,1)]" />
                ))}
             </svg>
 
@@ -428,14 +428,14 @@ const TreeExperience = ({ p }: any) => {
             {treeNodes.map((node) => (
                <div 
                   key={node.id}
-                  className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center px-5 py-3 md:px-6 md:py-4 bg-[#0A0A0A] border border-[#D4AF37]/40 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.15)] whitespace-nowrap transition-transform duration-300 hover:scale-105 hover:border-[#D4AF37] cursor-pointer group"
+                  className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center px-5 py-3 md:px-6 md:py-4 bg-[#0A0A0A] border border-[#C9A84C]/40 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.15)] whitespace-nowrap transition-transform duration-300 hover:scale-105 hover:border-[#C9A84C] cursor-pointer group"
                   style={{ left: node.x + '%', top: node.y + '%' }}
                >
                   {node.type === 'parent' ? (
-                     <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#D4AF37] rounded-full mr-3 md:mr-4 shadow-[0_0_12px_rgba(212,175,55,1)] group-hover:shadow-[0_0_20px_rgba(212,175,55,1)] transition-shadow"></div>
+                     <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#C9A84C] rounded-full mr-3 md:mr-4 shadow-[0_0_12px_rgba(212,175,55,1)] group-hover:shadow-[0_0_20px_rgba(212,175,55,1)] transition-shadow"></div>
                   ) : (
-                     <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-[#D4AF37]/50 flex items-center justify-center mr-3 md:mr-4 group-hover:border-[#D4AF37] transition-colors">
-                        <span className="material-symbols-outlined text-[#D4AF37] text-[14px] md:text-[16px]">{node.icon}</span>
+                     <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-[#C9A84C]/50 flex items-center justify-center mr-3 md:mr-4 group-hover:border-[#C9A84C] transition-colors">
+                        <span className="material-symbols-outlined text-[#C9A84C] text-[14px] md:text-[16px]">{node.icon}</span>
                      </div>
                   )}
                   <span className="font-sans text-[10px] md:text-[12px] text-white tracking-[0.2em] font-medium uppercase text-left">{node.label}</span>
@@ -455,10 +455,10 @@ function MobileGalleryExperience() {
          <NavBar />
 
          {/* Mobile Hero */}
-         <div className="min-h-[90dvh] flex flex-col items-center justify-center text-center px-6 relative sticky top-0 z-0 bg-[#0B0B0B] border-b border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+         <div className="min-h-[90dvh] flex flex-col items-center justify-center text-center px-6 relative sticky top-0 z-0 bg-[#0A0A0A] border-b border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.1),_transparent_70%)]"></div>
             <h1 className="font-serif text-[36px] sm:text-[48px] font-bold text-white mb-4 sm:mb-6 leading-tight relative z-10">Every Brand Has Untapped Potential.</h1>
-            <h2 className="font-serif text-[32px] sm:text-[40px] font-bold text-[#D4AF37] italic relative z-10">We Reveal It.</h2>
+            <h2 className="font-serif text-[32px] sm:text-[40px] font-bold text-[#C9A84C] italic relative z-10">We Reveal It.</h2>
             <div className="absolute bottom-12 animate-bounce opacity-50">
                <span className="font-sans text-[10px] tracking-[0.3em] uppercase border border-white/20 px-6 py-2 rounded-full">Enter Gallery ↓</span>
             </div>
@@ -473,8 +473,8 @@ function MobileGalleryExperience() {
 
          {/* Mobile Final Experience */}
          <div className="min-h-[100dvh] flex flex-col items-center justify-center text-center px-6 relative sticky top-0 z-20 bg-black pt-20 pb-32 shadow-[0_-30px_60px_rgba(0,0,0,1)] border-b border-white/5">
-            <div className="w-[200px] h-[200px] bg-[#D4AF37] rounded-full blur-[80px] absolute opacity-20 animate-pulse"></div>
-            <h2 className="font-serif text-[32px] sm:text-[40px] text-center leading-tight text-[#D4AF37] font-bold mb-4 relative z-10 px-4">
+            <div className="w-[200px] h-[200px] bg-[#C9A84C] rounded-full blur-[80px] absolute opacity-20 animate-pulse"></div>
+            <h2 className="font-serif text-[32px] sm:text-[40px] text-center leading-tight text-[#C9A84C] font-bold mb-4 relative z-10 px-4">
                Growth Happens When Everything Works Together.
             </h2>
          </div>
@@ -482,17 +482,17 @@ function MobileGalleryExperience() {
          {/* Mobile Very Final CTA */}
          <div className="min-h-[100dvh] flex flex-col items-center justify-center text-center px-6 w-full relative sticky top-0 z-30 bg-[#050505] shadow-[0_-40px_60px_rgba(0,0,0,1)]">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.2),_transparent_70%)] pointer-events-none"></div>
-            <div className="w-[250px] h-[250px] bg-[#D4AF37] rounded-full blur-[100px] absolute opacity-30 animate-pulse pointer-events-none"></div>
+            <div className="w-[250px] h-[250px] bg-[#C9A84C] rounded-full blur-[100px] absolute opacity-30 animate-pulse pointer-events-none"></div>
 
             <div className="relative z-20 flex flex-col items-center text-center px-4 w-full">
                {/* Decorative Star */}
-               <div className="absolute right-0 -top-6 text-[#D4AF37] text-[20px] opacity-80 animate-pulse">★</div>
+               <div className="absolute right-0 -top-6 text-[#C9A84C] text-[20px] opacity-80 animate-pulse">★</div>
                
                <h2 className="font-serif text-[32px] sm:text-[40px] text-white font-bold leading-[1.1] tracking-tighter mb-8 sm:mb-10">
                   Ready To Build Your <br /> Growth System?
                </h2>
                <Link href="/contact" className="w-full sm:w-auto flex justify-center">
-                  <button className="bg-[#D4AF37] w-full sm:w-auto text-black font-sans text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.2em] px-8 sm:px-10 py-4 sm:py-5 rounded-[16px] active:scale-95 transition-transform shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+                  <button className="bg-[#C9A84C] w-full sm:w-auto text-black font-sans text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.2em] px-8 sm:px-10 py-4 sm:py-5 active:scale-95 transition-transform shadow-[0_0_40px_rgba(212,175,55,0.3)]">
                      BOOK A CALL
                   </button>
                </Link>
@@ -514,7 +514,7 @@ const MobileExhibit = ({ service, index }: any) => {
          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20 z-10"></div>
 
          <div className="relative z-20 px-6 sm:px-8 py-16 sm:py-20 flex flex-col justify-center items-center text-center w-full h-full min-h-[100dvh]">
-            <span className="font-sans text-[10px] text-[#D4AF37] tracking-[0.3em] uppercase mb-4 block border border-[#D4AF37]/30 px-4 py-2 rounded-full bg-[#111]">
+            <span className="font-sans text-[10px] text-[#C9A84C] tracking-[0.3em] uppercase mb-4 block border border-[#C9A84C]/30 px-4 py-2 rounded-full bg-[#0A0A0A]">
                0{index + 1} // {service.subtitle}
             </span>
             <h2 className="font-serif text-[32px] sm:text-[40px] md:text-[48px] text-white mb-4 sm:mb-6 leading-tight">{service.title}</h2>
@@ -534,11 +534,11 @@ const MobileExhibit = ({ service, index }: any) => {
                            </div>
                            {service.deliverables && (
                               <div>
-                                 <p className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-[#D4AF37] mb-4">Key Deliverables</p>
+                                 <p className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-[#C9A84C] mb-4">Key Deliverables</p>
                                  <div className="flex flex-col">
                                     {service.deliverables.map((item: string, idx: number) => (
                                        <div key={idx} className="flex items-start gap-3 py-3 border-b border-white/5 last:border-0 first:border-t">
-                                          <span className="w-1.5 h-1.5 border border-[#D4AF37] rotate-45 shrink-0 mt-1"></span>
+                                          <span className="w-1.5 h-1.5 border border-[#C9A84C] rotate-45 shrink-0 mt-1"></span>
                                           <span className="font-sans text-[12px] font-light text-[#C8C3BB] leading-relaxed">{item}</span>
                                        </div>
                                     ))}
@@ -555,7 +555,7 @@ const MobileExhibit = ({ service, index }: any) => {
                )}
             </AnimatePresence>
 
-            <button onClick={() => setExpanded(!expanded)} className="bg-transparent border border-white/30 text-white font-sans text-[10px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-colors hover:border-[#D4AF37] hover:text-[#D4AF37] mt-4">
+            <button onClick={() => setExpanded(!expanded)} className="bg-transparent border border-white/30 text-white font-sans text-[10px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-colors hover:border-[#C9A84C] hover:text-[#C9A84C] mt-4">
                {expanded ? "Close Details" : "Explore Masterpiece"}
             </button>
          </div>
@@ -573,11 +573,11 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
             <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-[#050505]">
                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20"></div>
                <motion.div animate={{ rotateY: 360, rotateX: 180 }} transition={{ duration: 30, repeat: Infinity, ease: "linear" }} className="w-[300px] md:w-[500px] h-[300px] md:h-[500px] relative preserve-3d">
-                  <div className="absolute inset-0 border-[1px] border-[#D4AF37]/30 rounded-full rotate-45 shadow-[0_0_40px_rgba(212,175,55,0.1)]"></div>
-                  <div className="absolute inset-0 border-[1px] border-[#D4AF37]/20 rounded-full -rotate-45"></div>
+                  <div className="absolute inset-0 border-[1px] border-[#C9A84C]/30 rounded-full rotate-45 shadow-[0_0_40px_rgba(212,175,55,0.1)]"></div>
+                  <div className="absolute inset-0 border-[1px] border-[#C9A84C]/20 rounded-full -rotate-45"></div>
                   <div className="absolute inset-0 border-[1px] border-white/10 rounded-full rotate-90"></div>
                </motion.div>
-               <motion.div animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="absolute w-[150px] h-[150px] bg-[#D4AF37] rounded-full blur-[100px]"></motion.div>
+               <motion.div animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="absolute w-[150px] h-[150px] bg-[#C9A84C] rounded-full blur-[100px]"></motion.div>
             </div>
          );
       case 'marketing':
@@ -591,17 +591,17 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
                   />
                   <defs>
                      <linearGradient id="goldGradient" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#D4AF37" />
+                        <stop offset="0%" stopColor="#C9A84C" />
                         <stop offset="100%" stopColor="transparent" />
                      </linearGradient>
                   </defs>
                </svg>
-               <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="absolute md:left-[20%] top-[30%] w-[250px] md:w-[350px] h-[180px] bg-[#111] border border-white/10 rounded-[20px] p-8 shadow-2xl">
+               <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="absolute md:left-[20%] top-[30%] w-[250px] md:w-[350px] h-[180px] bg-[#0A0A0A] border border-white/10 rounded-[20px] p-8 shadow-2xl">
                   <div className="w-[80%] h-2 bg-white/10 rounded-full mb-4"></div>
-                  <div className="w-[50%] h-2 bg-[#D4AF37]/50 rounded-full mb-8"></div>
+                  <div className="w-[50%] h-2 bg-[#C9A84C]/50 rounded-full mb-8"></div>
                   <div className="flex gap-3 h-[50px] items-end">
                      {[30, 70, 50, 100, 80].map((h, i) => (
-                        <motion.div key={i} animate={{ height: [`${h * 0.4}%`, `${h}%`, `${h * 0.4}%`] }} transition={{ duration: 3, delay: i * 0.3, repeat: Infinity }} className="flex-1 bg-[#D4AF37]/40 rounded-t-sm"></motion.div>
+                        <motion.div key={i} animate={{ height: [`${h * 0.4}%`, `${h}%`, `${h * 0.4}%`] }} transition={{ duration: 3, delay: i * 0.3, repeat: Infinity }} className="flex-1 bg-[#C9A84C]/40 rounded-t-sm"></motion.div>
                      ))}
                   </div>
                </motion.div>
@@ -613,18 +613,18 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
                <motion.div animate={{ rotateY: [-3, 3, -3], rotateX: [3, -3, 3] }} transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }} className="w-[90%] md:w-[60%] h-[80%] flex gap-4 md:gap-8 preserve-3d">
                   <div className="flex-1 flex flex-col gap-4 md:gap-8 translate-z-10">
                      <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 5, repeat: Infinity, delay: 0 }} className="h-[40%] bg-white/5 border border-white/10 rounded-[20px] md:rounded-[32px]"></motion.div>
-                     <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 5, repeat: Infinity, delay: 0.5 }} className="h-[60%] bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-[20px] md:rounded-[32px]"></motion.div>
+                     <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 5, repeat: Infinity, delay: 0.5 }} className="h-[60%] bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-[20px] md:rounded-[32px]"></motion.div>
                   </div>
                   <div className="flex-[1.5] flex flex-col gap-4 md:gap-8 translate-z-30">
-                     <motion.div animate={{ y: [0, -20, 0] }} transition={{ duration: 6, repeat: Infinity, delay: 1 }} className="h-[70%] bg-[#111] border border-white/10 rounded-[20px] md:rounded-[32px] p-6 flex flex-col justify-end shadow-2xl">
-                        <div className="w-12 h-12 rounded-full bg-[#D4AF37]/30 mb-4"></div>
+                     <motion.div animate={{ y: [0, -20, 0] }} transition={{ duration: 6, repeat: Infinity, delay: 1 }} className="h-[70%] bg-[#0A0A0A] border border-white/10 rounded-[20px] md:rounded-[32px] p-6 flex flex-col justify-end shadow-2xl">
+                        <div className="w-12 h-12 rounded-full bg-[#C9A84C]/30 mb-4"></div>
                         <div className="w-[60%] h-3 bg-white/20 rounded-full mb-3"></div>
                         <div className="w-[40%] h-3 bg-white/10 rounded-full"></div>
                      </motion.div>
                      <motion.div animate={{ y: [0, -20, 0] }} transition={{ duration: 6, repeat: Infinity, delay: 1.5 }} className="h-[30%] bg-white/5 border border-white/10 rounded-[20px] md:rounded-[32px]"></motion.div>
                   </div>
                   <div className="flex-1 flex flex-col gap-4 md:gap-8 translate-z-0 hidden md:flex">
-                     <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 2 }} className="h-[50%] bg-[#D4AF37]/5 border border-[#D4AF37]/10 rounded-[32px]"></motion.div>
+                     <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 2 }} className="h-[50%] bg-[#C9A84C]/5 border border-[#C9A84C]/10 rounded-[32px]"></motion.div>
                      <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 2.5 }} className="h-[50%] bg-white/5 border border-white/10 rounded-[32px]"></motion.div>
                   </div>
                </motion.div>
@@ -639,10 +639,10 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
                   <div className="w-full flex justify-between"><div className="w-12 h-1 bg-white/20"></div><div className="w-12 h-1 bg-white/20"></div></div>
                </div>
                <div className="absolute w-[70%] h-[40%] md:h-[50%] border border-white/10 z-20 flex items-center justify-center">
-                  <div className="w-8 md:w-12 h-8 md:h-12 border-t-[2px] border-l-[2px] border-[#D4AF37] absolute top-[-2px] left-[-2px]"></div>
-                  <div className="w-8 md:w-12 h-8 md:h-12 border-t-[2px] border-r-[2px] border-[#D4AF37] absolute top-[-2px] right-[-2px]"></div>
-                  <div className="w-8 md:w-12 h-8 md:h-12 border-b-[2px] border-l-[2px] border-[#D4AF37] absolute bottom-[-2px] left-[-2px]"></div>
-                  <div className="w-8 md:w-12 h-8 md:h-12 border-b-[2px] border-r-[2px] border-[#D4AF37] absolute bottom-[-2px] right-[-2px]"></div>
+                  <div className="w-8 md:w-12 h-8 md:h-12 border-t-[2px] border-l-[2px] border-[#C9A84C] absolute top-[-2px] left-[-2px]"></div>
+                  <div className="w-8 md:w-12 h-8 md:h-12 border-t-[2px] border-r-[2px] border-[#C9A84C] absolute top-[-2px] right-[-2px]"></div>
+                  <div className="w-8 md:w-12 h-8 md:h-12 border-b-[2px] border-l-[2px] border-[#C9A84C] absolute bottom-[-2px] left-[-2px]"></div>
+                  <div className="w-8 md:w-12 h-8 md:h-12 border-b-[2px] border-r-[2px] border-[#C9A84C] absolute bottom-[-2px] right-[-2px]"></div>
                   <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse absolute top-4 right-4 md:top-8 md:right-8"></div>
                </div>
             </div>
@@ -650,16 +650,16 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
       case 'seo':
          return (
             <div className="w-full h-full relative overflow-hidden bg-[#080808] flex items-center justify-center">
-               <motion.div animate={{ x: ["-100vw", "100vw"] }} transition={{ duration: 5, repeat: Infinity, ease: "linear" }} className="absolute inset-0 w-[50%] bg-gradient-to-r from-transparent via-[#D4AF37]/15 to-transparent skew-x-[45deg]"></motion.div>
+               <motion.div animate={{ x: ["-100vw", "100vw"] }} transition={{ duration: 5, repeat: Infinity, ease: "linear" }} className="absolute inset-0 w-[50%] bg-gradient-to-r from-transparent via-[#C9A84C]/15 to-transparent skew-x-[45deg]"></motion.div>
 
-               <div className="relative z-10 w-[80%] md:w-[60%] max-w-[700px] h-[60px] md:h-[80px] bg-[#111] border border-white/20 rounded-full flex items-center px-8 shadow-[0_0_50px_rgba(212,175,55,0.1)]">
-                  <span className="material-symbols-outlined text-[#D4AF37] text-[24px] md:text-[32px] mr-6">search</span>
+               <div className="relative z-10 w-[80%] md:w-[60%] max-w-[700px] h-[60px] md:h-[80px] bg-[#0A0A0A] border border-white/20 rounded-full flex items-center px-8 shadow-[0_0_50px_rgba(212,175,55,0.1)]">
+                  <span className="material-symbols-outlined text-[#C9A84C] text-[24px] md:text-[32px] mr-6">search</span>
                   <motion.div animate={{ width: ["0%", "80%", "80%", "0%"] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="h-4 bg-white/20 rounded-full overflow-hidden"></motion.div>
                </div>
 
                <div className="absolute inset-0 z-0 pointer-events-none hidden md:block">
                   {[...Array(6)].map((_, i) => (
-                     <motion.div key={i} animate={{ y: ["100vh", "-20vh"], opacity: [0, 0.4, 0] }} transition={{ duration: 8, repeat: Infinity, delay: i * 1.5, ease: "linear" }} className="absolute text-[#D4AF37] font-sans font-bold uppercase tracking-widest text-[16px]" style={{ left: `${15 + i * 14}%` }}>
+                     <motion.div key={i} animate={{ y: ["100vh", "-20vh"], opacity: [0, 0.4, 0] }} transition={{ duration: 8, repeat: Infinity, delay: i * 1.5, ease: "linear" }} className="absolute text-[#C9A84C] font-sans font-bold uppercase tracking-widest text-[16px]" style={{ left: `${15 + i * 14}%` }}>
                         + Ranking
                      </motion.div>
                   ))}
@@ -671,21 +671,21 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
             <div className="w-full h-full relative overflow-hidden bg-[#0A0A0A] flex items-center justify-center perspective-[1200px]">
                <motion.div animate={{ rotateZ: 360 }} transition={{ duration: 80, repeat: Infinity, ease: "linear" }} className="relative w-[300px] md:w-[600px] h-[300px] md:h-[600px] flex items-center justify-center">
                   {[0, 1, 2, 3, 4, 5].map((i) => (
-                     <motion.div key={i} animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 5, repeat: Infinity, delay: i * 0.6 }} className="absolute w-[100px] md:w-[150px] h-[140px] md:h-[200px] bg-[#111] border border-[#D4AF37]/20 rounded-[16px] shadow-2xl flex flex-col p-4 md:p-6" style={{ transform: `rotate(${i * 60}deg) translateY(-200px)` }}>
+                     <motion.div key={i} animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 5, repeat: Infinity, delay: i * 0.6 }} className="absolute w-[100px] md:w-[150px] h-[140px] md:h-[200px] bg-[#0A0A0A] border border-[#C9A84C]/20 rounded-[16px] shadow-2xl flex flex-col p-4 md:p-6" style={{ transform: `rotate(${i * 60}deg) translateY(-200px)` }}>
                         <div className="w-full h-2 md:h-3 bg-white/20 rounded-full mb-3 md:mb-4"></div>
                         <div className="w-[70%] h-2 md:h-3 bg-white/10 rounded-full mb-6 md:mb-8"></div>
-                        <div className="w-full h-full bg-[#111] rounded-[8px] md:rounded-[12px]"></div>
+                        <div className="w-full h-full bg-[#0A0A0A] rounded-[8px] md:rounded-[12px]"></div>
                      </motion.div>
                   ))}
-                  <div className="w-[120px] h-[120px] bg-[#D4AF37] rounded-full blur-[60px] opacity-40 animate-pulse"></div>
+                  <div className="w-[120px] h-[120px] bg-[#C9A84C] rounded-full blur-[60px] opacity-40 animate-pulse"></div>
                </motion.div>
             </div>
          );
       case 'web':
          return (
             <div className="w-full h-full relative overflow-hidden bg-[#050505] flex items-center justify-center p-6 md:p-20">
-               <div className="w-full max-w-[1000px] h-[50%] md:h-[70%] bg-[#0B0B0B] border border-white/10 rounded-[24px] md:rounded-[32px] shadow-[0_0_80px_rgba(0,0,0,0.8)] flex flex-col overflow-hidden relative">
-                  <div className="h-[40px] md:h-[60px] bg-[#111] border-b border-white/5 flex items-center px-6 md:px-8 gap-3">
+               <div className="w-full max-w-[1000px] h-[50%] md:h-[70%] bg-[#0A0A0A] border border-white/10 rounded-[24px] md:rounded-[32px] shadow-[0_0_80px_rgba(0,0,0,0.8)] flex flex-col overflow-hidden relative">
+                  <div className="h-[40px] md:h-[60px] bg-[#0A0A0A] border-b border-white/5 flex items-center px-6 md:px-8 gap-3">
                      <div className="w-3 md:w-4 h-3 md:h-4 rounded-full bg-red-500/50"></div><div className="w-3 md:w-4 h-3 md:h-4 rounded-full bg-yellow-500/50"></div><div className="w-3 md:w-4 h-3 md:h-4 rounded-full bg-green-500/50"></div>
                   </div>
                   <div className="flex-1 p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-10">
@@ -695,7 +695,7 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
                         <div className="flex-1 md:h-10 bg-white/5 rounded-[8px] md:rounded-[12px] hidden md:block"></div>
                      </div>
                      <div className="flex-1 flex flex-col gap-6 md:gap-8">
-                        <motion.div animate={{ width: ["0%", "100%"] }} transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }} className="h-24 md:h-48 bg-gradient-to-r from-[#D4AF37]/10 to-[#D4AF37]/30 rounded-[12px] md:rounded-[20px] border border-[#D4AF37]/20"></motion.div>
+                        <motion.div animate={{ width: ["0%", "100%"] }} transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }} className="h-24 md:h-48 bg-gradient-to-r from-[#C9A84C]/10 to-[#C9A84C]/30 rounded-[12px] md:rounded-[20px] border border-[#C9A84C]/20"></motion.div>
                         <div className="flex gap-6 md:gap-8 h-full">
                            <div className="flex-1 bg-white/5 rounded-[12px] md:rounded-[20px]"></div>
                            <div className="flex-1 bg-white/5 rounded-[12px] md:rounded-[20px]"></div>
@@ -720,9 +720,9 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
                   <motion.svg animate={{ rotate: 360 }} transition={{ duration: 80, repeat: Infinity, ease: "linear" }} viewBox="0 0 100 100" className="w-full h-full overflow-visible opacity-60">
                      <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.2" strokeDasharray="2 4" />
                      <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(212,175,55,0.3)" strokeWidth="0.4" />
-                     <motion.path animate={{ pathLength: [0, 1, 0] }} transition={{ duration: 6, repeat: Infinity }} d="M50 5 L95 50 L50 95 L5 50 Z" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
+                     <motion.path animate={{ pathLength: [0, 1, 0] }} transition={{ duration: 6, repeat: Infinity }} d="M50 5 L95 50 L50 95 L5 50 Z" fill="none" stroke="#C9A84C" strokeWidth="0.5" />
                   </motion.svg>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-32 md:h-32 bg-[#111] rounded-full shadow-[0_0_60px_#D4AF37] flex items-center justify-center border border-[#D4AF37]/50">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-32 md:h-32 bg-[#0A0A0A] rounded-full shadow-[0_0_60px_#C9A84C] flex items-center justify-center border border-[#C9A84C]/50">
                      <span className="font-sans text-[10px] md:text-[14px] text-white font-bold tracking-widest uppercase">Systems</span>
                   </div>
                </div>
@@ -734,13 +734,13 @@ const ExhibitVisuals = ({ type }: { type: string }) => {
                <motion.div animate={{ opacity: [0.1, 0.3, 0.1] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-10%] w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_top,_rgba(212,175,55,0.2),_transparent_60%)] pointer-events-none"></motion.div>
 
                <div className="relative z-10 w-[300px] md:w-[500px] h-[200px] md:h-[300px] border-b-[2px] border-white/10 flex items-end justify-center pb-0">
-                  <div className="w-[150px] md:w-[200px] h-[4px] md:h-[6px] bg-[#D4AF37] shadow-[0_0_30px_#D4AF37] mb-10 md:mb-16 relative rounded-full">
-                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 md:w-16 h-[80px] md:h-[120px] border-x-2 border-[#D4AF37]/20 -translate-y-full rounded-t-[8px]"></div>
+                  <div className="w-[150px] md:w-[200px] h-[4px] md:h-[6px] bg-[#C9A84C] shadow-[0_0_30px_#C9A84C] mb-10 md:mb-16 relative rounded-full">
+                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 md:w-16 h-[80px] md:h-[120px] border-x-2 border-[#C9A84C]/20 -translate-y-full rounded-t-[8px]"></div>
                   </div>
                </div>
 
                <div className="absolute bottom-[15%] text-center opacity-60 px-6">
-                  <p className="font-serif text-[24px] md:text-[36px] text-[#D4AF37] italic drop-shadow-lg">Every Great Strategy Begins With One Conversation.</p>
+                  <p className="font-serif text-[24px] md:text-[36px] text-[#C9A84C] italic drop-shadow-lg">Every Great Strategy Begins With One Conversation.</p>
                </div>
             </div>
          );

@@ -144,7 +144,7 @@ export function CustomCursor() {
       <svg className="absolute inset-0 w-full h-full pointer-events-none">
         <defs>
           <linearGradient id="comet-grad" ref={gradRef} gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#D4AF37" stopOpacity="1.0" />
+            <stop offset="0%" stopColor="#C9A84C" stopOpacity="1.0" />
             <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.0" />
           </linearGradient>
         </defs>
@@ -179,7 +179,7 @@ export function CustomCursor() {
           />
         )}
         
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#D4AF37" style={{ filter: 'drop-shadow(0px 0px 8px rgba(212,175,55,0.8))' }}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C9A84C" style={{ filter: 'drop-shadow(0px 0px 8px rgba(212,175,55,0.8))' }}>
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
       </motion.div>
