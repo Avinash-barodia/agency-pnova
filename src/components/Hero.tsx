@@ -97,7 +97,7 @@ export function Hero() {
       </motion.div>
 
       {/* ── Main Content ──────────────────────────────────────── */}
-      <div className="relative z-10 max-w-[1280px] w-full mt-8 md:mt-16">
+      <div className="relative z-10 max-w-[1280px] w-full mx-auto mt-8 md:mt-16">
         
         {/* Right Side Decorative Composition */}
         <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[450px] h-[650px] pointer-events-auto z-20">
