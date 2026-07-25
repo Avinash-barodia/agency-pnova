@@ -64,26 +64,48 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[80vh] flex flex-col justify-center pt-28 pb-20 px-6 md:px-12 lg:px-[80px] overflow-hidden"
+      className="relative min-h-[80vh] flex flex-col justify-center pt-28 pb-20 px-6 md:px-12 lg:px-[80px] overflow-hidden bg-[#0A0A0A]"
       aria-label="Purnova Hero"
     >
-      {/* ── Background: Grain Texture ─────────────────────────── */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.06]"
-        style={{
-          backgroundImage: "radial-gradient(circle, #C9A84C 0.5px, transparent 0.5px)",
-          backgroundSize: "28px 28px",
+      {/* ── Layer 2: Vignette ─────────────────────────────────── */}
+      <div className="absolute inset-0 pointer-events-none z-0" style={{ background: "radial-gradient(circle at center, transparent 45%, rgba(0,0,0,0.15) 100%)" }} />
+
+      {/* ── Layer 4: Film Grain ───────────────────────────────── */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-0" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
+
+      {/* ── Layer 5: Editorial Grid ───────────────────────────── */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.025] z-0 hidden md:block" style={{ 
+        backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)", 
+        backgroundSize: "100px 100px", 
+        maskImage: "radial-gradient(ellipse at center, black 15%, transparent 75%)", 
+        WebkitMaskImage: "radial-gradient(ellipse at center, black 15%, transparent 75%)" 
+      }} />
+
+      {/* ── Layer 6: Star Field (Static & Twinkling) ──────────── */}
+      <motion.div className="absolute inset-0 pointer-events-none z-0 hidden md:block" 
+        style={{ 
+          backgroundImage: `
+            radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.8), transparent),
+            radial-gradient(1.5px 1.5px at 35% 65%, rgba(255,255,255,0.6), transparent),
+            radial-gradient(1px 1px at 75% 15%, rgba(255,255,255,0.9), transparent),
+            radial-gradient(2px 2px at 85% 75%, rgba(255,255,255,0.5), transparent),
+            radial-gradient(1px 1px at 55% 85%, rgba(255,255,255,0.7), transparent),
+            radial-gradient(1px 1px at 45% 15%, rgba(255,255,255,0.4), transparent)
+          `
         }}
+        animate={{ opacity: [0.3, 0.7, 0.3] }} 
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }} 
       />
 
-      {/* ── Background: Mouse-reactive glow ──────────────────── */}
-      <motion.div
-        className="absolute pointer-events-none"
-        style={{
-          width: 600, height: 600, left: "50%", top: "40%", x: glowX, y: glowY, translateX: "-50%", translateY: "-50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)",
-        }}
+      {/* ── Layer 3: Ambient Gold Glow ────────────────────────── */}
+      <motion.div className="absolute left-[20%] top-[30%] w-[1200px] h-[800px] pointer-events-none -translate-x-1/2 -translate-y-1/2 z-0" 
+        style={{ background: "radial-gradient(ellipse at center, rgba(201,168,76,0.04) 0%, transparent 60%)" }}
+        animate={{ opacity: [0.7, 1, 0.7] }} 
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} 
       />
+
+      {/* ── Layer 7: Soft Light Falloff ───────────────────────── */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[500px] pointer-events-none z-0" style={{ background: "radial-gradient(ellipse at top, rgba(255,255,255,0.02) 0%, transparent 60%)" }} />
 
       {/* ── Vertical gold rule — right side accent ─────────────── */}
       <motion.div
