@@ -24,7 +24,7 @@ export function Stats() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section ref={ref} className="py-8 md:py-12 luxury-border border-x-0 border-b-0 bg-[var(--color-primary-container)] text-[var(--color-on-primary-container)]">
+    <section ref={ref} className="py-24 md:py-32 luxury-border border-x-0 border-b-0 bg-[var(--color-primary-container)] text-[var(--color-on-primary-container)]">
       <div className="px-6 md:px-12 lg:px-[80px] max-w-[1440px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
         {stats.map((stat, index) => (
           <div key={index}>

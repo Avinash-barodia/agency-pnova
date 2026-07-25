@@ -71,19 +71,19 @@ export default function PuneVoicesCaseStudy() {
           
           {/* Mobile-First 2x2 Premium Information Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 reveal-up reveal-active" style={{ transitionDelay: "200ms" }}>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">INDUSTRY</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">Digital Media</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">LOCATION</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">Pune, India</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">ENGAGEMENT</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">2+ Years</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">SERVICES</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">Brand & Content</p>
             </div>
@@ -116,22 +116,22 @@ export default function PuneVoicesCaseStudy() {
           <h2 className="font-serif text-[28px] md:text-[48px] leading-[1.1] text-white mb-12 md:mb-24 text-center md:text-left">Good Content. Wrong Direction.</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 reveal-up">
-            <div className="bg-[#0A0A0A] p-8 rounded-[16px] border border-white/5">
+            <div className="bg-[#0A0A0A] p-8 rounded-none border border-white/5">
               <p className="font-serif text-[32px] text-[#C9A84C]/30 mb-4">01</p>
               <h3 className="font-sans text-[16px] font-bold uppercase tracking-wider text-white mb-3">No Defined Niche</h3>
               <p className="font-sans text-[16px] leading-[1.6] text-white/60">The content was too broad, attempting to cater to everyone and reaching no one effectively.</p>
             </div>
-            <div className="bg-[#0A0A0A] p-8 rounded-[16px] border border-white/5">
+            <div className="bg-[#0A0A0A] p-8 rounded-none border border-white/5">
               <p className="font-serif text-[32px] text-[#C9A84C]/30 mb-4">02</p>
               <h3 className="font-sans text-[16px] font-bold uppercase tracking-wider text-white mb-3">Invisible Space</h3>
               <p className="font-sans text-[16px] leading-[1.6] text-white/60">Podcast platforms were saturated. Standing out required more than just good audio.</p>
             </div>
-            <div className="bg-[#0A0A0A] p-8 rounded-[16px] border border-white/5">
+            <div className="bg-[#0A0A0A] p-8 rounded-none border border-white/5">
               <p className="font-serif text-[32px] text-[#C9A84C]/30 mb-4">03</p>
               <h3 className="font-sans text-[16px] font-bold uppercase tracking-wider text-white mb-3">No Social System</h3>
               <p className="font-sans text-[16px] leading-[1.6] text-white/60">Content was being made in isolation, with no systematic repurposing for social growth.</p>
             </div>
-            <div className="bg-[#0A0A0A] p-8 rounded-[16px] border border-white/5">
+            <div className="bg-[#0A0A0A] p-8 rounded-none border border-white/5">
               <p className="font-serif text-[32px] text-[#C9A84C]/30 mb-4">04</p>
               <h3 className="font-sans text-[16px] font-bold uppercase tracking-wider text-white mb-3">No Personal Brand</h3>
               <p className="font-sans text-[16px] leading-[1.6] text-white/60">The host was hidden behind the mic, missing out on the human-to-human connection.</p>
@@ -187,7 +187,7 @@ export default function PuneVoicesCaseStudy() {
       {/* Section 05: Premium Testimonial Card */}
       <section className="py-16 md:py-32 border-b border-white/5">
         <div className="px-5 md:px-[80px] max-w-none md:max-w-[1000px] mx-auto w-full">
-          <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-16 relative overflow-hidden reveal-up w-full">
+          <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-16 relative overflow-hidden reveal-up w-full">
             <div className="absolute top-0 right-0 p-8 opacity-[0.03] select-none pointer-events-none">
               <span className="material-symbols-outlined text-[120px] md:text-[200px]">format_quote</span>
             </div>
@@ -212,16 +212,16 @@ export default function PuneVoicesCaseStudy() {
         <div className="px-5 md:px-[80px] max-w-none md:max-w-[1440px] mx-auto w-full">
           <p className="font-sans text-[10px] tracking-[0.2em] text-[#C9A84C] uppercase mb-8 md:mb-16 text-center md:text-left">06 · SELECTED WORK</p>
           <div className="flex flex-col gap-6 md:grid md:grid-cols-12 md:gap-8 reveal-up">
-            <div className="w-full md:col-span-8 aspect-video border border-white/5 overflow-hidden rounded-[16px]">
+            <div className="w-full md:col-span-8 aspect-video border border-white/5 overflow-hidden rounded-none">
               <img alt="Social Media Templates" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGO59det4Y0H1_Dm-TehOZralzlG5OMAcRJ2p3tnrHhtNB3C8xkwVSa8cndWKNFr0kqngxRpsveaEn6qYE4QYREi3xKDJiN4JXIUnhrUh3sxxVBcW0Np6sL-aWq_7WkK2yhyM05-eWpVEB6Qs9kEqbRukdpDNM7wT50LvSpKVENnPB5uiLFqlUxW7RC0mS_yw9r0ZNspzgRPA3LrrN-8WjwcZ3ICV3OBXKeNA9g5Xx3Efydmr_jl6mIwnm2U1O9GNsgKiOkhxgEm4" />
             </div>
-            <div className="w-full md:col-span-4 aspect-video md:aspect-square border border-white/5 overflow-hidden rounded-[16px]">
+            <div className="w-full md:col-span-4 aspect-video md:aspect-square border border-white/5 overflow-hidden rounded-none">
               <img alt="Cover Design" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0CAJWM998JgUQXJTJ8h0IzM3kiQqCtRXmNSWDB03f_DtmbKP2ppmIkD-_HUqfTCNMKiU02DHcgRMA-cwSy0VSXxWIVLANPI5kOpfBg8J0y6zwPos19ONiIInLOaFfGZEJb6tz_QLmD29gWSeoFkZkHpIC905A6-Wh2hgwX2J9J7cFavXtcWlsrILP_unHnjQn6ydntOC4VooxyZGA18-_9NQdS1uamrrsbH_qR7nEE4SKklU5A-Ps1O9o5WouH_Ur5qMHWPPJJ4Q" />
             </div>
-            <div className="w-full md:col-span-4 aspect-video md:aspect-[4/5] border border-white/5 overflow-hidden rounded-[16px]">
+            <div className="w-full md:col-span-4 aspect-video md:aspect-[4/5] border border-white/5 overflow-hidden rounded-none">
               <img alt="Instagram Reels Grid" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Qx-OPmwySvnbSJpXGwZUTnCPDIVGUqMxmWr4mZUGiSl7PJvwRGU2A9OZVS4paUc3YqZbGd88GgxpPtz_SbFKQKpCnjHANIZy0im-eFGV30KEhTTBW1wo6O7Gxv1rU_1ElwpZx-Z8L7pCD-JV5oWTN0t-tX7dS3UYR0sJ82XK15cn4FUE0VMv6BNqq-8UVGicwOWaE2JXw5eri-oAKn_pdTkp3zhtjfLWkEVuOF61wkOO3_SdtYbO-WQWABVnVPGhSWZnehwysm4" />
             </div>
-            <div className="w-full md:col-span-8 aspect-video md:aspect-[16/7] border border-white/5 overflow-hidden rounded-[16px]">
+            <div className="w-full md:col-span-8 aspect-video md:aspect-[16/7] border border-white/5 overflow-hidden rounded-none">
               <img alt="Physical Studio environment" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWP7t3OPz1VJ1nbCzeXyJh-9g9iqB8Kele_oj0D2gtDngOXoOVzW_sc0iboNoMRFDVBMTMGfpHpJBkIbvm-SwXX-AsihOowycIOicUZOACSuOeERkRlcWDYDAZWQ-1vF71Wu65OnUHfN1uBAiiTdlwmS9WQ60kfizqghEGDETfDIEmVwu0eGlLtiK3Jd3z-jG3S0YVwylhdHa9cTyCv2REt37Al6VgtuL6vfCqoe1ACzYreLBNaXksxjDQ-To0UB-komeQaLiiPQ8" />
             </div>
           </div>

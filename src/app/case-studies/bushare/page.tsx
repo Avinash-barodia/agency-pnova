@@ -71,19 +71,19 @@ export default function BushareCaseStudy() {
           
           {/* Mobile-First 2x2 Premium Information Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 reveal-up reveal-active" style={{ transitionDelay: "200ms" }}>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">INDUSTRY</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">Fashion</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">LOCATION</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">India</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">ENGAGEMENT</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">14 Months</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-[12px] md:rounded-[16px]">
+            <div className="bg-[#0A0A0A] border border-white/5 p-4 md:p-6 rounded-none md:rounded-none">
               <p className="font-sans text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">SERVICES</p>
               <p className="font-sans text-[14px] md:text-[16px] text-white">Brand Strategy, Social, Content</p>
             </div>
@@ -108,7 +108,7 @@ export default function BushareCaseStudy() {
           
           <div className="mt-12 md:mt-24 reveal-up">
             <img 
-              className="w-full aspect-video object-cover rounded-[16px] grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full aspect-video object-cover rounded-none grayscale hover:grayscale-0 transition-all duration-700"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk_Nl2GGYG2Lbdw1Q6vA6TtTQw3a_vzXdbmOyAu_C3-pNYJyyGspwHCehDXemHaXY5uoBkRgOUSA1q5CRhIBSynvxQPra0uGAjyKVhjTlOK8lHZPlFXN8tec1mde6rKwaR2ajCL6JFdAXn5l5IXRRqNsiUZ5nkXpdE5SYs6tllG_GIlY5uga2RqhxP1ucKuLCz3TbDUiMLvuvfWDIlFBZc0FbTA29EcNxsNP8-QkqSi0Q2bzwe_qKzHgF4dkRQDKN4LQPodoP3ySc" 
               alt="Fashion Lifestyle" 
             />
@@ -123,17 +123,17 @@ export default function BushareCaseStudy() {
           <h2 className="font-serif text-[28px] md:text-[48px] leading-[1.1] text-white mb-12 md:mb-24 text-center md:text-left">Good product. Zero infrastructure.</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 reveal-up">
-            <div className="bg-[#0A0A0A] p-8 rounded-[16px] border border-white/5">
+            <div className="bg-[#0A0A0A] p-8 rounded-none border border-white/5">
               <p className="font-serif text-[32px] text-[#C9A84C]/30 mb-4">01</p>
               <h3 className="font-sans text-[16px] font-bold uppercase tracking-wider text-white mb-3">No Identity</h3>
               <p className="font-sans text-[16px] leading-[1.6] text-white/60">Inconsistent visuals, no clear positioning, making the brand entirely forgettable.</p>
             </div>
-            <div className="bg-[#0A0A0A] p-8 rounded-[16px] border border-white/5">
+            <div className="bg-[#0A0A0A] p-8 rounded-none border border-white/5">
               <p className="font-serif text-[32px] text-[#C9A84C]/30 mb-4">02</p>
               <h3 className="font-sans text-[16px] font-bold uppercase tracking-wider text-white mb-3">Weak Funnel</h3>
               <p className="font-sans text-[16px] leading-[1.6] text-white/60">Website converting at an abysmal 0.6% with 6-second mobile load times.</p>
             </div>
-            <div className="bg-[#0A0A0A] p-8 rounded-[16px] border border-white/5">
+            <div className="bg-[#0A0A0A] p-8 rounded-none border border-white/5">
               <p className="font-serif text-[32px] text-[#C9A84C]/30 mb-4">03</p>
               <h3 className="font-sans text-[16px] font-bold uppercase tracking-wider text-white mb-3">Failed Ads</h3>
               <p className="font-sans text-[16px] leading-[1.6] text-white/60">No tracking, no audience strategy, and poor creatives led to completely wasted ad spend.</p>
@@ -184,35 +184,35 @@ export default function BushareCaseStudy() {
           <h2 className="font-serif text-[28px] md:text-[48px] leading-[1.1] text-white text-center mb-12 md:mb-24">14 months. One brand. Measurable growth.</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 reveal-up">
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-[#C9A84C] mb-2 leading-none">3.4×</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">Revenue Growth</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-white mb-2 leading-none">+218%</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">Organic Traffic</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-white mb-2 leading-none">3.8×</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">Paid ROAS</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-white mb-2 leading-none">11.4K</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">New Followers</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-white mb-2 leading-none">6.2K+</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">Email Subs</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-[#C9A84C] mb-2 leading-none">2.9%</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">Conversion Rate</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-white mb-2 leading-none">22%</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">Cart Recovery</p>
             </div>
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-8 text-center flex flex-col items-center justify-center">
               <p className="font-serif text-[32px] md:text-[56px] text-white mb-2 leading-none">38</p>
               <p className="font-sans text-[10px] tracking-[0.1em] text-white/50 uppercase">Page-1 Keywords</p>
             </div>
@@ -235,7 +235,7 @@ export default function BushareCaseStudy() {
       {/* Section 06: Premium Testimonial Card */}
       <section className="py-16 md:py-32 bg-[#080808] border-t border-white/5">
         <div className="px-5 md:px-[80px] max-w-none md:max-w-[1000px] mx-auto w-full">
-          <div className="bg-[#0A0A0A] border border-white/5 rounded-[16px] p-6 md:p-16 relative overflow-hidden reveal-up w-full">
+          <div className="bg-[#0A0A0A] border border-white/5 rounded-none p-6 md:p-16 relative overflow-hidden reveal-up w-full">
             <div className="absolute top-0 right-0 p-8 opacity-[0.03] select-none pointer-events-none">
               <span className="material-symbols-outlined text-[120px] md:text-[200px]">format_quote</span>
             </div>

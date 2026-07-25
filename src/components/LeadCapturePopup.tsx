@@ -198,7 +198,7 @@ export function LeadCapturePopup() {
             className={`relative flex flex-col overflow-hidden bg-[#090909] border border-[#C9A84C]/25 shadow-[0_20px_80px_rgba(0,0,0,0.8),_0_0_40px_rgba(212,175,55,0.05)] ${
               isMobile
                 ? "w-full h-[85vh] rounded-t-[28px]"
-                : "w-[800px] max-w-[90vw] min-h-[500px] rounded-[32px]"
+                : "w-[800px] max-w-[90vw] min-h-[500px] rounded-none"
             }`}
             onClick={(e) => e.stopPropagation()}
           >

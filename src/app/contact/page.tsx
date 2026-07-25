@@ -69,7 +69,7 @@ export default function ContactPage() {
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value.replace(/[0-9]/g, '') })}
-                className="w-full bg-[#0A0A0A] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
+                className="w-full bg-[#0A0A0A] border border-white/10 rounded-none px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
               />
               <input
                 type="email"
@@ -77,7 +77,7 @@ export default function ContactPage() {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-[#0A0A0A] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
+                className="w-full bg-[#0A0A0A] border border-white/10 rounded-none px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
               />
             </div>
 
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 required
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/[^0-9]/g, '') })}
-                className="w-full bg-[#0A0A0A] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
+                className="w-full bg-[#0A0A0A] border border-white/10 rounded-none px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
               />
               <input
                 type="text"
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 required
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="w-full bg-[#0A0A0A] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
+                className="w-full bg-[#0A0A0A] border border-white/10 rounded-none px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors"
               />
             </div>
 
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 value={formData.requirements}
                 onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
                 required
-                className="w-full bg-[#0A0A0A] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white/40 focus:text-white focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors appearance-none cursor-pointer"
+                className="w-full bg-[#0A0A0A] border border-white/10 rounded-none px-6 py-4 font-sans text-[14px] text-white/40 focus:text-white focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors appearance-none cursor-pointer"
               >
                 <option value="" disabled>Select Your Requirements</option>
                 <option value="branding">Branding & Identity</option>
@@ -123,7 +123,7 @@ export default function ContactPage() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               required
-              className="w-full bg-[#0A0A0A] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors resize-none"
+              className="w-full bg-[#0A0A0A] border border-white/10 rounded-none px-6 py-4 font-sans text-[14px] text-white placeholder-white/40 focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors resize-none"
             />
 
             <div className="relative">
@@ -131,7 +131,7 @@ export default function ContactPage() {
                 value={formData.source}
                 onChange={(e) => setFormData({ ...formData, source: e.target.value })}
                 required
-                className="w-full bg-[#0A0A0A] border border-white/10 rounded-[12px] px-6 py-4 font-sans text-[14px] text-white/40 focus:text-white focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors appearance-none cursor-pointer"
+                className="w-full bg-[#0A0A0A] border border-white/10 rounded-none px-6 py-4 font-sans text-[14px] text-white/40 focus:text-white focus:outline-none focus:border-[#C9A84C]/50 focus:bg-[#151515] transition-colors appearance-none cursor-pointer"
               >
                 <option value="" disabled>How did you hear about us?</option>
                 <option value="google">Google</option>
@@ -196,7 +196,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-16">
             
             {/* Email */}
-            <div className="bg-[#0A0A0A] border border-white/10 rounded-[16px] p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
+            <div className="bg-[#0A0A0A] border border-white/10 rounded-none p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
               <span className="material-symbols-outlined text-[32px] text-[#C9A84C] mb-4">mail</span>
               <h3 className="font-serif text-[20px] text-white mb-2">Email</h3>
               <a href="mailto:hello@purnova.com" className="font-sans text-[16px] text-white/80 hover:text-[#C9A84C] transition-colors mb-2">hello@purnova.com</a>
@@ -204,7 +204,7 @@ export default function ContactPage() {
             </div>
 
             {/* Call */}
-            <div className="bg-[#0A0A0A] border border-white/10 rounded-[16px] p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
+            <div className="bg-[#0A0A0A] border border-white/10 rounded-none p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
               <span className="material-symbols-outlined text-[32px] text-[#C9A84C] mb-4">call</span>
               <h3 className="font-serif text-[20px] text-white mb-2">Call</h3>
               <a href="tel:+918390025023" className="font-sans text-[16px] text-white/80 hover:text-[#C9A84C] transition-colors mb-2">+91 83900 25023</a>
@@ -212,7 +212,7 @@ export default function ContactPage() {
             </div>
 
             {/* Office */}
-            <div className="bg-[#0A0A0A] border border-white/10 rounded-[16px] p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
+            <div className="bg-[#0A0A0A] border border-white/10 rounded-none p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
               <span className="material-symbols-outlined text-[32px] text-[#C9A84C] mb-4">location_on</span>
               <h3 className="font-serif text-[20px] text-white mb-2">Office</h3>
               <p className="font-sans text-[16px] text-white/80 mb-2 text-center">
@@ -224,7 +224,7 @@ export default function ContactPage() {
             </div>
 
             {/* Working Hours */}
-            <div className="bg-[#0A0A0A] border border-white/10 rounded-[16px] p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
+            <div className="bg-[#0A0A0A] border border-white/10 rounded-none p-8 flex flex-col items-center hover:border-[#C9A84C]/50 transition-colors">
               <span className="material-symbols-outlined text-[32px] text-[#C9A84C] mb-4">schedule</span>
               <h3 className="font-serif text-[20px] text-white mb-2">Working Hours</h3>
               <p className="font-sans text-[16px] text-white/80 mb-2">10:00 AM – 6:00 PM</p>

@@ -74,15 +74,15 @@ export default function CaseStudiesPage() {
 
           {/* Stats Blocks (Stacked/Inline on Mobile) */}
           <div className="grid grid-cols-3 gap-2 md:gap-12 w-full max-w-4xl border-t border-white/10 pt-8 md:pt-16">
-            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
+            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-none md:rounded-none">
               <span className="font-serif text-[28px] md:text-[48px] text-[#C9A84C] mb-1 md:mb-2">40+</span>
               <span className="font-sans text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-white/50">Projects</span>
             </div>
-            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
+            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-none md:rounded-none">
               <span className="font-serif text-[28px] md:text-[48px] text-[#C9A84C] mb-1 md:mb-2">12</span>
               <span className="font-sans text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-white/50">Industries</span>
             </div>
-            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-[12px] md:rounded-none">
+            <div className="flex flex-col items-center bg-[#0A0A0A] md:bg-transparent py-4 md:py-0 rounded-none md:rounded-none">
               <span className="font-serif text-[28px] md:text-[48px] text-[#C9A84C] mb-1 md:mb-2">5+</span>
               <span className="font-sans text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-white/50">Years</span>
             </div>
@@ -207,14 +207,14 @@ export default function CaseStudiesPage() {
                   }}
                 >
                   {/* Floating Insight Panel */}
-                  <div className="hidden md:block absolute -top-4 -right-4 z-20 bg-[#0A0A0A] border border-[#C9A84C]/30 px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 pointer-events-none shadow-2xl">
+                  <div className="hidden md:block absolute -top-4 -right-4 z-20 bg-[#0A0A0A] border border-[#C9A84C]/30 px-4 py-2 rounded-none opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-500 pointer-events-none shadow-2xl">
                     <span className="font-sans text-[11px] tracking-[0.1em] text-[#C9A84C] uppercase whitespace-nowrap">
                       {study.insight}
                     </span>
                   </div>
 
                   {/* Card Container */}
-                  <div className={`bg-[#0A0A0A] rounded-[16px] md:rounded-[20px] overflow-hidden border transition-all duration-700 h-full flex flex-col shadow-lg relative ${isTapped ? 'border-[#C9A84C]/50 scale-[1.02] shadow-[#C9A84C]/10' : 'border-white/5'} md:group-hover:border-[#C9A84C]/50 md:group-hover:-translate-y-2 md:group-hover:shadow-[#C9A84C]/10 before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-[#0A0A0A] before:z-10 before:opacity-0 md:group-hover:before:opacity-100 before:transition-opacity before:duration-700`}>
+                  <div className={`bg-[#0A0A0A] rounded-none md:rounded-none overflow-hidden border transition-all duration-700 h-full flex flex-col shadow-lg relative ${isTapped ? 'border-[#C9A84C]/50 scale-[1.02] shadow-[#C9A84C]/10' : 'border-white/5'} md:group-hover:border-[#C9A84C]/50 md:group-hover:-translate-y-2 md:group-hover:shadow-[#C9A84C]/10 before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-[#0A0A0A] before:z-10 before:opacity-0 md:group-hover:before:opacity-100 before:transition-opacity before:duration-700`}>
                     
                     <div className="aspect-[16/10] w-full overflow-hidden relative bg-[#1A1A1A]">
                       <div className={`absolute inset-0 bg-[#0A0A0A]/20 z-10 transition-colors duration-700 ${isTapped ? 'bg-transparent' : ''} md:group-hover:bg-transparent`}></div>
@@ -234,7 +234,7 @@ export default function CaseStudiesPage() {
                           {study.title}
                         </h3>
 
-                        <div className="md:hidden inline-flex items-center border border-[#C9A84C]/30 bg-[#C9A84C]/5 px-3 py-1.5 rounded-md mb-4 w-fit">
+                        <div className="md:hidden inline-flex items-center border border-[#C9A84C]/30 bg-[#C9A84C]/5 px-3 py-1.5 rounded-none mb-4 w-fit">
                           <span className="font-sans text-[10px] tracking-[0.1em] text-[#C9A84C] uppercase">{study.insight}</span>
                         </div>
                         

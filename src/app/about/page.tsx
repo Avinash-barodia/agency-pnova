@@ -1,350 +1,244 @@
 "use client";
 
-import { useEffect } from "react";
-import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
-import WebGLBackground from "@/components/WebGLBackground";
-import { motion } from "framer-motion";
+
+const EXPO_EASE = [0.16, 1, 0.3, 1] as const;
 
 export default function AboutPage() {
-  useEffect(() => {
-    const revealCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    };
-
-    const revealObserver = new IntersectionObserver(revealCallback, {
-      threshold: 0.1,
-    });
-
-    // We still keep the observer for the rest of the page elements, but not the hero
-    document.querySelectorAll("section .reveal, section .reveal-group").forEach((el) => {
-      revealObserver.observe(el);
-    });
-
-    return () => {
-      revealObserver.disconnect();
-    };
-  }, []);
-
   return (
-    <main className="flex min-h-screen flex-col bg-[var(--color-background)]">
+    <main className="flex min-h-screen flex-col bg-[#0A0A0A] text-white selection:bg-[#C9A84C] selection:text-black">
       <NavBar />
-      
-      {/* Hero Section */}
-      <header className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden pt-24 md:pt-32 pb-12 md:pb-16">
-        <div className="absolute inset-0 w-full h-full pointer-events-none opacity-50 block">
-          <WebGLBackground />
-        </div>
-        
-        <div className="relative z-10 text-center px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-7xl w-full">
-          <motion.span 
-            initial={{ opacity: 0, y: 30 }}
+
+      {/* ── 1. Hero (Introduction) ────────────────────────────────────────────── */}
+      <header className="relative pt-32 pb-24 md:pt-48 md:pb-32 px-6 md:px-12 lg:px-[80px] max-w-[1440px] mx-auto w-full flex flex-col justify-center min-h-[70vh]">
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: EXPO_EASE }}
+          className="font-sans text-[11px] md:text-[12px] font-bold uppercase tracking-[0.4em] text-[#C9A84C] mb-8"
+        >
+          Who We Are
+        </motion.span>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: EXPO_EASE }}
+          className="font-serif font-bold text-[clamp(48px,7vw,96px)] leading-[1.08] tracking-[-0.03em] mb-12"
+        >
+          About Purnova
+        </motion.h1>
+
+        <div className="max-w-3xl space-y-8 font-sans font-light text-[17px] md:text-[19px] leading-[2] text-[#b0a693]">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="block font-label-caps text-label-caps font-bold uppercase tracking-[0.15em] text-[var(--color-primary-container)] mb-6"
+            transition={{ duration: 0.8, delay: 0.2, ease: EXPO_EASE }}
+            className="text-white text-2xl md:text-3xl font-serif font-semibold"
           >
-            ABOUT PURNOVA
-          </motion.span>
-          <h1 className="font-display-lg text-[36px] sm:text-[48px] md:text-[72px] leading-[1.1] md:leading-[80px] tracking-[-0.02em] font-bold text-white mb-6 md:mb-8">
-            <span className="block overflow-hidden pb-2">
-              <motion.span 
-                initial={{ y: "-110%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-                className="block"
-              >
-                SOME BRANDS ARE SEEN.
-              </motion.span>
-            </span>
-            <span className="block overflow-hidden pb-2">
-              <motion.span 
-                initial={{ y: "-110%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                className="block"
-              >
-                GREAT BRANDS ARE
-              </motion.span>
-            </span>
-            <span className="block overflow-hidden pb-2">
-              <motion.span 
-                initial={{ y: "-110%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-                className="block italic font-normal"
-              >
-                REMEMBERED.
-              </motion.span>
-            </span>
-          </h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] mb-8 md:mb-12 max-w-2xl mx-auto"
-          >
-            We help businesses build brands people trust, remember, and choose. Through strategy, creativity, and marketing, we turn ambitious ideas into lasting growth.
+            Purnova was founded on a simple yet powerful belief:
+            <br />
+            <span className="text-[#C9A84C] italic font-normal">Great brands are not built through noise, but through intention.</span>
           </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-            className="px-4 sm:px-0"
+            transition={{ duration: 0.8, delay: 0.3, ease: EXPO_EASE }}
           >
-            <button className="bg-[var(--color-primary)] w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 font-label-caps text-label-caps font-bold uppercase tracking-[0.15em] text-[var(--color-on-primary)] hover:bg-[var(--color-primary-container)] transition-colors duration-300">
-              Explore Our Work
-            </button>
-          </motion.div>
+            In a digital landscape overflowing with short-term tactics and disposable campaigns, we chose a different path — one rooted in timeless branding principles and strategic excellence.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: EXPO_EASE }}
+          >
+            We are not another digital marketing agency. We are brand architects who understand that true success lies in creating identities so strong and memorable that they become part of your audience&apos;s consciousness.
+          </motion.p>
         </div>
-        <div className="scroll-line"></div>
       </header>
 
-      {/* Section 2: OUR STORY */}
-      <section className="pt-20 md:pt-32 pb-10 md:pb-12 px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
-          <div className="md:col-span-4 relative">
-            <div className="md:sticky md:top-32">
-              <h2 className="font-headline-lg text-4xl md:text-[64px] font-bold text-[var(--color-primary)] leading-[1.1] uppercase tracking-tighter">OUR <br className="hidden md:block" /> STORY</h2>
-              <div className="w-12 h-1 bg-[var(--color-primary)] mt-6 md:mt-8 opacity-60"></div>
-            </div>
-          </div>
-          <div className="md:col-span-8">
-            <div className="font-body-lg text-lg md:text-[22px] text-[var(--color-on-surface-variant)] space-y-8 md:space-y-12 leading-[1.6]">
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-white text-2xl md:text-3xl font-bold font-serif"
-              >
-                Look up.
-              </motion.p>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              >
-                Every star you see today existed long before you noticed it. It wasn't born overnight. It was shaped by time, pressure, and purpose.
-              </motion.p>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              >
-                Brands aren't any different.
-              </motion.p>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              >
-                They're not built by a logo, a campaign, or a viral post. They're built through clarity, difficult decisions, and a clear understanding of who they are.
-              </motion.p>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              >
-                The brands people remember aren't always the loudest. They're the ones with a distinct identity and a lasting presence.
-              </motion.p>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              >
-                That's where Purnova comes in.
-              </motion.p>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              >
-                We help ambitious businesses discover what makes them different, shape their brand identity, and build a presence that people recognize, remember, and trust.
-              </motion.p>
-
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-white border-l-2 border-[var(--color-primary)] pl-6 md:pl-8 py-2 font-serif italic"
-              >
-                <p>Because marketing may create attention, but a strong brand creates lasting impact.</p>
-              </motion.div>
-
-            </div>
-          </div>
+      {/* ── 2. Our Purpose (Manifesto Quote Block) ─────────────────────────────── */}
+      <section className="py-24 md:py-32 bg-[#050505] px-6 md:px-12 lg:px-[80px] text-center border-y border-white/5">
+        <div className="max-w-5xl mx-auto flex flex-col items-center">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: EXPO_EASE }}
+            className="font-sans text-[11px] font-bold uppercase tracking-[0.4em] text-[#C9A84C] mb-12 block"
+          >
+            Our Purpose
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.1, ease: EXPO_EASE }}
+            className="font-serif italic text-[36px] md:text-[48px] lg:text-[56px] leading-[1.2] text-white mb-12 max-w-4xl"
+          >
+            &ldquo;To transform ambitious brands into distinguished names that endure.&rdquo;
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: EXPO_EASE }}
+            className="font-sans font-light text-[15px] md:text-[17px] leading-[2] text-[#b0a693] max-w-3xl mx-auto"
+          >
+            We help our clients move beyond being &quot;just another option&quot; to becoming the preferred choice — not through aggressive promotion alone, but through deep, meaningful brand positioning that creates lasting emotional connections.
+          </motion.p>
         </div>
       </section>
 
-      {/* Section 3: WHO WE ARE */}
-      <section className="pt-16 md:pt-24 pb-10 md:pb-16 bg-[var(--color-surface-container-lowest)] w-full">
-        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-[var(--spacing-gutter)] items-center">
-            <div className="md:col-span-12 reveal mb-8 md:mb-12">
-              <h2 className="font-headline-lg text-3xl md:text-headline-lg font-semibold text-white leading-tight">WHERE AMBITIOUS BRANDS BECOME UNFORGETTABLE</h2>
-              <div className="h-1 w-16 md:w-24 bg-[var(--color-primary)] mt-6 md:mt-8"></div>
-            </div>
-            <div className="md:col-span-12 reveal">
-              <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-4xl">
-                At <span className="text-[var(--color-primary)] font-semibold">PURNOVA</span>, we believe every ambitious business already has something worth remembering. Our job is to uncover it, shape it, and help the world see it. Through strategy, branding, marketing, and digital experiences, we turn bold ideas into brands people trust, remember, and choose. Because growth isn't about being louder. It's about becoming unforgettable.
+      {/* ── 3. Why Purnova (Editorial 2-Column) ─────────────────────────────────── */}
+      <section className="py-24 md:py-32 px-6 md:px-12 lg:px-[80px] max-w-[1440px] mx-auto w-full relative">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+          <div className="lg:w-1/2">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: EXPO_EASE }}
+              className="lg:sticky lg:top-32"
+            >
+              <h2 className="font-serif text-[40px] md:text-[56px] lg:text-[72px] font-semibold leading-[1.1] tracking-tighter">
+                Why <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/40">Purnova?</span>
+              </h2>
+            </motion.div>
+          </div>
+          <div className="lg:w-1/2 flex flex-col gap-8 font-sans font-light text-[15px] md:text-[17px] leading-[2] text-[#b0a693]">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.1, ease: EXPO_EASE }}
+            >
+              While the industry obsesses over immediate deliverables and vanity metrics, we focus on what truly matters:
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.2, ease: EXPO_EASE }}
+              className="border-l border-[#C9A84C] pl-6 md:pl-8 py-2"
+            >
+              <p className="font-serif italic text-2xl md:text-3xl text-white">
+                Brand equity that compounds over time.
               </p>
-            </div>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.3, ease: EXPO_EASE }}
+              className="text-[#F5F0E8]"
+            >
+              We seamlessly integrate sophisticated branding strategies with high-performance marketing. This balanced approach ensures your brand doesn&apos;t just generate results today — it builds a foundation for sustainable success tomorrow.
+            </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Section 4: OUR BELIEF */}
-      <section className="pt-16 md:pt-24 pb-12 md:pb-16 bg-[var(--color-surface)] w-full">
-        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto text-center">
-          <h2 className="font-display-lg text-3xl sm:text-[40px] md:text-display-lg font-bold text-white mb-10 md:mb-12 leading-tight md:leading-[1.1] flex flex-col items-center justify-center">
+      {/* ── 4. Our Core Principles (3 Cards) ────────────────────────────────────── */}
+      <section className="py-24 md:py-32 bg-[#050505] border-y border-white/5 relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[radial-gradient(circle,_rgba(201,168,76,0.05)_0%,_transparent_70%)] pointer-events-none" />
+        
+        <div className="px-6 md:px-12 lg:px-[80px] max-w-[1440px] mx-auto relative z-10">
+          <div className="text-center mb-16 md:mb-24">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: EXPO_EASE }}
+              className="font-serif text-[40px] md:text-[56px] font-semibold tracking-tighter"
+            >
+              Our Core Principles
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
+            {[
+              { title: "Clarity", desc: "Understanding your vision and audience with precision." },
+              { title: "Elegance", desc: "Creating refined, memorable brand experiences." },
+              { title: "Longevity", desc: "Building identities designed to thrive for years, not months." }
+            ].map((principle, index) => (
+              <motion.div
+                key={principle.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.15, ease: EXPO_EASE }}
+                className="group relative bg-[#0A0A0A] border border-white/5 p-10 md:p-12 min-h-[300px] flex flex-col justify-end overflow-hidden"
+              >
+                {/* Hover top glow */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A84C]/0 to-transparent group-hover:via-[#C9A84C]/50 transition-all duration-700" />
+                
+                <span className="font-sans text-[11px] font-bold text-white/20 mb-auto">0{index + 1}</span>
+                <h3 className="font-serif text-[32px] font-semibold text-white mb-4 group-hover:text-[#C9A84C] transition-colors duration-500">
+                  {principle.title}
+                </h3>
+                <p className="font-sans font-light text-[15px] leading-relaxed text-white/50 group-hover:text-white/80 transition-colors duration-500">
+                  {principle.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. Our Commitment (Highlight Panel) ─────────────────────────────────── */}
+      <section className="py-24 md:py-40 px-6 md:px-12 lg:px-[80px] bg-[#0A0A0A]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: EXPO_EASE }}
+          className="max-w-4xl mx-auto p-12 md:p-20 border border-white/10 relative overflow-hidden bg-[#050505]"
+        >
+          {/* Subtle gold line accent */}
+          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C9A84C]/40 to-transparent" />
+          
+          <div className="flex flex-col items-center text-center space-y-8 md:space-y-10">
+            <span className="font-sans text-[11px] font-bold uppercase tracking-[0.4em] text-[#C9A84C]">
+              Our Commitment
+            </span>
             
-            <div className="overflow-hidden pb-1 md:pb-2">
-              <motion.div
-                initial={{ y: 80, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0 }}
-              >
-                <span className="text-[var(--color-primary)]">CREATIVITY</span> WITHOUT
-              </motion.div>
-            </div>
-
-            <div className="overflow-hidden pb-4 md:pb-8">
-              <motion.div
-                initial={{ y: 80, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
-              >
-                <span className="text-[var(--color-primary)]">PURPOSE</span> IS NOISE.
-              </motion.div>
-            </div>
-
-            <div className="overflow-hidden pb-1 md:pb-2">
-              <motion.div
-                initial={{ y: 80, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.65 }}
-              >
-                <span className="text-[var(--color-primary)]">STRATEGY</span> WITHOUT
-              </motion.div>
-            </div>
-
-            <div className="overflow-hidden pb-1 md:pb-2">
-              <motion.div
-                initial={{ y: 80, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
-              >
-                <span className="text-[var(--color-primary)]">EXECUTION</span> IS THEORY.
-              </motion.div>
-            </div>
-
-          </h2>
-          <div className="overflow-hidden">
-             <motion.p 
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true, margin: "-50px" }}
-               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 1.3 }}
-               className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] max-w-2xl mx-auto"
-             >
-               Great brands are built where vision, creativity, and performance meet. That is where PURNOVA operates.
-             </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: WHAT WE DO (5 Premium Cards) */}
-      <section className="pt-16 md:pt-24 pb-20 md:pb-32 w-full">
-        <div className="px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-[var(--spacing-container-max)] mx-auto">
-          <h2 className="font-label-caps text-label-caps font-bold text-[var(--color-primary)] text-center mb-12 md:mb-16 tracking-widest uppercase">WHAT WE DO</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {/* Card 01 */}
-            <div className="reveal h-full">
-              <div className="p-8 bg-[var(--color-surface)] border border-[var(--color-outline-variant)] gold-glow transition-all duration-500 floating-vertical flex flex-col h-full" style={{ animationDelay: '0s' }}>
-                <span className="font-label-caps text-headline-md font-bold text-[var(--color-primary)] opacity-30 block mb-6">01</span>
-                <h3 className="font-label-caps text-label-caps text-white font-bold mb-4">Brand Strategy</h3>
-                <p className="font-body-md text-body-md text-[var(--color-on-surface-variant)] flex-grow">We define the position your audience remembers.</p>
-              </div>
-            </div>
-            {/* Card 02 */}
-            <div className="reveal h-full" style={{ transitionDelay: '100ms' }}>
-              <div className="p-8 bg-[var(--color-surface)] border border-[var(--color-outline-variant)] gold-glow transition-all duration-500 floating-vertical flex flex-col h-full" style={{ animationDelay: '-1.2s' }}>
-                <span className="font-label-caps text-headline-md font-bold text-[var(--color-primary)] opacity-30 block mb-6">02</span>
-                <h3 className="font-label-caps text-label-caps text-white font-bold mb-4">Visual Identity</h3>
-                <p className="font-body-md text-body-md text-[var(--color-on-surface-variant)] flex-grow">We create brands that are instantly recognizable.</p>
-              </div>
-            </div>
-            {/* Card 03 */}
-            <div className="reveal h-full" style={{ transitionDelay: '200ms' }}>
-              <div className="p-8 bg-[var(--color-surface)] border border-[var(--color-outline-variant)] gold-glow transition-all duration-500 floating-vertical flex flex-col h-full" style={{ animationDelay: '-2.4s' }}>
-                <span className="font-label-caps text-headline-md font-bold text-[var(--color-primary)] opacity-30 block mb-6">03</span>
-                <h3 className="font-label-caps text-label-caps text-white font-bold mb-4">Content Architecture</h3>
-                <p className="font-body-md text-body-md text-[var(--color-on-surface-variant)] flex-grow">We turn attention into engagement.</p>
-              </div>
-            </div>
-            {/* Card 04 */}
-            <div className="reveal h-full" style={{ transitionDelay: '300ms' }}>
-              <div className="p-8 bg-[var(--color-surface)] border border-[var(--color-outline-variant)] gold-glow transition-all duration-500 floating-vertical flex flex-col h-full" style={{ animationDelay: '-3.6s' }}>
-                <span className="font-label-caps text-headline-md font-bold text-[var(--color-primary)] opacity-30 block mb-6">04</span>
-                <h3 className="font-label-caps text-label-caps text-white font-bold mb-4">Digital Experiences</h3>
-                <p className="font-body-md text-body-md text-[var(--color-on-surface-variant)] flex-grow">We build websites that move people to action.</p>
-              </div>
-            </div>
-            {/* Card 05 */}
-            <div className="reveal h-full" style={{ transitionDelay: '400ms' }}>
-              <div className="p-8 bg-[var(--color-surface)] border border-[var(--color-outline-variant)] gold-glow transition-all duration-500 floating-vertical flex flex-col h-full" style={{ animationDelay: '-4.8s' }}>
-                <span className="font-label-caps text-headline-md font-bold text-[var(--color-primary)] opacity-30 block mb-6">05</span>
-                <h3 className="font-label-caps text-label-caps text-white font-bold mb-4">Performance Marketing</h3>
-                <p className="font-body-md text-body-md text-[var(--color-on-surface-variant)] flex-grow">We transform visibility into measurable growth.</p>
-              </div>
+            <p className="font-serif text-2xl md:text-3xl text-white leading-relaxed">
+              When you partner with Purnova, you gain more than a service provider.
+            </p>
+            <p className="font-sans font-light text-[17px] leading-[2] text-[#F5F0E8] max-w-2xl">
+              You gain a dedicated brand partner committed to making your name noticeable, memorable, and respected.
+            </p>
+            
+            <div className="w-12 h-[1px] bg-white/20 my-4" />
+            
+            <div className="font-serif text-[32px] md:text-[40px] font-bold leading-tight">
+              We don&apos;t just market your business.<br/>
+              <span className="text-[#C9A84C] italic">We help shape its legacy.</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* Closing Manifesto */}
-      <section className="relative py-24 md:py-48 overflow-hidden bg-[var(--color-background)] w-full">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-background)] via-transparent to-[var(--color-background)] z-10"></div>
-          <div 
-            className="w-full h-full bg-cover bg-center opacity-40" 
-            style={{ backgroundImage: "url('/about_manifesto_bg.png')" }}
-          ></div>
-        </div>
-        <div className="relative z-20 px-[var(--spacing-margin-mobile)] md:px-[var(--spacing-margin-desktop)] max-w-5xl mx-auto text-center">
-          <h2 className="font-display-lg text-4xl md:text-display-lg font-bold text-white mb-6 reveal italic">"STOP CHASING THE MARKET. BECOME THE STANDARD."</h2>
-          <p className="font-body-lg text-lg md:text-body-lg text-[var(--color-on-surface-variant)] mb-8 md:mb-12 reveal" style={{ transitionDelay: '150ms' }}>
-            The era of merely competing is over. The future belongs to brands brave enough to build something unforgettable.
-          </p>
-          <div className="reveal px-4 sm:px-0" style={{ transitionDelay: '300ms' }}>
-            <button className="bg-[var(--color-primary)] w-full sm:w-auto px-8 sm:px-16 py-4 sm:py-6 font-label-caps text-label-caps font-bold uppercase tracking-[0.15em] text-[var(--color-on-primary)] hover:bg-[var(--color-primary-container)] transition-all duration-300 text-lg">
-              Start Your Brand Journey
+      {/* ── 6. Final CTA ──────────────────────────────────────────────────────── */}
+      <section className="py-24 border-t border-white/5 bg-[#050505] text-center px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, ease: EXPO_EASE }}
+        >
+          <Link href="/contact">
+            <button className="font-label-caps text-[11px] tracking-[0.2em] uppercase bg-[#C9A84C] text-black px-12 py-5 font-bold relative group overflow-hidden">
+              <span className="relative z-10">Start Your Brand Journey</span>
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-white/20 skew-x-[-20deg] transition-transform duration-500" />
             </button>
-          </div>
-        </div>
+          </Link>
+        </motion.div>
       </section>
 
       <Footer />

@@ -1,91 +1,248 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useRef, useCallback } from "react";
+import { useState } from "react";
 
+// ─── Headline Lines ────────────────────────────────────────────────────────────
+const headlineLines = [
+  "We Build Brands",
+  "That People Notice,",
+  "Remember, and Choose.",
+];
+
+// ─── Easing ───────────────────────────────────────────────────────────────────
+const EXPO_EASE = [0.16, 1, 0.3, 1] as const;
+
+// ─── Main Hero ─────────────────────────────────────────────────────────────────
 export function Hero() {
-  const container: Variants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const springX = useSpring(mouseX, { stiffness: 40, damping: 25 });
+  const springY = useSpring(mouseY, { stiffness: 40, damping: 25 });
+  const glowX = useTransform(springX, (v) => `${v}px`);
+  const glowY = useTransform(springY, (v) => `${v}px`);
+  const heroRef = useRef<HTMLElement>(null);
+
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!heroRef.current) return;
+      const rect = heroRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - rect.left - rect.width / 2);
+      mouseY.set(e.clientY - rect.top - rect.height / 2);
     },
+    [mouseX, mouseY]
+  );
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    el.addEventListener("mousemove", handleMouseMove);
+    return () => el.removeEventListener("mousemove", handleMouseMove);
+  }, [handleMouseMove]);
+
+  // Animation variants
+  const eyebrowVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EXPO_EASE, delay: 0.2 } },
   };
 
-  const item: Variants = {
+  const subtitleVariants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EXPO_EASE, delay: 1.0 } },
   };
+
+  const ctaVariants = {
+    hidden: { opacity: 0, y: 16 },
+    show: (i: number) => ({
+      opacity: 1, y: 0, transition: { duration: 0.5, ease: EXPO_EASE, delay: 1.2 + i * 0.15 },
+    }),
+  };
+
 
   return (
-    <section className="relative flex items-center justify-center pt-24 pb-12 md:pt-32 md:pb-16 px-6 md:px-12 lg:px-[80px] overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(rgb(242, 202, 80) 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }}></div>
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="max-w-4xl text-center z-10"
-      >
-        <motion.span variants={item} className="font-sans text-[12px] font-bold text-[var(--color-primary)] tracking-[0.3em] block mb-6 uppercase">A DIFFERENT APPROACH TO DIGITAL MARKETING</motion.span>
-        <h1 className="font-serif text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] mb-8 leading-[1.15] font-bold tracking-[-0.02em] flex flex-col items-center">
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="relative inline-block pb-2"
-          >
-            We Don't Just <br className="hidden md:block" /> Promote Brands.
-            <motion.div
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 0.6, ease: "easeInOut", delay: 1.0 }}
-              className="absolute bottom-0 left-0 h-[4px] bg-[var(--color-primary)]"
-            />
-          </motion.div>
+    <section
+      ref={heroRef}
+      className="relative min-h-[80vh] flex flex-col justify-center pt-28 pb-20 px-6 md:px-12 lg:px-[80px] overflow-hidden"
+      aria-label="Purnova Hero"
+    >
+      {/* ── Background: Grain Texture ─────────────────────────── */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.06]"
+        style={{
+          backgroundImage: "radial-gradient(circle, #C9A84C 0.5px, transparent 0.5px)",
+          backgroundSize: "28px 28px",
+        }}
+      />
 
-          <div className="mt-4 md:mt-6 text-[var(--color-primary)] italic flex flex-col items-center">
-             <div className="overflow-hidden">
-                <motion.div
-                  initial={{ y: "120%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 1.6 }}
-                >
-                  We Establish Their
-                </motion.div>
-             </div>
-             <div className="overflow-hidden mt-1 md:mt-2">
-                <motion.div
-                  initial={{ y: "120%" }}
-                  animate={{ y: 0 }}
-                  transition={{ 
-                    type: "spring",
-                    stiffness: 150,
-                    damping: 10,
-                    delay: 1.8
-                  }}
-                >
-                  Brand Presence.
-                </motion.div>
-             </div>
+      {/* ── Background: Mouse-reactive glow ──────────────────── */}
+      <motion.div
+        className="absolute pointer-events-none"
+        style={{
+          width: 600, height: 600, left: "50%", top: "40%", x: glowX, y: glowY, translateX: "-50%", translateY: "-50%",
+          background: "radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)",
+        }}
+      />
+
+      {/* ── Vertical gold rule — right side accent ─────────────── */}
+      <motion.div
+        className="absolute right-[80px] top-32 bottom-32 hidden xl:block pointer-events-none"
+        initial={{ scaleY: 0, opacity: 0 }}
+        animate={{ scaleY: 1, opacity: 1 }}
+        transition={{ duration: 1.2, ease: EXPO_EASE, delay: 0.8 }}
+        style={{ transformOrigin: "top" }}
+      >
+        <div className="w-[1px] h-full bg-gradient-to-b from-[#C9A84C]/30 via-[#C9A84C]/10 to-transparent" />
+      </motion.div>
+
+      {/* ── Main Content ──────────────────────────────────────── */}
+      <div className="relative z-10 max-w-[1280px] w-full mt-8 md:mt-16">
+        
+        {/* Right Side Decorative Composition */}
+        <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[450px] h-[650px] pointer-events-auto z-20">
+          <DashboardComposition />
+        </div>
+
+        <div className="relative z-30 max-w-2xl pointer-events-none">
+          <motion.p variants={eyebrowVariants} initial="hidden" animate="show" className="font-label-caps text-[11px] md:text-[12px] tracking-[0.4em] uppercase text-[#C9A84C] mb-8 md:mb-10 opacity-80 pointer-events-auto">
+            Branding That Lasts. Growth That Matters.
+          </motion.p>
+
+          <h1 className="font-serif font-bold leading-[0.95] tracking-[-0.03em] mb-8 md:mb-10 pointer-events-auto" style={{ fontSize: "clamp(48px, 7vw, 96px)" }}>
+            {headlineLines.map((line, i) => (
+              <span key={i} className="block overflow-hidden pb-1">
+                <motion.span className="block" initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ duration: 0.75, ease: EXPO_EASE, delay: 0.45 + i * 0.15 }}>
+                  {i === 2 ? <><span className="text-[#C9A84C] italic">Remember,</span> and Choose.</> : line}
+                </motion.span>
+              </span>
+            ))}
+          </h1>
+
+          <motion.p variants={subtitleVariants} initial="hidden" animate="show" className="font-sans font-light text-[15px] md:text-[17px] leading-[1.8] text-[#b0a693] max-w-xl mb-10 md:mb-12 pointer-events-auto">
+            Most marketing creates noise. <span className="text-[#F5F0E8] font-normal">Purnova creates memory.</span> We combine strategic branding with performance marketing to deliver recognition today and growth that lasts.
+          </motion.p>
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-4 pointer-events-auto">
+            <motion.div custom={0} variants={ctaVariants} initial="hidden" animate="show">
+              <Link href="/contact">
+                <button className="w-full sm:w-auto font-label-caps text-[11px] tracking-[0.2em] uppercase bg-[#C9A84C] text-black px-10 py-4 md:py-5 font-bold overflow-hidden relative group">
+                  <span className="relative z-10">Start Your Brand Journey</span>
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-white/20 skew-x-[-20deg] transition-transform duration-500" />
+                </button>
+              </Link>
+            </motion.div>
+            <motion.div custom={1} variants={ctaVariants} initial="hidden" animate="show">
+              <Link href="/contact">
+                <button className="w-full sm:w-auto font-label-caps text-[11px] tracking-[0.2em] uppercase text-[#C9A84C] px-10 py-4 md:py-5 font-bold border border-[#C9A84C]/40 relative overflow-hidden group">
+                  <span className="absolute inset-0 scale-x-0 group-hover:scale-x-100 bg-[#C9A84C]/10 origin-left transition-transform duration-400" />
+                  <span className="relative z-10 group-hover:text-[#F5F0E8] transition-colors duration-300">Schedule a Discovery Call</span>
+                </button>
+              </Link>
+            </motion.div>
           </div>
-        </h1>
-        <motion.div variants={item} className="mb-12 max-w-2xl mx-auto flex flex-col gap-3">
-          <span className="font-sans font-bold text-[var(--color-primary)] tracking-[0.2em] text-[13px] md:text-[15px] uppercase">
-            FOR THOSE WHO EXPECT MORE FROM MARKETING.
-          </span>
-          <p className="font-sans text-[16px] md:text-[20px] text-[var(--color-on-surface-variant)] leading-[26px] md:leading-[32px]">
-            Combining strategy, creativity, and performance to create brands with lasting presence.
-          </p>
-        </motion.div>
-        <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Link href="/case-studies" className="inline-block w-full sm:w-auto bg-[var(--color-primary)] text-[var(--color-on-primary-fixed)] font-sans text-[12px] py-5 px-12 font-bold uppercase tracking-[0.15em] hover:bg-[var(--color-primary-fixed-dim)] transition-all duration-300 text-center">
-            SEE OUR WORK
-          </Link>
-        </motion.div>
+        </div>
+      </div>
+
+
+
+      {/* ── Scroll hint ────────────────────────────────────────── */}
+      <motion.div
+        className="absolute bottom-8 right-8 hidden md:flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 4, duration: 0.8 }}
+      >
+        <span className="font-sans text-[9px] tracking-[0.3em] uppercase text-white/20 [writing-mode:vertical-rl]">Scroll</span>
+        <motion.div className="w-[1px] h-12 bg-gradient-to-b from-[#C9A84C]/50 to-transparent" animate={{ scaleY: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} style={{ transformOrigin: "top" }} />
       </motion.div>
     </section>
+  );
+}
+
+// ─── Decorative Dashboard Composition ──────────────────────────────────────
+const dashboardNodes = [
+  { id: "strategy", label: "Strategy", image: "/images/strategy.png", x: 75, y: 10 },
+  { id: "branding", label: "Branding", image: "/images/branding.png", x: 25, y: 23 },
+  { id: "content", label: "Content", image: "/images/content.png", x: 75, y: 36 },
+  { id: "social", label: "Social Media", image: "/images/social media.png", x: 25, y: 50 },
+  { id: "advertising", label: "Advertising", image: "/images/ads.png", x: 75, y: 63 },
+  { id: "marketing", label: "Marketing", image: "/images/marketing.png", x: 25, y: 76 },
+  { id: "trust", label: "Trust", image: "/images/trust.png", x: 75, y: 90 },
+];
+
+// Smooth spline curve between staggered nodes
+const pathD = "M 75 10 C 75 16.5, 25 16.5, 25 23 C 25 29.5, 75 29.5, 75 36 C 75 43, 25 43, 25 50 C 25 56.5, 75 56.5, 75 63 C 75 69.5, 25 69.5, 25 76 C 25 83, 75 83, 75 90";
+
+function DashboardComposition() {
+  return (
+    <div className="relative w-full h-full">
+      {/* Background ambient glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,168,76,0.03)_0%,_transparent_60%)] pointer-events-none" />
+      
+      {/* SVG Path Connections */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="rgba(201,168,76,0)" />
+            <stop offset="20%" stopColor="rgba(201,168,76,0.25)" />
+            <stop offset="80%" stopColor="rgba(201,168,76,0.25)" />
+            <stop offset="100%" stopColor="rgba(201,168,76,0)" />
+          </linearGradient>
+        </defs>
+
+        {/* Base Track */}
+        <motion.path 
+          d={pathD} 
+          fill="none" 
+          stroke="url(#lineGradient)" 
+          strokeWidth="0.3" 
+          vectorEffect="non-scaling-stroke"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2.5, ease: EXPO_EASE, delay: 0.5 }}
+        />
+        
+        {/* Moving Particles (Simulated via dash offset) */}
+        <motion.path 
+          d={pathD} 
+          fill="none" 
+          stroke="#C9A84C" 
+          strokeWidth="0.6" 
+          strokeDasharray="1.5 20"
+          vectorEffect="non-scaling-stroke"
+          animate={{ strokeDashoffset: [21.5, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          style={{ filter: "drop-shadow(0 0 3px rgba(201,168,76,0.8))" }}
+          className="opacity-70"
+        />
+      </svg>
+
+      {/* Nodes */}
+      {dashboardNodes.map((node, i) => (
+        <DashboardNode key={node.id} node={node} index={i} />
+      ))}
+    </div>
+  );
+}
+
+function DashboardNode({ node, index }: { node: typeof dashboardNodes[0], index: number }) {
+  return (
+    <motion.div
+      className="absolute flex flex-col items-center justify-center group z-10"
+      style={{ left: `${node.x}%`, top: `${node.y}%`, x: "-50%", y: "-50%" }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, delay: 1 + index * 0.15, ease: EXPO_EASE }}
+    >
+      <motion.div
+        animate={{ scale: [1, 1.03, 1] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: index * 0.4 }}
+        whileHover={{ scale: 1.05, y: -6, rotate: 2 }}
+        className="relative flex items-center justify-center cursor-pointer transition-all duration-300 group-hover:drop-shadow-[0_0_25px_rgba(201,168,76,0.4)]"
+      >
+        <img src={node.image} alt={node.label} className="h-[88px] md:h-[110px] w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity" loading="lazy" />
+      </motion.div>
+    </motion.div>
   );
 }

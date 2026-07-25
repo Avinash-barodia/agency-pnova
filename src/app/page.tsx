@@ -1,5 +1,6 @@
 import { NavBar } from "@/components/NavBar";
 import { Hero } from "@/components/Hero";
+import { OurDifference } from "@/components/OurDifference";
 import { LogoBanner } from "@/components/LogoBanner";
 import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <NavBar />
       <Hero />
+      <OurDifference />
       <LogoBanner />
       <Services />
       <Stats />

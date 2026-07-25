@@ -98,7 +98,7 @@ export function ServiceDetailClient({ service }: { service: any }) {
             onTouchMove={handleTouchMove}
             onTouchStart={() => setIsHovering(true)}
             onTouchEnd={() => setIsHovering(false)}
-            className="relative w-full rounded-[40px] overflow-hidden bg-black border border-white/5 shadow-[0_0_100px_rgba(0,0,0,1)_inset]"
+            className="relative w-full rounded-none overflow-hidden bg-black border border-white/5 shadow-[0_0_100px_rgba(0,0,0,1)_inset]"
           >
              {/* Dim Layer (The Shadows) */}
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12 md:gap-y-16 p-8 md:p-20 opacity-[0.03] transition-opacity duration-500">

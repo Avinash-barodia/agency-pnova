@@ -7,8 +7,9 @@ export function Footer() {
         <div className="text-[24px] md:text-[32px] font-serif font-bold text-[var(--color-primary)]">Purnova</div>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 md:gap-x-12 md:gap-y-6">
           <Link href="/services" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">Services</Link>
+          <Link href="/approach" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">Approach</Link>
           <Link href="/case-studies" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">Work</Link>
-          <Link href="/about" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">About</Link>
+          <Link href="/about" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">About Us</Link>
           <Link href="/contact" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">Contact</Link>
           <Link href="https://www.instagram.com/purnovaa/?hl=en" target="_blank" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">Instagram</Link>
           <Link href="https://linkedin.com" target="_blank" className="text-[var(--color-on-surface-variant)] font-sans text-[12px] font-bold uppercase tracking-[0.15em] hover:text-[var(--color-primary)] transition-colors duration-300">LinkedIn</Link>

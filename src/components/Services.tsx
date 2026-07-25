@@ -50,7 +50,7 @@ export function Services() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="font-sans text-[12px] font-bold text-[#C9A84C] uppercase tracking-[0.2em] mb-6 block">OUR EXPERTISE</span>
-            <h2 className="font-serif text-[40px] md:text-[48px] lg:text-[56px] font-semibold mb-6 leading-[1.1] text-white tracking-tighter">
+            <h2 className="font-serif text-[40px] md:text-[56px] lg:text-[72px] font-semibold mb-6 leading-[1.1] text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/40 tracking-tighter">
               Turning Businesses Into Brands.
             </h2>
             <p className="text-white/60 font-sans text-[16px] leading-[26px] mb-8 max-w-md">
@@ -76,7 +76,7 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-                className="sticky w-full h-auto min-h-[350px] md:min-h-[400px] rounded-[40px] p-8 md:p-14 flex flex-col justify-between border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)] overflow-hidden group"
+                className="sticky w-full h-auto min-h-[350px] md:min-h-[400px] rounded-none p-8 md:p-14 flex flex-col justify-between border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)] overflow-hidden group"
                 style={{
                   top: stickyTop,
                   backgroundColor: '#0A0A0A',
@@ -84,8 +84,8 @@ export function Services() {
                 }}
               >
                 {/* Background Glow Effect */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.15),_transparent_50%)] rounded-[40px] pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none rounded-[40px]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.15),_transparent_50%)] rounded-none pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none rounded-none" />
 
                 {/* Card Header (Icon + Number) */}
                 <div className="flex justify-between items-start relative z-10 w-full">

@@ -247,7 +247,7 @@ function MasonryTile({ client }: { client: any }) {
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.5 }}
       onClick={() => setExpanded(!expanded)}
-      className="relative overflow-hidden bg-[#0A0A0A] rounded-[24px] cursor-pointer group hover:-translate-y-2 transition-transform duration-500 border border-transparent hover:border-[#C9A84C]/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)]"
+      className="relative overflow-hidden bg-[#0A0A0A] rounded-none cursor-pointer group hover:-translate-y-2 transition-transform duration-500 border border-transparent hover:border-[#C9A84C]/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)]"
     >
       {/* TILE FRONT */}
       <motion.div layout className={`relative w-full ${getHeight()} flex flex-col justify-between p-8`}>
@@ -316,7 +316,7 @@ function MasonryTile({ client }: { client: any }) {
               {/* Mock IG Grid */}
               <div className="grid grid-cols-3 gap-2 mb-8">
                 {[1,2,3,4,5,6].map(i => (
-                  <div key={i} className="aspect-square bg-[#222] rounded-md overflow-hidden relative">
+                  <div key={i} className="aspect-square bg-[#222] rounded-none overflow-hidden relative">
                     <div className="absolute inset-0 bg-[#C9A84C] opacity-0 hover:opacity-20 transition-opacity cursor-pointer"></div>
                   </div>
                 ))}
@@ -418,7 +418,7 @@ function MobileClients() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="relative w-full h-[400px] bg-[#0A0A0A] rounded-[24px] overflow-hidden border border-white/5 shadow-2xl flex flex-col justify-end p-6"
+              className="relative w-full h-[400px] bg-[#0A0A0A] rounded-none overflow-hidden border border-white/5 shadow-2xl flex flex-col justify-end p-6"
               onClick={() => setExpandedClient(client)}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
@@ -483,7 +483,7 @@ function MobileClients() {
 
                 <div className="grid grid-cols-3 gap-2 mb-8">
                   {[1,2,3,4,5,6,7,8,9].map(i => (
-                    <div key={i} className="aspect-square bg-[#222] rounded-md"></div>
+                    <div key={i} className="aspect-square bg-[#222] rounded-none"></div>
                   ))}
                 </div>
 
